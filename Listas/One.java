@@ -6,8 +6,8 @@ public class One {
     // implemente um algoritmo em java que receba 10 números e armazene-os num vetor
     // e ele indique qual elemento é o menor e o valor.
     
+    static Scanner leia = new Scanner(System.in);
     public static void main (String args[]){
-        Scanner leia = new Scanner(System.in);
         int slots = 10;
         // criando vetor
         int vec [] = new int[slots];

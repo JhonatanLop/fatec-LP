@@ -1,6 +1,5 @@
-package Atividades;
+package Exercicios;
 
-import java.sql.ResultSetMetaData;
 import java.util.Scanner;
 
 public class ExercicioB {

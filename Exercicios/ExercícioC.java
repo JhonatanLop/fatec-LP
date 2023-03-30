@@ -1,4 +1,4 @@
-package Atividades;
+package Exercicios;
 import java.util.Scanner;
 import java.util.ArrayList;
 

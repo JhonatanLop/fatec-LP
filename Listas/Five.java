@@ -16,7 +16,7 @@ public class Five {
             // preenche a lista com números aleatórios de 0 a 100
             for (int i = 0; i < vec.length; i++) {
                 vec[i] = gerador.nextInt(100);
-                System.out.println(vec[i]);
+                // System.out.println(vec[i]);
             }
 
             // recebe valor do usuário

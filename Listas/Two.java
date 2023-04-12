@@ -1,6 +1,5 @@
 package Listas;
 import java.util.Scanner;
-import java.util.Random;
 
 public class Two {
     // Implemente um programa em Java que peça 10 números, armazene eles em um vetor 

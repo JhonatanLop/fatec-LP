@@ -1,10 +1,11 @@
+package org.openjfx.Atividade;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.TextField;
 
-public class PleaseProvideControllerClassName {
+public class PessoaController {
 
     @FXML
     private Button clean;
@@ -26,7 +27,6 @@ public class PleaseProvideControllerClassName {
 
     @FXML
     void cleanField(ActionEvent event) {
-
     }
 
     @FXML

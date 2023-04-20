@@ -1,0 +1,37 @@
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
+import javafx.scene.control.Button;
+import javafx.scene.control.DatePicker;
+import javafx.scene.control.TextField;
+
+public class PleaseProvideControllerClassName {
+
+    @FXML
+    private Button clean;
+
+    @FXML
+    private TextField cpf;
+
+    @FXML
+    private TextField email;
+
+    @FXML
+    private Button enviarCadastro;
+
+    @FXML
+    private DatePicker nascimento;
+
+    @FXML
+    private TextField nome;
+
+    @FXML
+    void cleanField(ActionEvent event) {
+
+    }
+
+    @FXML
+    void sendCad(ActionEvent event) {
+
+    }
+
+}

@@ -47,9 +47,19 @@
   <children>
       <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="402.0" prefWidth="640.0" style="-fx-background-color: #1C1C1C; -fx-border-radius: 50;">
          <children>
-            <Pane layoutX="42.0" layoutY="79.0" prefHeight="243.0" prefWidth="380.0" style="-fx-background-color: #151515; -fx-border-radius: 4; -fx-background-radius: 4;">
+            <ImageView fitHeight="350.0" fitWidth="350.0" opacity="0.08" style="-fx-effect: slide;">
+               <image>
+                  <Image url="@../../../../../../Docs/images/avião.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="402.0" fitWidth="646.0" opacity="0.74">
+               <image>
+                  <Image url="@../../../../../../Docs/images/photographer-anime-girl-beach-wallpaper-preview.jpg" />
+               </image>
+            </ImageView>
+            <Pane layoutX="42.0" layoutY="79.0" prefHeight="243.0" prefWidth="380.0" style="-fx-background-color: #1515159b; -fx-border-radius: 4; -fx-background-radius: 4;">
                <children>
-                  <Label layoutX="14.0" layoutY="22.0" prefHeight="30.0" prefWidth="60.0" text="Nome:" textFill="#088a85">
+                  <Label layoutX="14.0" layoutY="22.0" prefHeight="30.0" prefWidth="60.0" text="Nome:" textFill="#5ce1db">
                      <font>
                         <Font name="Calibri" size="16.0" />
                      </font>
@@ -59,7 +69,7 @@
                         <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
                      </opaqueInsets>
                   </TextField>
-                  <Label layoutX="14.0" layoutY="70.0" prefHeight="30.0" prefWidth="70.0" text="País:" textFill="#088a85">
+                  <Label layoutX="14.0" layoutY="70.0" prefHeight="30.0" prefWidth="70.0" text="País:" textFill="#5ce1db">
                      <font>
                         <Font name="Calibri" size="16.0" />
                      </font>
@@ -69,7 +79,7 @@
                         <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
                      </opaqueInsets>
                   </TextField>
-                  <Label layoutX="14.0" layoutY="124.0" prefHeight="30.0" prefWidth="60.0" text="Estado:" textFill="#088a85">
+                  <Label layoutX="14.0" layoutY="124.0" prefHeight="30.0" prefWidth="60.0" text="Estado:" textFill="#5ce1db">
                      <font>
                         <Font name="Calibri" size="16.0" />
                      </font>
@@ -79,7 +89,7 @@
                         <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
                      </opaqueInsets>
                   </TextField>
-                  <Label layoutX="14.0" layoutY="177.0" prefHeight="30.0" prefWidth="60.0" text="Cidade:" textFill="#088a85">
+                  <Label layoutX="14.0" layoutY="177.0" prefHeight="30.0" prefWidth="60.0" text="Cidade:" textFill="#5ce1db">
                      <font>
                         <Font name="Calibri" size="16.0" />
                      </font>
@@ -91,23 +101,17 @@
                   </TextField>
                </children>
             </Pane>
-            <ImageView fitHeight="350.0" fitWidth="350.0" opacity="0.08" style="-fx-effect: slide;">
-               <image>
-                  <Image url="@../../../../../../Docs/images/avião.png" />
-               </image>
-            </ImageView>
-            <ImageView fitHeight="401.0" fitWidth="646.0" opacity="0.17">
-               <image>
-                  <Image url="@../../../../../../Docs/images/photographer-anime-girl-beach-wallpaper-preview.jpg" />
-               </image>
-            </ImageView>
-            <Button fx:id="clean" layoutX="308.0" layoutY="347.0" mnemonicParsing="false" onAction="#cleanField" prefHeight="30.0" prefWidth="124.0" style="-fx-background-color: #2E2E2E; -fx-border-color: #088a85; -fx-border-radius: 4;" text="Limpar" textFill="#088a85" />
-            <Button fx:id="enviarCadastro" layoutX="474.0" layoutY="347.0" mnemonicParsing="false" onAction="#sendCad" prefHeight="30.0" prefWidth="124.0" style="-fx-background-color: #2E2E2E; -fx-border-color: #088a85; -fx-border-radius: 4;" text="Enviar Cadastro" textFill="#088a85" />
-            <Label layoutX="28.0" layoutY="14.0" style="-fx-font-size: 20;" text="Cadastro de Lugares" textFill="#088a85">
-               <font>
-                  <Font name="Magneto Bold" size="12.0" />
-               </font>
-            </Label>
+            <Button fx:id="clean" layoutX="308.0" layoutY="347.0" mnemonicParsing="false" onAction="#cleanField" prefHeight="30.0" prefWidth="124.0" style="-fx-background-color: #2E2E2E; -fx-border-color: #088a85; -fx-border-radius: 4; -fx-background-radius: 4;" text="Limpar" textFill="#088a85" />
+            <Button fx:id="enviarCadastro" layoutX="474.0" layoutY="347.0" mnemonicParsing="false" onAction="#sendCad" prefHeight="30.0" prefWidth="124.0" style="-fx-background-color: #2E2E2E; -fx-border-color: #088a85; -fx-border-radius: 4; -fx-background-radius: 4;" text="Enviar Cadastro" textFill="#088a85" />
+            <Pane layoutX="21.0" layoutY="21.0" prefHeight="46.0" prefWidth="193.0" style="-fx-background-color: #1515159b; -fx-border-radius: 4; -fx-background-radius: 4;">
+               <children>
+                  <Label layoutX="6.0" layoutY="8.0" style="-fx-font-size: 20;" text="Cadastro de Lugares" textFill="#5ce1db">
+                     <font>
+                        <Font name="Magneto Bold" size="12.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
          </children>
       </AnchorPane>
   </children>

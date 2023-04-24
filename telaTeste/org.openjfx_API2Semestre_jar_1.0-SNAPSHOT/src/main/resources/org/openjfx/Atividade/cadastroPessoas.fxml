@@ -46,7 +46,7 @@
 
 <VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
   <children>
-    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" style="-fx-background-color: #1C1C1C; -fx-border-radius: 50;" VBox.vgrow="ALWAYS">
+    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="400.0" prefWidth="641.0" style="-fx-background-color: #1C1C1C; -fx-border-radius: 50;" VBox.vgrow="ALWAYS">
       <children>
             <Pane layoutX="42.0" layoutY="79.0" prefHeight="243.0" prefWidth="380.0" style="-fx-background-color: #151515; -fx-border-radius: 4; -fx-background-radius: 4;">
                <children>
@@ -86,29 +86,25 @@
                         <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
                      </opaqueInsets>
                   </TextField>
-                  <ImageView fitHeight="350.0" fitWidth="350.0" layoutX="30.0" layoutY="-53.0" opacity="0.08" style="-fx-effect: slide;">
+                  <ImageView fitHeight="350.0" fitWidth="350.0" layoutX="30.0" layoutY="-53.0" opacity="0.21" style="-fx-effect: slide;">
                      <image>
                         <Image url="@../../../../../../Docs/images/avião.png" />
                      </image>
                   </ImageView>
-                  <Button fx:id="clean" layoutX="289.0" layoutY="267.0" mnemonicParsing="false" onAction="#cleanField" prefHeight="30.0" prefWidth="124.0" style="-fx-background-color: #2E2E2E; -fx-border-color: #088a85; -fx-border-radius: 4;" text="Limpar" textFill="#088a85" />
                </children>
             </Pane>
+            <ImageView fitHeight="400.0" fitWidth="258.0" layoutX="379.0" opacity="0.73">
+               <image>
+                  <Image url="@../../../../../../Docs/images/persona-anime2.png" />
+               </image>
+            </ImageView>
             <Button fx:id="enviarCadastro" layoutX="474.0" layoutY="347.0" mnemonicParsing="false" onAction="#sendCad" prefHeight="30.0" prefWidth="124.0" style="-fx-background-color: #2E2E2E; -fx-border-color: #088a85; -fx-border-radius: 4;" text="Enviar Cadastro" textFill="#088a85" />
+            <Button fx:id="clean" layoutX="318.0" layoutY="347.0" mnemonicParsing="false" onAction="#cleanField" prefHeight="30.0" prefWidth="124.0" style="-fx-background-color: #2E2E2E; -fx-border-color: #088a85; -fx-border-radius: 4;" text="Limpar" textFill="#088a85" />
             <Label layoutX="28.0" layoutY="14.0" style="-fx-font-size: 20;" text="Cadastro de Viajante" textFill="#088a85">
                <font>
                   <Font name="Magneto Bold" size="12.0" />
                </font>
             </Label>
-            <Pane layoutX="450.0" layoutY="59.0" prefHeight="243.0" prefWidth="148.0" style="-fx-background-color: #151515; -fx-border-radius: 4; -fx-background-radius: 4; -fx-background-image: https://w.wallhaven.cc/full/wy/wallhaven-wyzgo7.jpg;">
-               <children>
-                  <ImageView fitHeight="243.0" fitWidth="160.0" layoutX="-5.0" layoutY="2.0">
-                     <image>
-                        <Image url="@../../../../../../Docs/images/bg.jpg" />
-                     </image>
-                  </ImageView>
-               </children>
-            </Pane>
       </children>
     </AnchorPane>
   </children>

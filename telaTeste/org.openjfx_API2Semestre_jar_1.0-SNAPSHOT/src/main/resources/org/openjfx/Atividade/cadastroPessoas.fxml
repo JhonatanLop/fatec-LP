@@ -93,7 +93,7 @@
                   </ImageView>
                </children>
             </Pane>
-            <ImageView fitHeight="400.0" fitWidth="258.0" layoutX="379.0" opacity="0.73">
+            <ImageView fitHeight="400.0" fitWidth="258.0" layoutX="380.0" opacity="0.73">
                <image>
                   <Image url="@../../../../../../Docs/images/persona-anime2.png" />
                </image>

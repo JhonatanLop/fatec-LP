@@ -22,12 +22,12 @@
                   <Image url="@../../../../../../Docs/images/avião.png" />
                </image>
             </ImageView>
-            <Button fx:id="clean" layoutX="285.0" layoutY="98.0" mnemonicParsing="false" onAction="#cadPessoas" prefHeight="44.0" prefWidth="137.0" style="-fx-background-color: #2E2E2E; -fx-border-color: #088a85; -fx-border-radius: 4;" text="Cadastrar" textFill="#05c6bc">
+            <Button fx:id="cadPessoas" layoutX="285.0" layoutY="98.0" mnemonicParsing="false" onAction="#cadPessoas" prefHeight="44.0" prefWidth="137.0" style="-fx-background-color: #2E2E2E; -fx-border-color: #088a85; -fx-border-radius: 4;" text="Cadastrar" textFill="#05c6bc">
                <font>
                   <Font size="16.0" />
                </font>
             </Button>
-            <Label layoutX="53.0" layoutY="105.0" prefHeight="30.0" prefWidth="195.0" style="-fx-font-size: 20;" text="Cadastro de Pessoas" textFill="#05c6bc">
+            <Label layoutX="53.0" layoutY="105.0" prefHeight="30.0" prefWidth="195.0" style="-fx-font-size: 20;" text="Cadastro de Viajante" textFill="#05c6bc">
                <font>
                   <Font size="20.0" />
                </font>
@@ -37,7 +37,7 @@
                   <Font size="20.0" />
                </font>
             </Label>
-            <Button fx:id="clean1" layoutX="285.0" layoutY="170.0" mnemonicParsing="false" onAction="#cadVeiculos" prefHeight="44.0" prefWidth="137.0" style="-fx-background-color: #2E2E2E; -fx-border-color: #088a85; -fx-border-radius: 4;" text="Cadastrar" textFill="#05c6bc">
+            <Button fx:id="cadVeiculos" layoutX="285.0" layoutY="170.0" mnemonicParsing="false" onAction="#cadVeiculos" prefHeight="44.0" prefWidth="137.0" style="-fx-background-color: #2E2E2E; -fx-border-color: #088a85; -fx-border-radius: 4;" text="Cadastrar" textFill="#05c6bc">
                <font>
                   <Font size="16.0" />
                </font>
@@ -47,7 +47,7 @@
                   <Font size="20.0" />
                </font>
             </Label>
-            <Button fx:id="clean11" layoutX="285.0" layoutY="245.0" mnemonicParsing="false" onAction="#cadLugares" prefHeight="44.0" prefWidth="137.0" style="-fx-background-color: #2E2E2E; -fx-border-color: #088a85; -fx-border-radius: 4;" text="Cadastrar" textFill="#05c6bc">
+            <Button fx:id="cadLugares" layoutX="285.0" layoutY="245.0" mnemonicParsing="false" onAction="#cadLugares" prefHeight="44.0" prefWidth="137.0" style="-fx-background-color: #2E2E2E; -fx-border-color: #088a85; -fx-border-radius: 4;" text="Cadastrar" textFill="#05c6bc">
                <font>
                   <Font size="16.0" />
                </font>
@@ -57,6 +57,11 @@
                   <Image url="@../../../../../../Docs/images/secretaria.png" />
                </image>
             </ImageView>
+            <Label layoutX="190.0" layoutY="377.0" prefHeight="30.0" prefWidth="239.0" style="-fx-font-size: 11;" text="Jhonatan Oliveria Lopes ⓒ Copyright Inc. 2023" textFill="#05c6bc">
+               <font>
+                  <Font size="9.0" />
+               </font>
+            </Label>
          </children>
       </AnchorPane>
    </children>

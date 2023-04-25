@@ -6,13 +6,16 @@ import javafx.scene.control.Button;
 
 public class menuUtil {
     @FXML
-    private Button clean;
+    private Button cadLugares;
 
     @FXML
-    private Button clean1;
+    private Button cadPessoas;
 
     @FXML
-    private Button clean11;
+    private Button cadVeiculos;
+
+    @FXML
+    private ImageView imgSecretaria;
 
     @FXML
     void cadLugares(ActionEvent event) {

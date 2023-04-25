@@ -91,6 +91,7 @@
                         <Image url="@../../../../../../Docs/images/avião.png" />
                      </image>
                   </ImageView>
+                  <Button fx:id="goBack" layoutX="-16.0" layoutY="269.0" mnemonicParsing="false" onAction="#goBack" prefHeight="30.0" prefWidth="124.0" style="-fx-background-color: #2E2E2E; -fx-border-color: #088a85; -fx-border-radius: 4;" text="Voltar" textFill="#088a85" />
                </children>
             </Pane>
             <ImageView fitHeight="400.0" fitWidth="258.0" layoutX="380.0" opacity="0.73">

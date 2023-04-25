@@ -112,6 +112,7 @@
                   </Label>
                </children>
             </Pane>
+            <Button fx:id="goBack" layoutX="36.0" layoutY="347.0" mnemonicParsing="false" onAction="#goBack" prefHeight="30.0" prefWidth="124.0" style="-fx-background-color: #2E2E2E; -fx-border-color: #088a85; -fx-border-radius: 4;" text="Voltar" textFill="#088a85" />
          </children>
       </AnchorPane>
   </children>

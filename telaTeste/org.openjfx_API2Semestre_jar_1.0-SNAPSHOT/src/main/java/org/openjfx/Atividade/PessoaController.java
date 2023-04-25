@@ -30,6 +30,11 @@ public class PessoaController {
     }
 
     @FXML
+    void goBack(ActionEvent event) {
+
+    }
+
+    @FXML
     void sendCad(ActionEvent event) {
 
     }

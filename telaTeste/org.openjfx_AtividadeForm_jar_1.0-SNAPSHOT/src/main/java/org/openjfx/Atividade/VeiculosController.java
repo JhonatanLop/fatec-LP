@@ -10,23 +10,29 @@ public class VeiculosController {
     private TextField ano;
 
     @FXML
-    private TextField capacidade;
-
-    @FXML
     private Button clean;
 
     @FXML
     private Button enviarCadastro;
 
     @FXML
+    private Button goBack;
+
+    @FXML
     private TextField marca;
 
     @FXML
-    private TextField peso;
+    private TextField modelo;
+
+    @FXML
+    private TextField tipo;
 
     @FXML
     void cleanField(ActionEvent event) {
-
+        ano.clear();
+        marca.clear();
+        modelo.clear();
+        tipo.clear();
     }
 
     @FXML

@@ -5,6 +5,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 
 public class menuUtil {
+
     @FXML
     private Button cadLugares;
 
@@ -13,6 +14,12 @@ public class menuUtil {
 
     @FXML
     private Button cadVeiculos;
+
+    @FXML
+    private Button cadViagens;
+
+    @FXML
+    private Button tiquet;
 
     @FXML
     void cadLugares(ActionEvent event) {
@@ -28,4 +35,15 @@ public class menuUtil {
     void cadVeiculos(ActionEvent event) {
 
     }
+
+    @FXML
+    void cadViagens(ActionEvent event) {
+
+    }
+
+    @FXML
+    void openTicket(ActionEvent event) {
+
+    }
+
 }

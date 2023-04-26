@@ -15,9 +15,6 @@ public class menuUtil {
     private Button cadVeiculos;
 
     @FXML
-    private ImageView imgSecretaria;
-
-    @FXML
     void cadLugares(ActionEvent event) {
 
     }

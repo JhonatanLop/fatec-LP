@@ -22,32 +22,32 @@
                   <Image url="@../../../../../../Docs/images/avião.png" />
                </image>
             </ImageView>
-            <Button fx:id="cadPessoas" layoutX="285.0" layoutY="98.0" mnemonicParsing="false" onAction="#cadPessoas" prefHeight="44.0" prefWidth="137.0" style="-fx-background-color: #2E2E2E; -fx-border-color: #088a85; -fx-border-radius: 4;" text="Cadastrar" textFill="#05c6bc">
+            <Button fx:id="cadPessoas" alignment="CENTER" layoutX="285.0" layoutY="91.0" mnemonicParsing="false" onAction="#cadPessoas" prefHeight="44.0" prefWidth="137.0" style="-fx-background-color: #2E2E2E; -fx-border-color: #088a85; -fx-border-radius: 4; -fx-text-alignment: centre;" text="Entrar" textAlignment="CENTER" textFill="#05c6bc">
                <font>
                   <Font size="16.0" />
                </font>
             </Button>
-            <Label layoutX="53.0" layoutY="105.0" prefHeight="30.0" prefWidth="195.0" style="-fx-font-size: 20;" text="Cadastro de Viajante" textFill="#05c6bc">
+            <Label layoutX="53.0" layoutY="98.0" prefHeight="30.0" prefWidth="195.0" style="-fx-font-size: 20;" text="Cadastro de Pessoas" textFill="#05c6bc">
                <font>
                   <Font size="20.0" />
                </font>
             </Label>
-            <Label layoutX="53.0" layoutY="177.0" prefHeight="30.0" prefWidth="195.0" style="-fx-font-size: 20;" text="Cadastro de Veículos" textFill="#05c6bc">
+            <Label layoutX="53.0" layoutY="170.0" prefHeight="30.0" prefWidth="195.0" style="-fx-font-size: 20;" text="Cadastro de Veículos" textFill="#05c6bc">
                <font>
                   <Font size="20.0" />
                </font>
             </Label>
-            <Button fx:id="cadVeiculos" layoutX="285.0" layoutY="170.0" mnemonicParsing="false" onAction="#cadVeiculos" prefHeight="44.0" prefWidth="137.0" style="-fx-background-color: #2E2E2E; -fx-border-color: #088a85; -fx-border-radius: 4;" text="Cadastrar" textFill="#05c6bc">
+            <Button fx:id="cadVeiculos" alignment="CENTER" contentDisplay="CENTER" layoutX="285.0" layoutY="163.0" mnemonicParsing="false" onAction="#cadVeiculos" prefHeight="44.0" prefWidth="137.0" style="-fx-background-color: #2E2E2E; -fx-border-color: #088a85; -fx-border-radius: 4;" text="Entrar" textFill="#05c6bc">
                <font>
                   <Font size="16.0" />
                </font>
             </Button>
-            <Label layoutX="53.0" layoutY="252.0" prefHeight="30.0" prefWidth="195.0" style="-fx-font-size: 20;" text="Cadastro de Lugares" textFill="#05c6bc">
+            <Label layoutX="53.0" layoutY="245.0" prefHeight="30.0" prefWidth="195.0" style="-fx-font-size: 20;" text="Cadastro de Lugares" textFill="#05c6bc">
                <font>
                   <Font size="20.0" />
                </font>
             </Label>
-            <Button fx:id="cadLugares" layoutX="285.0" layoutY="245.0" mnemonicParsing="false" onAction="#cadLugares" prefHeight="44.0" prefWidth="137.0" style="-fx-background-color: #2E2E2E; -fx-border-color: #088a85; -fx-border-radius: 4;" text="Cadastrar" textFill="#05c6bc">
+            <Button fx:id="cadLugares" alignment="CENTER" contentDisplay="CENTER" layoutX="285.0" layoutY="238.0" mnemonicParsing="false" onAction="#cadLugares" prefHeight="44.0" prefWidth="137.0" style="-fx-background-color: #2E2E2E; -fx-border-color: #088a85; -fx-border-radius: 4;" text="Entrar" textFill="#05c6bc">
                <font>
                   <Font size="16.0" />
                </font>
@@ -60,6 +60,16 @@
             <Label layoutX="190.0" layoutY="377.0" prefHeight="30.0" prefWidth="239.0" style="-fx-font-size: 11;" text="Jhonatan Oliveria Lopes ⓒ Copyright Inc. 2023" textFill="#05c6bc">
                <font>
                   <Font size="9.0" />
+               </font>
+            </Label>
+            <Button fx:id="cadPessoas1" alignment="CENTER" layoutX="285.0" layoutY="309.0" mnemonicParsing="false" onAction="#cadPessoas" prefHeight="44.0" prefWidth="137.0" style="-fx-background-color: #2E2E2E; -fx-border-color: #088a85; -fx-border-radius: 4; -fx-text-alignment: centre;" text="Entrar" textAlignment="CENTER" textFill="#05c6bc">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+            <Label layoutX="53.0" layoutY="316.0" prefHeight="30.0" prefWidth="195.0" style="-fx-font-size: 20;" text="Cadastro de Viagens" textFill="#05c6bc">
+               <font>
+                  <Font size="20.0" />
                </font>
             </Label>
          </children>

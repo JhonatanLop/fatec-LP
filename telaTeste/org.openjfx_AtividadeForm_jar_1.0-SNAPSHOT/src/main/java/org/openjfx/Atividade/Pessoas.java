@@ -1,7 +1,6 @@
 package org.openjfx.atividade;
 
 import java.time.LocalDate;
-import java.util.Date;
 
 import javafx.scene.control.TextField;
 

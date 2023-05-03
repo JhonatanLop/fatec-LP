@@ -7,6 +7,7 @@ import javafx.scene.control.DatePicker;
 import javafx.scene.control.TextField;
 
 public class ViagemController {
+
     @FXML
     private Button cadViagem;
 
@@ -18,6 +19,9 @@ public class ViagemController {
 
     @FXML
     private TextField documentoViajante;
+
+    @FXML
+    private Button limpar;
 
     @FXML
     private TextField localChegada;
@@ -32,7 +36,26 @@ public class ViagemController {
     private TextField transporte;
 
     @FXML
+    private Button voltar;
+
+    @FXML
     void cadViagem(ActionEvent event) {
 
+    }
+
+    @FXML
+    void cleanFields(ActionEvent event) {
+        localPartida.clear();
+        localChegada.clear();
+        nomeViajante.clear();
+        transporte.clear();
+        dataPartida.setPromptText("dd/mm/yyyy");
+        dataChegada.setPromptText("dd/mm/yyyy");
+        documentoViajante.clear();
+    }
+
+    @FXML
+    void goBack(ActionEvent event) {
+        App.changeView("menu");
     }
 }

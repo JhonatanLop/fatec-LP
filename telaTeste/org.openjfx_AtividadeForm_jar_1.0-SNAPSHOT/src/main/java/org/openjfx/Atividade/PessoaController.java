@@ -34,7 +34,7 @@ public class PessoaController {
     @FXML
     void cleanField(ActionEvent event) {
         email.clear();
-        nascimento.setPromptText("dd/mm/aaaa");
+        // nascimento.set
         nome.clear();
         documentoViajante.clear();
     }

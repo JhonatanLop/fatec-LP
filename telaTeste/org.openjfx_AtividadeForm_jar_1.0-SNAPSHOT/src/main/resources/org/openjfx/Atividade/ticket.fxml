@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="635.0" prefWidth="275.0" style="-fx-background-color: #dedede;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <AnchorPane prefHeight="672.0" prefWidth="275.0" style="-fx-background-color: #2e2e2e;">
+         <children>
+            <ImageView fitHeight="635.0" fitWidth="275.0" layoutY="3.0" opacity="0.15">
+               <image>
+                  <Image url="@images/ticket.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="200.0" fitWidth="200.0" layoutX="38.0" layoutY="40.0" opacity="0.2">
+               <image>
+                  <Image url="@images/avião.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="42.0" layoutY="14.0" style="-fx-text-fill: #088a85;" text="Ticket de Passagem" textAlignment="CENTER">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Label>
+            <Text fx:id="nomePessoaT" fill="#088a85" layoutX="37.0" layoutY="127.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-text-fill: #088a85;" text="nome: ">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Text>
+            <Text fx:id="emailPessoaT" fill="#088a85" layoutX="37.0" layoutY="155.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-text-fill: #088a85;" text="email:">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Text>
+            <Text fx:id="documentoPessoaT" fill="#088a85" layoutX="36.0" layoutY="185.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-text-fill: #088a85;" text="documento:">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Text>
+            <Text fx:id="idadePessoaT" fill="#088a85" layoutX="36.0" layoutY="217.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-text-fill: #088a85;" text="idade:">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Text>
+            <Line endX="174.19998168945312" endY="-3.814697265625E-6" layoutX="101.0" layoutY="59.0" startX="-100.0" style="-fx-text-fill: #088a85;" />
+            <Label layoutX="36.0" layoutY="67.0" style="-fx-text-fill: #088a85;" text="Dados do passageiro" textAlignment="CENTER">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Label>
+            <Text fx:id="nomeViajanteT" fill="#088a85" layoutX="36.0" layoutY="308.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-text-fill: #088a85;" text="Viajante:">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Text>
+            <Text fx:id="localChegadaT" fill="#088a85" layoutX="37.0" layoutY="382.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-text-fill: #088a85;" text="Local Chegada:">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Text>
+            <Text fx:id="localPartidaT" fill="#088a85" layoutX="35.0" layoutY="336.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-text-fill: #088a85;" text="Local Partida:">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Text>
+            <Text fx:id="tadaPartidaT" fill="#088a85" layoutX="35.0" layoutY="433.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-text-fill: #088a85;" text="Data Partida:">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Text>
+            <Line endX="174.19998168945312" endY="-3.814697265625E-6" layoutX="100.0" layoutY="239.0" startX="-100.0" style="-fx-text-fill: #088a85;" />
+            <Label layoutX="35.0" layoutY="247.0" style="-fx-text-fill: #088a85;" text="Dados da Viagem" textAlignment="CENTER">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Label>
+            <Text fx:id="dataChegadaT" fill="#088a85" layoutX="34.0" layoutY="463.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-text-fill: #088a85;" text="Data Chegada:">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Text>
+            <Text fx:id="marcaT" fill="#088a85" layoutX="35.0" layoutY="536.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-text-fill: #088a85;" text="Marca:">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Text>
+            <Text fx:id="tipoT" fill="#088a85" layoutX="34.0" layoutY="618.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-text-fill: #088a85;" text="Tipo:">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Text>
+            <Text fx:id="anoT" fill="#088a85" layoutX="34.0" layoutY="564.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-text-fill: #088a85;" text="Ano:">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Text>
+            <Line endX="174.19998168945312" endY="-3.814697265625E-6" layoutX="99.0" layoutY="472.0" startX="-100.0" style="-fx-text-fill: #088a85;" />
+            <Label layoutX="34.0" layoutY="480.0" style="-fx-text-fill: #088a85;" text="Dados do Transporte" textAlignment="CENTER">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Label>
+            <Text fx:id="modeloT" fill="#088a85" layoutX="34.0" layoutY="590.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-text-fill: #088a85;" text="Modelo:">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+   </children>
+</VBox>

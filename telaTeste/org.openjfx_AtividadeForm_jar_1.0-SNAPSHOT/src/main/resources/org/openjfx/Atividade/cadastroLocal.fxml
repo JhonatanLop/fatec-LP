@@ -101,11 +101,11 @@
                   </TextField>
                </children>
             </Pane>
-            <Button fx:id="clean" layoutX="422.0" layoutY="413.0" mnemonicParsing="false" onAction="#cleanField" prefHeight="38.0" prefWidth="139.0" style="-fx-background-color: #2E2E2E; -fx-border-color: #088a85; -fx-border-radius: 4; -fx-background-radius: 4;" text="Limpar" textFill="#088a85">
+            <Button fx:id="clean" layoutX="419.0" layoutY="402.0" mnemonicParsing="false" onAction="#cleanField" prefHeight="38.0" prefWidth="139.0" style="-fx-background-color: #2E2E2E; -fx-border-color: #088a85; -fx-border-radius: 4; -fx-background-radius: 4;" text="Limpar" textFill="#088a85">
                <font>
                   <Font size="16.0" />
                </font></Button>
-            <Button fx:id="enviarCadastro" layoutX="582.0" layoutY="413.0" mnemonicParsing="false" onAction="#sendCad" prefHeight="38.0" prefWidth="146.0" style="-fx-background-color: #2E2E2E; -fx-border-color: #088a85; -fx-border-radius: 4; -fx-background-radius: 4;" text="Enviar Cadastro" textFill="#088a85">
+            <Button fx:id="enviarCadastro" layoutX="582.0" layoutY="402.0" mnemonicParsing="false" onAction="#sendCad" prefHeight="38.0" prefWidth="146.0" style="-fx-background-color: #2E2E2E; -fx-border-color: #088a85; -fx-border-radius: 4; -fx-background-radius: 4;" text="Enviar Cadastro" textFill="#088a85">
                <font>
                   <Font size="16.0" />
                </font></Button>
@@ -118,10 +118,19 @@
                   </Label>
                </children>
             </Pane>
-            <Button fx:id="goBack" layoutX="42.0" layoutY="413.0" mnemonicParsing="false" onAction="#goBack" prefHeight="30.0" prefWidth="124.0" style="-fx-background-color: #2E2E2E; -fx-border-color: #088a85; -fx-border-radius: 4;" text="Voltar" textFill="#088a85">
+            <Button fx:id="goBack" layoutX="42.0" layoutY="403.0" mnemonicParsing="false" onAction="#goBack" prefHeight="30.0" prefWidth="124.0" style="-fx-background-color: #2E2E2E; -fx-border-color: #088a85; -fx-border-radius: 4;" text="Voltar" textFill="#088a85">
                <font>
                   <Font size="16.0" />
                </font></Button>
+            <Pane layoutX="265.0" layoutY="450.0" prefHeight="37.0" prefWidth="252.0" style="-fx-background-color: #1515159b; -fx-border-radius: 4; -fx-background-radius: 4;">
+               <children>
+                  <Label layoutX="12.0" layoutY="5.0" prefHeight="30.0" prefWidth="239.0" style="-fx-font-size: 11;" text="Jhonatan Oliveria Lopes ⓒ Copyright Inc. 2023" textFill="#05c6bc">
+                     <font>
+                        <Font size="9.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
          </children>
       </AnchorPane>
   </children>

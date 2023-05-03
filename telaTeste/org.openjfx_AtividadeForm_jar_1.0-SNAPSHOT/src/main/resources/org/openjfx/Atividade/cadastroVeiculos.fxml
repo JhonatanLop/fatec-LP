@@ -43,7 +43,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.openjfx.atividade.VeiculosController">
    <children>
       <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="495.0" prefWidth="819.0" style="-fx-background-color: #1C1C1C; -fx-border-radius: 50;">
          <children>

@@ -44,7 +44,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.openjfx.atividade.PessoaController">
   <children>
     <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="465.0" prefWidth="744.0" style="-fx-background-color: #1C1C1C; -fx-border-radius: 50;" VBox.vgrow="ALWAYS">
       <children>
@@ -70,7 +70,7 @@
                         <Font name="Calibri" size="18.0" />
                      </font>
                   </Label>
-                  <DatePicker fx:id="nascimento" layoutX="206.0" layoutY="67.0" prefHeight="36.0" prefWidth="193.0" style="-fx-background: none; -fx-background-color: #2E2E2E; -fx-border-radius: 4; -fx-border-color: #088a85; -fx-text-fill: #088a85;" />
+                  <DatePicker id="date-picker" fx:id="dateViajante" layoutX="206.0" layoutY="67.0" prefHeight="36.0" prefWidth="193.0" style="-fx-background: none; -fx-background-color: #BDBDBD; -fx-border-radius: 4; -fx-border-color: #088a85; -fx-highlight-fill: #088a85; -fx-prompt-text-fill: #088a85; -fx-text-fill: #088a85;" stylesheets="@styles/style.css" />
                   <Label layoutX="14.0" layoutY="124.0" prefHeight="30.0" prefWidth="115.0" text="Documento:" textFill="#088a85">
                      <font>
                         <Font name="Calibri" size="18.0" />

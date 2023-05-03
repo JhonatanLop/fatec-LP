@@ -3,6 +3,7 @@ package org.openjfx.atividade;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.stage.Popup;
 
 public class MenuController {
 
@@ -43,7 +44,8 @@ public class MenuController {
 
     @FXML
     void openTicket(ActionEvent event) {
-
+        Popup popup = (Popup) ticket.getScene().getWindow();
+        popup.hide();
     }
 
 }

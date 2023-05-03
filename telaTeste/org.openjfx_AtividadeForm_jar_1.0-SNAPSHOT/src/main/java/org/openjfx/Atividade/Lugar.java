@@ -1,7 +1,5 @@
 package org.openjfx.atividade;
 
-import javafx.scene.control.TextField;
-
 public class Lugar {
     String nome;
     String pais;

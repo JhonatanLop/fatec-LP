@@ -1,4 +1,4 @@
-package org.openjfx.Atividade;
+package org.openjfx.atividade;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;

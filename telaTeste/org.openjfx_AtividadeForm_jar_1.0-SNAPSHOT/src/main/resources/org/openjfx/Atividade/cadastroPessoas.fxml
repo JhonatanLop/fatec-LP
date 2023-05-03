@@ -50,7 +50,7 @@
       <children>
             <ImageView fitHeight="453.0" fitWidth="453.0" layoutX="105.0" layoutY="101.0" opacity="0.21" style="-fx-effect: slide;">
                <image>
-                  <Image url="@../../../../../../Docs/images/avião.png" />
+                  <Image url="@images/avião.png" />
                </image>
             </ImageView>
             <Pane layoutX="42.0" layoutY="79.0" prefHeight="259.0" prefWidth="430.0" style="-fx-background-color: #1515153B; -fx-border-radius: 4; -fx-background-radius: 4;">
@@ -60,7 +60,7 @@
                         <Font name="Calibri" size="18.0" />
                      </font>
                   </Label>
-                  <TextField fx:id="nome" layoutX="119.0" layoutY="19.0" prefHeight="36.0" prefWidth="280.0" style="-fx-background-color: #2E2E2E; -fx-border-style: solid; -fx-border-color: #088a85; -fx-border-radius: 4;">
+                  <TextField fx:id="nome" layoutX="119.0" layoutY="19.0" prefHeight="36.0" prefWidth="280.0" style="-fx-background-color: #2E2E2E; -fx-border-style: solid; -fx-border-color: #088a85; -fx-border-radius: 4; -fx-text-fill: #088a85;">
                      <opaqueInsets>
                         <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
                      </opaqueInsets>
@@ -70,13 +70,13 @@
                         <Font name="Calibri" size="18.0" />
                      </font>
                   </Label>
-                  <DatePicker fx:id="nascimento" layoutX="206.0" layoutY="67.0" prefHeight="36.0" prefWidth="193.0" style="-fx-background: none; -fx-background-color: #2E2E2E; -fx-border-radius: 4; -fx-border-color: #088a85;" />
+                  <DatePicker fx:id="nascimento" layoutX="206.0" layoutY="67.0" prefHeight="36.0" prefWidth="193.0" style="-fx-background: none; -fx-background-color: #2E2E2E; -fx-border-radius: 4; -fx-border-color: #088a85; -fx-text-fill: #088a85;" />
                   <Label layoutX="14.0" layoutY="124.0" prefHeight="30.0" prefWidth="115.0" text="Documento:" textFill="#088a85">
                      <font>
                         <Font name="Calibri" size="18.0" />
                      </font>
                   </Label>
-                  <TextField fx:id="documentoViajante" layoutX="175.0" layoutY="121.0" prefHeight="36.0" prefWidth="224.0" style="-fx-background-color: #2E2E2E; -fx-border-style: solid; -fx-border-color: #088a85; -fx-border-radius: 4;">
+                  <TextField fx:id="documentoViajante" layoutX="175.0" layoutY="121.0" prefHeight="36.0" prefWidth="224.0" style="-fx-background-color: #2E2E2E; -fx-border-style: solid; -fx-border-color: #088a85; -fx-border-radius: 4; -fx-text-fill: #088a85;">
                      <opaqueInsets>
                         <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
                      </opaqueInsets>
@@ -86,7 +86,7 @@
                         <Font name="Calibri" size="18.0" />
                      </font>
                   </Label>
-                  <TextField fx:id="email" layoutX="149.0" layoutY="174.0" prefHeight="36.0" prefWidth="250.0" style="-fx-background-color: #2E2E2E; -fx-border-style: solid; -fx-border-color: #088a85; -fx-border-radius: 4;">
+                  <TextField fx:id="email" layoutX="119.0" layoutY="174.0" prefHeight="36.0" prefWidth="280.0" style="-fx-background-color: #2E2E2E; -fx-border-style: solid; -fx-border-color: #088a85; -fx-border-radius: 4; -fx-font-color: #088a85; -fx-text-fill: #088a85;">
                      <opaqueInsets>
                         <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
                      </opaqueInsets>
@@ -95,7 +95,7 @@
             </Pane>
             <ImageView fitHeight="564.0" fitWidth="364.0" layoutX="442.0" opacity="0.73">
                <image>
-                  <Image url="@../../../../../../Docs/images/persona-anime2.png" />
+                  <Image url="@images/persona-anime2.png" />
                </image>
             </ImageView>
             <Button fx:id="enviarCadastro" layoutX="624.0" layoutY="490.0" mnemonicParsing="false" onAction="#sendCad" prefHeight="36.0" prefWidth="147.0" style="-fx-background-color: #2E2E2E; -fx-border-color: #088a85; -fx-border-radius: 4;" text="Enviar Cadastro" textFill="#088a85">

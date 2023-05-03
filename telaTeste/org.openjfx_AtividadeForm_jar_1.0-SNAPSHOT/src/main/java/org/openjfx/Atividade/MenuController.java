@@ -1,10 +1,10 @@
-package org.openjfx.Atividade;
+package org.openjfx.atividade;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 
-public class menuUtil {
+public class MenuController {
 
     @FXML
     private Button cadLugares;
@@ -19,26 +19,26 @@ public class menuUtil {
     private Button cadViagens;
 
     @FXML
-    private Button tiquet;
+    private Button ticket;
 
     @FXML
     void cadLugares(ActionEvent event) {
-
+        App.changeView("cadastroLocal");
     }
-
+    
     @FXML
     void cadPessoas(ActionEvent event) {
-
+        App.changeView("cadastroPessoas");
     }
-
+    
     @FXML
     void cadVeiculos(ActionEvent event) {
-
+        App.changeView("cadastroVeiculos");
     }
 
     @FXML
     void cadViagens(ActionEvent event) {
-
+        App.changeView("cadastroViagens");
     }
 
     @FXML

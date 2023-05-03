@@ -1,4 +1,4 @@
-package org.openjfx.Atividade;
+package org.openjfx.atividade;
 
 public class Viagem {
     private String documentoViajante;
@@ -38,9 +38,5 @@ public class Viagem {
 
     public void getTransporte(String transporte) {
         this.transporte = transporte;
-    }
-
-    public void setDocumentoViajante(String documentoViajante) { 
-        
     }
 }

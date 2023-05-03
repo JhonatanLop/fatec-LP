@@ -1,8 +1,8 @@
-module org.openjfx.API2Semestre {
+module org.openjfx.atividade {
     requires transitive javafx.controls;
     requires transitive javafx.fxml;
     requires transitive java.sql;
 
-    opens org.openjfx.Atividade to javafx.fxml;
-    exports org.openjfx.Atividade;
+    opens org.openjfx.atividade to javafx.fxml;
+    exports org.openjfx.atividade;
 }

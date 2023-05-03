@@ -1,4 +1,4 @@
-package org.openjfx.Atividade;
+package org.openjfx.atividade;
 
 import java.sql.Date;
 

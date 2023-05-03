@@ -1,4 +1,4 @@
-package org.openjfx.Atividade;
+package org.openjfx.atividade;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -37,12 +37,16 @@ public class VeiculosController {
 
     @FXML
     void goBack(ActionEvent event) {
-
+        App.changeView("menu");
     }
 
     @FXML
     void sendCad(ActionEvent event) {
-
+        String marcaVeiculo = marca.toString();
+        String modeloVeiculo = modelo.toString();
+        String anoVeiculo = ano.toString();
+        String tipoVeiculo = tipo.toString();
+        
+        Veiculo veiculo = new Veiculo(marcaVeiculo,modeloVeiculo,anoVeiculo,tipoVeiculo);
     }
-
 }

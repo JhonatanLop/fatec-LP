@@ -21,10 +21,10 @@
             </Label>
             <ImageView fitHeight="400.0" fitWidth="400.0" layoutX="109.0" layoutY="6.0" opacity="0.15">
                <image>
-                  <Image url="@../../../../../../Docs/images/avião.png" />
+                  <Image url="@images/avião.png" />
                </image>
             </ImageView>
-            <Button fx:id="cadViagem" alignment="CENTER" layoutX="478.0" layoutY="338.0" mnemonicParsing="false" onAction="#cadViagem" prefHeight="22.0" prefWidth="127.0" style="-fx-background-color: #2E2E2E; -fx-border-color: #088a85; -fx-border-radius: 4; -fx-text-alignment: centre;" text="Enviar" textAlignment="CENTER" textFill="#05c6bc">
+            <Button fx:id="cadViagem" alignment="CENTER" layoutX="478.0" layoutY="338.0" mnemonicParsing="false" onAction="#cadViagem" prefHeight="22.0" prefWidth="127.0" style="-fx-background-color: #2E2E2E; -fx-border-color: #088a85; -fx-border-radius: 4; -fx-text-alignment: center;" text="Enviar" textAlignment="CENTER" textFill="#05c6bc">
                <font>
                   <Font size="16.0" />
                </font>

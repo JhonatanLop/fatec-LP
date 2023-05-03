@@ -43,18 +43,18 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.openjfx.atividade.LugarController">
   <children>
       <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="402.0" prefWidth="640.0" style="-fx-background-color: #1C1C1C; -fx-border-radius: 50;">
          <children>
             <ImageView fitHeight="350.0" fitWidth="350.0" opacity="0.08" style="-fx-effect: slide;">
                <image>
-                  <Image url="@../../../../../../Docs/images/avião.png" />
+                  <Image url="@images/avião.png" />
                </image>
             </ImageView>
             <ImageView fitHeight="488.0" fitWidth="782.0" opacity="0.74">
                <image>
-                  <Image url="@../../../../../../Docs/images/photographer-anime-girl-beach-wallpaper-preview.jpg" />
+                  <Image url="@images/photographer-anime-girl-beach-wallpaper-preview.jpg" />
                </image>
             </ImageView>
             <Pane layoutX="42.0" layoutY="79.0" prefHeight="278.0" prefWidth="446.0" style="-fx-background-color: #1515159b; -fx-border-radius: 4; -fx-background-radius: 4;">
@@ -64,7 +64,7 @@
                         <Font name="Calibri" size="18.0" />
                      </font>
                   </Label>
-                  <TextField fx:id="nomeLugar" layoutX="107.0" layoutY="18.0" prefHeight="38.0" prefWidth="306.0" style="-fx-background-color: #2E2E2E; -fx-border-style: solid; -fx-border-color: #088a85; -fx-border-radius: 4;">
+                  <TextField fx:id="nomeLugar" layoutX="107.0" layoutY="18.0" prefHeight="38.0" prefWidth="306.0" style="-fx-background-color: #2E2E2E; -fx-border-style: solid; -fx-border-color: #088a85; -fx-border-radius: 4; -fx-text-fill: #088a85;">
                      <opaqueInsets>
                         <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
                      </opaqueInsets>
@@ -74,7 +74,7 @@
                         <Font name="Calibri" size="18.0" />
                      </font>
                   </Label>
-                  <TextField fx:id="pais" layoutX="107.0" layoutY="85.0" prefHeight="38.0" prefWidth="306.0" style="-fx-background-color: #2E2E2E; -fx-border-style: solid; -fx-border-color: #088a85; -fx-border-radius: 4;">
+                  <TextField fx:id="pais" layoutX="107.0" layoutY="85.0" prefHeight="38.0" prefWidth="306.0" style="-fx-background-color: #2E2E2E; -fx-border-style: solid; -fx-border-color: #088a85; -fx-border-radius: 4; -fx-text-fill: #088a85;">
                      <opaqueInsets>
                         <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
                      </opaqueInsets>
@@ -84,7 +84,7 @@
                         <Font name="Calibri" size="18.0" />
                      </font>
                   </Label>
-                  <TextField fx:id="estado" layoutX="107.0" layoutY="149.0" prefHeight="38.0" prefWidth="306.0" style="-fx-background-color: #2E2E2E; -fx-border-style: solid; -fx-border-color: #088a85; -fx-border-radius: 4;">
+                  <TextField fx:id="estado" layoutX="107.0" layoutY="149.0" prefHeight="38.0" prefWidth="306.0" style="-fx-background-color: #2E2E2E; -fx-border-style: solid; -fx-border-color: #088a85; -fx-border-radius: 4; -fx-text-fill: #088a85;">
                      <opaqueInsets>
                         <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
                      </opaqueInsets>
@@ -94,7 +94,7 @@
                         <Font name="Calibri" size="18.0" />
                      </font>
                   </Label>
-                  <TextField fx:id="cidade" layoutX="107.0" layoutY="211.0" prefHeight="38.0" prefWidth="306.0" style="-fx-background-color: #2E2E2E; -fx-border-style: solid; -fx-border-color: #088a85; -fx-border-radius: 4;">
+                  <TextField fx:id="cidade" layoutX="107.0" layoutY="211.0" prefHeight="38.0" prefWidth="306.0" style="-fx-background-color: #2E2E2E; -fx-border-style: solid; -fx-border-color: #088a85; -fx-border-radius: 4; -fx-text-fill: #088a85;">
                      <opaqueInsets>
                         <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
                      </opaqueInsets>

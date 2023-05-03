@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.openjfx.atividade.MenuController">
+   <children>
+      <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="400.0" prefWidth="641.0" style="-fx-background-color: #1C1C1C; -fx-border-radius: 50;">
+         <children>
+            <Label layoutX="37.0" layoutY="30.0" style="-fx-font-size: 28;" text="Menu de Utilização" textFill="#05c6bc">
+               <font>
+                  <Font size="27.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="400.0" fitWidth="400.0" layoutX="156.0" layoutY="40.0" opacity="0.15">
+               <image>
+                  <Image url="@images/avião.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="cadPessoas" alignment="CENTER" layoutX="332.0" layoutY="101.0" mnemonicParsing="false" onAction="#cadPessoas" prefHeight="44.0" prefWidth="137.0" style="-fx-background-color: #2E2E2E; -fx-border-color: #088a85; -fx-border-radius: 4; -fx-text-alignment: center;" text="Entrar" textAlignment="CENTER" textFill="#05c6bc">
+               <font>
+                  <Font size="16.0" />
+               </font>
+               <effect>
+                  <Blend />
+               </effect>
+            </Button>
+            <Label layoutX="100.0" layoutY="108.0" prefHeight="30.0" prefWidth="195.0" style="-fx-font-size: 20;" text="Cadastro de Pessoas" textFill="#05c6bc">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="100.0" layoutY="180.0" prefHeight="30.0" prefWidth="195.0" style="-fx-font-size: 20;" text="Cadastro de Veículos" textFill="#05c6bc">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Button fx:id="cadVeiculos" alignment="CENTER" contentDisplay="CENTER" layoutX="332.0" layoutY="173.0" mnemonicParsing="false" onAction="#cadVeiculos" prefHeight="44.0" prefWidth="137.0" style="-fx-background-color: #2E2E2E; -fx-border-color: #088a85; -fx-border-radius: 4;" text="Entrar" textFill="#05c6bc">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+            <Label layoutX="100.0" layoutY="255.0" prefHeight="30.0" prefWidth="195.0" style="-fx-font-size: 20;" text="Cadastro de Lugares" textFill="#05c6bc">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Button fx:id="cadLugares" alignment="CENTER" contentDisplay="CENTER" layoutX="332.0" layoutY="248.0" mnemonicParsing="false" onAction="#cadLugares" prefHeight="44.0" prefWidth="137.0" style="-fx-background-color: #2E2E2E; -fx-border-color: #088a85; -fx-border-radius: 4;" text="Entrar" textFill="#05c6bc">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+            <ImageView fitHeight="497.0" fitWidth="349.0" layoutX="437.0" opacity="0.4">
+               <image>
+                  <Image url="@images/secretaria.png" />
+               </image>
+               <effect>
+                  <Blend />
+               </effect>
+            </ImageView>
+            <Label layoutX="242.0" layoutY="453.0" prefHeight="30.0" prefWidth="239.0" style="-fx-font-size: 11;" text="Jhonatan Oliveria Lopes ⓒ Copyright Inc. 2023" textFill="#05c6bc">
+               <font>
+                  <Font size="9.0" />
+               </font>
+            </Label>
+            <Button fx:id="cadViagens" alignment="CENTER" layoutX="332.0" layoutY="319.0" mnemonicParsing="false" onAction="#cadViagens" prefHeight="44.0" prefWidth="137.0" style="-fx-background-color: #2E2E2E; -fx-border-color: #088a85; -fx-border-radius: 4; -fx-text-alignment: center;" text="Entrar" textAlignment="CENTER" textFill="#05c6bc">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+            <Label layoutX="100.0" layoutY="326.0" prefHeight="30.0" prefWidth="195.0" style="-fx-font-size: 20;" text="Cadastro de Viagens" textFill="#05c6bc">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Button fx:id="tiquet" alignment="CENTER" layoutX="197.0" layoutY="400.0" mnemonicParsing="false" onAction="#openTicket" prefHeight="30.0" prefWidth="195.0" style="-fx-background-color: #2E2E2E; -fx-border-color: #088a85; -fx-border-radius: 4; -fx-text-alignment: center;" text="Tiquet" textAlignment="CENTER" textFill="#05c6bc">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+   </children>
+</VBox>

@@ -1,4 +1,4 @@
-package org.openjfx.Atividade;
+package org.openjfx.atividade;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -27,17 +27,24 @@ public class LugarController {
 
     @FXML
     void cleanField(ActionEvent event) {
-
+        cidade.clear();
+        estado.clear();
+        nomeLugar.clear();
+        pais.clear();
     }
 
     @FXML
     void goBack(ActionEvent event) {
-
+        App.changeView("menu");
     }
 
     @FXML
     void sendCad(ActionEvent event) {
-
+        String lugarnome = nomeLugar.toString();
+        String lugarpais = pais.toString();
+        String lugarestado = estado.toString();
+        String lugarcidade = cidade.toString();
+        Lugar lugar = new Lugar(lugarnome,lugarpais,lugarestado,lugarcidade);
     }
 
 }

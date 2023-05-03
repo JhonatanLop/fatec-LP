@@ -49,12 +49,12 @@
          <children>
             <ImageView fitHeight="495.0" fitWidth="825.0" layoutX="-67.0">
                <image>
-                  <Image url="@../../../../../../Docs/images/car-anime-girls-art.jpg" />
+                  <Image url="@images/car-anime-girls-art.jpg" />
                </image>
             </ImageView>
             <ImageView fitHeight="302.0" fitWidth="302.0" layoutX="338.0" opacity="0.16">
                <image>
-                  <Image url="@../../../../../../Docs/images/avião.png" />
+                  <Image url="@images/avião.png" />
                </image>
             </ImageView>
             <Pane layoutX="51.0" layoutY="64.0" prefHeight="302.0" prefWidth="460.0" style="-fx-background-color: #1c1c1c8B; -fx-background-radius: 4;">
@@ -74,7 +74,7 @@
                         <Font name="Calibri" size="18.0" />
                      </font>
                   </Label>
-                  <TextField fx:id="marca" layoutX="141.0" layoutY="25.0" prefHeight="38.0" prefWidth="250.0" style="-fx-background-color: #2E2E2E; -fx-border-style: solid; -fx-border-color: #088a85; -fx-border-radius: 4;">
+                  <TextField fx:id="marca" layoutX="141.0" layoutY="25.0" prefHeight="38.0" prefWidth="250.0" style="-fx-background-color: #2E2E2E; -fx-border-style: solid; -fx-border-color: #088a85; -fx-border-radius: 4; -fx-text-fill: #088a85;">
                      <opaqueInsets>
                         <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
                      </opaqueInsets>
@@ -84,17 +84,17 @@
                         <Font name="Calibri" size="18.0" />
                      </font>
                   </Label>
-                  <TextField fx:id="modelo" layoutX="141.0" layoutY="91.0" prefHeight="38.0" prefWidth="250.0" style="-fx-background-color: #2E2E2E; -fx-border-style: solid; -fx-border-color: #088a85; -fx-border-radius: 4;">
+                  <TextField fx:id="modelo" layoutX="141.0" layoutY="91.0" prefHeight="38.0" prefWidth="250.0" style="-fx-background-color: #2E2E2E; -fx-border-style: solid; -fx-border-color: #088a85; -fx-border-radius: 4; -fx-text-fill: #088a85;">
                      <opaqueInsets>
                         <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
                      </opaqueInsets>
                   </TextField>
-                  <TextField fx:id="ano" layoutX="141.0" layoutY="160.0" prefHeight="38.0" prefWidth="250.0" style="-fx-background-color: #2E2E2E; -fx-border-style: solid; -fx-border-color: #088a85; -fx-border-radius: 4;">
+                  <TextField fx:id="ano" layoutX="141.0" layoutY="160.0" prefHeight="38.0" prefWidth="250.0" style="-fx-background-color: #2E2E2E; -fx-border-style: solid; -fx-border-color: #088a85; -fx-border-radius: 4; -fx-text-fill: #088a85;">
                      <opaqueInsets>
                         <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
                      </opaqueInsets>
                   </TextField>
-                  <TextField fx:id="tipo" layoutX="141.0" layoutY="224.0" prefHeight="38.0" prefWidth="250.0" style="-fx-background-color: #2E2E2E; -fx-border-style: solid; -fx-border-color: #088a85; -fx-border-radius: 4;">
+                  <TextField fx:id="tipo" layoutX="141.0" layoutY="224.0" prefHeight="38.0" prefWidth="250.0" style="-fx-background-color: #2E2E2E; -fx-border-style: solid; -fx-border-color: #088a85; -fx-border-radius: 4; -fx-text-fill: #088a85;">
                      <opaqueInsets>
                         <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
                      </opaqueInsets>

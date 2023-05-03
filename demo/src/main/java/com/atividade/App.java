@@ -1,4 +1,4 @@
-package org.openjfx.atividade;
+package com.atividade;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -14,12 +14,10 @@ import java.io.IOException;
 public class App extends Application {
 
     private static Scene scene;
-    private static Stage stage;
 
     @Override
     public void start(Stage stage) throws IOException {
-        scene = new Scene(loadFXML("menu"), 826, 400);
-        App.stage = stage;
+        scene = new Scene(loadFXML("primary"), 640, 480);
         stage.setScene(scene);
         stage.show();
     }
@@ -37,12 +35,4 @@ public class App extends Application {
         launch();
     }
 
-    public static void changeView(String nomeTela) {
-        try {
-            stage.setScene(new Scene(loadFXML(nomeTela)));
-        } catch (IOException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
-        }
-    }
 }

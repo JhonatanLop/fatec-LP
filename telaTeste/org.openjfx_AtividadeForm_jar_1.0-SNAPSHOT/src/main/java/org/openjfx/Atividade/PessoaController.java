@@ -1,4 +1,7 @@
-package org.openjfx.Atividade;
+package org.openjfx.atividade;
+
+import java.time.LocalDate;
+import java.util.Date;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -30,16 +33,24 @@ public class PessoaController {
 
     @FXML
     void cleanField(ActionEvent event) {
-
+        email.clear();
+        nascimento.setPromptText("dd/mm/aaaa");
+        nome.clear();
+        documentoViajante.clear();
     }
 
     @FXML
     void goBack(ActionEvent event) {
-
+        App.changeView("menu");
     }
 
     @FXML
     void sendCad(ActionEvent event) {
+        String nomePessoa = nome.getText();
+        String emailPessoa = email.getText();
+        String documentoPessoa = documentoViajante.getText();
+        LocalDate nascimentoPessoa = nascimento.getValue();
 
+        Pessoas pessoa = new Pessoas(nome, nascimentoPessoa, documentoPessoa, email);
     }
 }

@@ -1,7 +1,7 @@
 package org.openjfx.atividade;
 
 import java.time.LocalDate;
-import java.util.Date;
+import java.time.format.DateTimeFormatter;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -10,6 +10,7 @@ import javafx.scene.control.DatePicker;
 import javafx.scene.control.TextField;
 
 public class PessoaController {
+   
     @FXML
     private Button clean;
 
@@ -50,7 +51,12 @@ public class PessoaController {
         String emailPessoa = email.getText();
         String documentoPessoa = documentoViajante.getText();
         LocalDate nascimentoPessoa = nascimento.getValue();
+        System.out.println(nascimentoPessoa.toString());
 
-        Pessoas pessoa = new Pessoas(nome, nascimentoPessoa, documentoPessoa, email);
+        DateTimeFormatter formatador = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+        String formatdata = nascimentoPessoa.format(formatador);
+
+        Pessoa pessoa = new Pessoa(nomePessoa,formatdata,documentoPessoa,emailPessoa);
+        Ticket.setPessoa(pessoa);
     }
 }

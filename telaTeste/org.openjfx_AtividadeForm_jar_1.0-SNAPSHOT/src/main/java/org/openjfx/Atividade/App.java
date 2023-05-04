@@ -4,8 +4,6 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.layout.AnchorPane;
-import javafx.stage.Popup;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -49,13 +47,14 @@ public class App extends Application {
     }
 
     public static void showPopup(String nomeTelaPopup) {
-        try {
-            AnchorPane content = FXMLLoader.load(App.class.getResource(nomeTelaPopup + ".fxml"));
-            Popup popup = new Popup();
-            popup.getContent().add(content);
-            popup.show(stage);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        // try {
+        //     AnchorPane content = FXMLLoader.load(App.class.getResource(nomeTelaPopup + ".fxml"));
+        //     Popup popup = new Popup();
+        //     popup.getContent().add(content);
+        //     popup.show(stage);
+        // } catch (IOException e) {
+        //     e.printStackTrace();
+        // }
+        
     }
 }

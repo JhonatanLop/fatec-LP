@@ -1,9 +1,15 @@
 package org.openjfx.atividade;
 
+import java.io.IOException;
+
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.stage.Popup;
+import javafx.stage.Stage;
 
 public class MenuController {
 
@@ -43,9 +49,17 @@ public class MenuController {
     }
 
     @FXML
-    void openTicket(ActionEvent event) {
-        Popup popup = (Popup) ticket.getScene().getWindow();
-        popup.hide();
-    }
+    void openTicket(ActionEvent event) throws IOException {
+        // Popup popup = (Popup) ticket.getScene().getWindow();
+        // popup.hide();
+        // App.showPopup("ticket");
 
+        Parent root = FXMLLoader.load(getClass().getResource("ticket.fxml"));
+        Scene scene = new Scene(root);
+
+        Stage stage = new Stage();
+        stage.setTitle("Ticket");
+        stage.setScene(scene);
+        stage.show();
+    }
 }

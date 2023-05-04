@@ -10,7 +10,7 @@
 <?import javafx.scene.text.Text?>
 
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="635.0" prefWidth="275.0" style="-fx-background-color: #dedede;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="635.0" prefWidth="275.0" style="-fx-background-color: #dedede;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.openjfx.atividade.TicketController">
    <children>
       <AnchorPane prefHeight="672.0" prefWidth="275.0" style="-fx-background-color: #2e2e2e;">
          <children>
@@ -70,7 +70,7 @@
                   <Font size="16.0" />
                </font>
             </Text>
-            <Text fx:id="tadaPartidaT" fill="#088a85" layoutX="35.0" layoutY="433.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-text-fill: #088a85;" text="Data Partida:">
+            <Text fx:id="dataPartidaT" fill="#088a85" layoutX="35.0" layoutY="433.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-text-fill: #088a85;" text="Data Partida:">
                <font>
                   <Font size="16.0" />
                </font>

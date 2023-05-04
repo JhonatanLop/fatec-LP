@@ -70,7 +70,7 @@
                         <Font name="Calibri" size="18.0" />
                      </font>
                   </Label>
-                  <DatePicker id="date-picker" fx:id="dateViajante" layoutX="206.0" layoutY="67.0" prefHeight="36.0" prefWidth="193.0" style="-fx-background: none; -fx-background-color: #BDBDBD; -fx-border-radius: 4; -fx-border-color: #088a85; -fx-highlight-fill: #088a85; -fx-prompt-text-fill: #088a85; -fx-text-fill: #088a85;" stylesheets="@styles/style.css" />
+                  <DatePicker id="date-picker" fx:id="nascimento" layoutX="206.0" layoutY="67.0" prefHeight="36.0" prefWidth="193.0" style="-fx-background: none; -fx-background-color: #BDBDBD; -fx-border-radius: 4; -fx-border-color: #088a85; -fx-highlight-fill: #088a85; -fx-prompt-text-fill: #088a85; -fx-text-fill: #088a85;" stylesheets="@styles/style.css" />
                   <Label layoutX="14.0" layoutY="124.0" prefHeight="30.0" prefWidth="115.0" text="Documento:" textFill="#088a85">
                      <font>
                         <Font name="Calibri" size="18.0" />

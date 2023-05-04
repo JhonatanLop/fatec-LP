@@ -61,8 +61,8 @@
             </Label>
             <TextField fx:id="localPartida" layoutX="33.0" layoutY="93.0" prefHeight="35.0" prefWidth="306.0" style="-fx-background-color: #2E2E2E; -fx-border-color: #088a85; -fx-border-radius: 4; -fx-text-fill: #088a85;" />
             <TextField fx:id="localChegada" layoutX="33.0" layoutY="164.0" prefHeight="38.0" prefWidth="306.0" style="-fx-background-color: #2E2E2E; -fx-border-color: #088a85; -fx-border-radius: 4; -fx-text-fill: #088a85;" />
-            <DatePicker fx:id="dataPartida" layoutX="473.0" layoutY="93.0" prefHeight="35.0" prefWidth="197.0" style="-fx-background-color: #2E2E2E; -fx-background: none; -fx-border-color: #088a85; -fx-border-radius: 4; -fx-text-fill: #088a85;" />
-            <DatePicker fx:id="dataChegada" layoutX="473.0" layoutY="164.0" prefHeight="35.0" prefWidth="198.0" style="-fx-background-color: #2E2E2E; -fx-background: none; -fx-border-color: #088a85; -fx-border-radius: 4; -fx-text-fill: #088a85;" />
+            <DatePicker fx:id="dataPartida" layoutX="473.0" layoutY="93.0" prefHeight="35.0" prefWidth="197.0" style="-fx-background-color: #BDBDBD; -fx-background: none; -fx-border-color: #088a85; -fx-border-radius: 4; -fx-text-fill: #088a85;" />
+            <DatePicker fx:id="dataChegada" layoutX="473.0" layoutY="164.0" prefHeight="35.0" prefWidth="198.0" style="-fx-background-color: #BDBDBD; -fx-background: none; -fx-border-color: #088a85; -fx-border-radius: 4; -fx-text-fill: #088a85;" />
             <Label layoutX="32.0" layoutY="204.0" prefHeight="30.0" prefWidth="138.0" style="-fx-font-size: 16;" text="Nome:" textFill="#05c6bc">
                <font>
                   <Font size="16.0" />

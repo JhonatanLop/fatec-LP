@@ -6,37 +6,51 @@ public class Viagem {
 	private String localPartida;
 	private String nomeViajante;
 	private String transporte;
+    private String dataChegada;
+    private String dataPartida;
 	
 	public Viagem(String documentoViajante,
                     String localChegada,
                     String localPartida,
                     String nomeViajante,
-                    String transporte) {
+                    String transporte,
+                    String dataChegada,
+                    String dataPartida){
 
         this.documentoViajante = documentoViajante;
         this.localChegada = localChegada;
         this.localPartida = localPartida;
         this.nomeViajante = nomeViajante;
         this.transporte = transporte;
+        this.dataChegada = dataChegada;
+        this.dataPartida = dataPartida;
 	}
-	
-    public void getDocumentoViajante(String documentoViajante) {
-        this.documentoViajante = documentoViajante;
-    }
-    
-    public void getLocalChegada(String localChegada) {
-        this.localChegada = localChegada;
-    }
 
-    public void getLocalPartida(String localPartida) {
-        this.localPartida = localPartida;
-    }
+    public String getDocumentoViajante() { return documentoViajante; }
 
-    public void getNomeViajante(String nomeViajante) {
-        this.nomeViajante = nomeViajante;
-    }
+    public void setDocumentoViajante(String documentoViajante) { this.documentoViajante = documentoViajante; }
 
-    public void getTransporte(String transporte) {
-        this.transporte = transporte;
-    }
+    public String getLocalChegada() { return localChegada; }
+
+    public void setLocalChegada(String localChegada) { this.localChegada = localChegada; }
+
+    public String getLocalPartida() { return localPartida; }
+
+    public void setLocalPartida(String localPartida) { this.localPartida = localPartida; }
+
+    public String getNomeViajante() { return nomeViajante; }
+
+    public void setNomeViajante(String nomeViajante) { this.nomeViajante = nomeViajante; }
+
+    public String getTransporte() { return transporte; }
+
+    public void setTransporte(String transporte) { this.transporte = transporte; }
+
+    public String getDataChegada() { return dataChegada; }
+
+    public void setDataChegada(String dataChegada) { this.dataChegada = dataChegada; }
+
+    public String getDataPartida() { return dataPartida; }
+
+    public void setDataPartida(String dataPartida) { this.dataPartida = dataPartida; }
 }

@@ -42,11 +42,13 @@ public class VeiculosController {
 
     @FXML
     void sendCad(ActionEvent event) {
-        String marcaVeiculo = marca.toString();
-        String modeloVeiculo = modelo.toString();
-        String anoVeiculo = ano.toString();
-        String tipoVeiculo = tipo.toString();
+        String marcaVeiculo = marca.getText();
+        String modeloVeiculo = modelo.getText();
+        String anoVeiculo = ano.getText();
+        String tipoVeiculo = tipo.getText();
         
         Veiculo veiculo = new Veiculo(marcaVeiculo,modeloVeiculo,anoVeiculo,tipoVeiculo);
+        Ticket.setVeiculo(veiculo);
+        System.out.println("\n\n\n deu bom caraio");
     }
 }

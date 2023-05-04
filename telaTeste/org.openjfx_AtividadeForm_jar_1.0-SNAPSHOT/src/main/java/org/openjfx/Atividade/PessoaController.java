@@ -58,5 +58,6 @@ public class PessoaController {
 
         Pessoa pessoa = new Pessoa(nomePessoa,formatdata,documentoPessoa,emailPessoa);
         Ticket.setPessoa(pessoa);
+        System.out.println("\n\n\n deu bom caraio");
     }
 }

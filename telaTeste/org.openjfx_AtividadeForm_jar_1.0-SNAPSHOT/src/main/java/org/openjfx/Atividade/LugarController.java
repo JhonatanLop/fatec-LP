@@ -40,11 +40,13 @@ public class LugarController {
 
     @FXML
     void sendCad(ActionEvent event) {
-        String lugarnome = nomeLugar.toString();
-        String lugarpais = pais.toString();
-        String lugarestado = estado.toString();
-        String lugarcidade = cidade.toString();
-        Lugar lugar = new Lugar(lugarnome,lugarpais,lugarestado,lugarcidade);
-    }
+        String lugarnome = nomeLugar.getText();
+        String lugarpais = pais.getText();
+        String lugarestado = estado.getText();
+        String lugarcidade = cidade.getText();
 
+        Lugar lugar = new Lugar(lugarnome,lugarpais,lugarestado,lugarcidade);
+        Ticket.setLugar(lugar);
+        System.out.println("\n\n\n deu bom caraio");
+    }
 }

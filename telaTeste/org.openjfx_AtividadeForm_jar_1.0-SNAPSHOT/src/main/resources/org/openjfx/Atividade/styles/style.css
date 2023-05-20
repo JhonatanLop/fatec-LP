@@ -1,3 +1,261 @@
-.date-picker .text {
-    -fx-text-fill: #088a85;
+/* Global */
+  
+* {
+    -fx-col-b: #000;
+	-fx-col-0: #333;
+	-fx-col-1: #313131;
+	-fx-col-2: #363636;
+	-fx-col-3: #464646;
+	-fx-col-4: #565656;
+	-fx-col-5: #777;
+	-fx-col-6: #a6a6a6;
+    -fx-col-w: #eee;
+	-fx-col-btn: #36d636;
+	-fx-col-btn-focus: #56fa56;
+}
+
+.root{
+    -fx-text-background-color: -fx-col-w;
+}
+
+* .focus-indicator {
+    -fx-border-color: transparent;
+    -fx-border-radius: 0;
+}
+
+/* TabPane */
+.tab-pane .tab-header-area .tab-header-background {
+    -fx-background-color: -fx-col-0;
+}
+
+/* TabPane > TabHeaderArea */
+.tab-pane .tab-header-area {
+    -fx-padding: 8 4 0 8;
+}
+/* TabPane > Tab */
+.tab-pane .tab-header-area .tab {
+    -fx-background-color: -fx-col-3;
+    -fx-background-insets: 1 2;
+    -fx-background-radius: 32 4 16 4;
+    
+    -fx-border-color: -fx-col-4;
+    -fx-border-insets: 0 2;
+    -fx-border-radius: 32 4 16 4;
+    -fx-border-width: 2;
+
+    -fx-text-background-color: -fx-col-w;
+    -fx-font-weight: bold;
+}
+
+.tab-pane .tab-header-area .tab:hover {
+    -fx-background-color: -fx-col-4;
+    -fx-border-color: -fx-col-5;
+}
+
+.tab-pane .tab-header-area .tab:selected {
+    -fx-background-color: -fx-col-5;
+    -fx-border-color: -fx-col-6;
+    -fx-text-background-color: -fx-col-b;
+}
+
+/* TabPane > Content */
+.tab-pane .tab-content-area {
+    -fx-background-color: -fx-col-0;
+}
+
+/* TitledPane */
+.tab-pane .tab-content-area .titled-pane {
+    -fx-border-radius: 0;
+    -fx-border-width: 0;
+    -fx-padding: 2;
+    -fx-text-fill: -fx-col-w;
+}
+
+/* TitledPane > Title */
+.tab-pane .tab-content-area .titled-pane .title {
+    -fx-background-color: -fx-col-5;
+    -fx-background-radius: 16 4 0 0;
+    -fx-border-width: 0;
+    -fx-font-weight: bold;
+    -fx-font-size: 14;
+}
+
+/* TitledPane > Content */
+.tab-pane .tab-content-area .titled-pane .content {
+    -fx-background-color: -fx-col-3;
+    -fx-background-radius: 0 0 4 16;
+    -fx-border-width: 0;
+}
+
+/* TitledPane > Content > VBox */
+.tab-pane .tab-content-area .titled-pane .content .vbox {
+    -fx-border-width: 0;
+}
+
+/* TableView */
+.table-view {
+    -fx-background-color: transparent;
+    -fx-background-radius: 0 0 4 16;
+}
+
+/* TableView > Column */
+.table-column {
+    -fx-background-color: -fx-col-4;
+    -fx-background-radius: 8;
+    -fx-background-insets: 2;
+    -fx-alignment: CENTER;
+}
+
+.table-view .column-header-background {
+    -fx-background-color: -fx-col-3;
+}
+
+/* Table Rows */
+.table-row-cell {
+    -fx-table-cell-border-color: transparent;
+    -fx-background-color: -fx-col-2;
+    -fx-background-insets: 4 24 4 8;
+    -fx-background-radius: 8;
+    -fx-padding: 0 8 0 8;
+}
+
+.table-row-cell:hover {
+    -fx-background-color: -fx-col-4;
+}
+
+.table-row-cell:selected {
+    -fx-background-color: -fx-col-5;
+}
+
+/* Table Cell */
+.table-row-cell .table-cell {
+    -fx-background-color: transparent;
+    -fx-table-cell-border-color: transparent;
+    -fx-text-fill: -fx-col-w;
+}
+
+/* TextField */
+.text-field {
+    -fx-padding: 0;
+    -fx-background-color: -fx-col-2;
+    -fx-border-radius: 4;
+    -fx-border-color: -fx-col-4;
+    -fx-text-fill: -fx-col-w;
+}
+
+/* DatePicker */
+.date-picker {
+    -fx-background-color: transparent;
+    -fx-text-background-color: -fx-col-w;
+}
+
+/* DatePicker > Button */
+.date-picker .arrow-button {
+    -fx-background-color: -fx-col-6;
+    -fx-background-radius: 4;
+}
+
+.date-picker .arrow-button:hover {
+	-fx-background-color: -fx-col-w;
+}
+
+.date-picker .arrow-button .arrow {
+    -fx-background-color: -fx-col-b;
+}
+
+/* DatePicker > Cell */
+.date-picker .cell {
+	-fx-background-color: -fx-col-3;
+    -fx-border-width: 0;
+    -fx-background-insets: 4 0 4 0;
+    -fx-background-radius: 8;
+}
+
+.date-picker .cell:hover {
+    -fx-background-color: -fx-col-5;
+}
+
+.date-picker-popup > * > .previous-month,
+.date-picker-popup > * > .next-month {
+    -fx-text-fill: -fx-col-5;
+}
+
+/* DatePicker > Selected Cell */
+.date-picker .selected {
+    -fx-background-color: -fx-col-b;
+    -fx-text-fill: -fx-col-w;
+}
+
+.date-picker .selected:focused {
+    -fx-background-color: -fx-col-1;
+    -fx-text-fill: -fx-col-w;
+}
+
+.date-picker-popup  {
+    -fx-background-color: transparent;
+	-fx-border-width: 0;
+}
+
+.date-picker-popup > .calendar-grid {
+    -fx-background-color: -fx-col-3;
+}
+
+.date-picker-popup .month-year-pane {
+    -fx-background-color: -fx-col-0;
+	-fx-text-fill: -fx-col-w;
+}
+
+.date-picker-popup .month-year-pane .label {
+    -fx-text-fill: -fx-col-w;
+}
+
+.date-picker-popup > * > .day-name-cell {
+    -fx-background-color: -fx-col-5;
+    -fx-background-insets: 0 0 4 0;
+    -fx-background-radius: 0;
+	-fx-text-fill: -fx-col-b;
+}
+
+.date-picker-popup > * > .day-name-cell:hover {
+    -fx-background-color: -fx-col-5;
+}
+
+
+.date-picker-popup .spinner .button {
+    -fx-padding: 2 4 2 4;
+    -fx-background-color: transparent;
+    -fx-background-radius: 4;
+    -fx-font-size: 12;
+}
+
+.date-picker-popup .spinner .button:hover {
+    -fx-background-insets: 2 0 0 0;
+    -fx-border-insets: 0;
+    -fx-background-color: -fx-col-6;
+    -fx-background-radius: 4;
+    -fx-border-radius: 0;
+    -fx-border-width: 0;
+}
+
+.date-picker-popup .spinner .button .left-arrow,
+.date-picker-popup .spinner .button .right-arrow {
+	-fx-background-color: -fx-col-w;
+}
+
+/* Button */
+.button {
+    -fx-padding: 0 16 -2 0;
+    -fx-background-color: -fx-col-btn;
+    -fx-background-radius: 12 4 12 4;
+    -fx-font-size: 14;
+}
+
+.button:hover {
+    -fx-background-insets: -1;
+    -fx-border-insets: -2;
+    -fx-background-color: -fx-col-btn-focus;
+    -fx-background-radius: 24 2 24 2;
+    -fx-border-radius: 48 8 48 8;
+    -fx-border-width: 2;
+    -fx-border-color: -fx-col-btn;
 }

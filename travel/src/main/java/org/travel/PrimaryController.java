@@ -1,11 +1,10 @@
-package com.travels;
+package org.travel;
 
 import java.io.IOException;
-
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 
-public class MenuController {
+public class PrimaryController {
 
     @FXML
     private Button PassageirosId;
@@ -22,8 +21,8 @@ public class MenuController {
     @FXML
     private Button viagensId;
 
-    @FXML
-    private void switchToSecondary() throws IOException {
-        App.setRoot("secondary");
-    }
+//     @FXML
+//     private void switchToSecondary() throws IOException {
+//         App.setRoot("secondary");
+//     }
 }

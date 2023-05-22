@@ -1,4 +1,4 @@
-package com.travels;
+package org.travel;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -17,8 +17,7 @@ public class App extends Application {
 
     @Override
     public void start(Stage stage) throws IOException {
-        scene = new Scene(loadFXML("travels"), 1430, 786);
-        stage.setTitle("Travels");
+        scene = new Scene(loadFXML("primary"), 1430, 786);
         stage.setScene(scene);
         stage.show();
     }

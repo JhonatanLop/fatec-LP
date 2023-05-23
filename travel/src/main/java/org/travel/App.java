@@ -4,6 +4,7 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.ScrollPane;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -17,7 +18,13 @@ public class App extends Application {
 
     @Override
     public void start(Stage stage) throws IOException {
-        scene = new Scene(loadFXML("primary"), 1430, 786);
+        ScrollPane scrollPane = new ScrollPane();
+        scrollPane.setPrefSize(1430, 786);
+
+        Parent root = loadFXML("primary");
+        scrollPane.setContent(root);
+
+        scene = new Scene(scrollPane);
         stage.setScene(scene);
         stage.show();
     }
@@ -34,5 +41,4 @@ public class App extends Application {
     public static void main(String[] args) {
         launch();
     }
-
 }

@@ -132,7 +132,7 @@
                               <Image url="@../../img/passagem.png" />
                            </image>
                         </ImageView>
-                        <Button fx:id="passagensId" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" styleClass="menu-button" text="Passágens">
+                        <Button fx:id="passagensId" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" styleClass="menu-button" text="Passagens">
                            <opaqueInsets>
                               <Insets />
                            </opaqueInsets>
@@ -186,7 +186,7 @@
               <content>
                 <AnchorPane maxWidth="1.7976931348623157E308" minHeight="0.0" minWidth="0.0">
                      <children>
-                        <HBox prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+                        <HBox maxWidth="1.7976931348623157E308" prefWidth="0.0" spacing="10.0">
                            <children>
                               <VBox spacing="15.0">
                                  <children>

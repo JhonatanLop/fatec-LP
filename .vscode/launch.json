@@ -6,6 +6,18 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Aviao",
+            "request": "launch",
+            "mainClass": "Aviao"
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "Main"
+        },
+        {
+            "type": "java",
             "name": "Current File",
             "request": "launch",
             "mainClass": "${file}"

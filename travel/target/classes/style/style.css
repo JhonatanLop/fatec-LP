@@ -99,7 +99,18 @@
 
 .normal-text {
   -fx-text-fill: -fx-color-w;
-  -fx-font-size: 16px;
+  -fx-font-size: 22px;
+}
+
+.normal-field-text{
+  -fx-background-color: -fx-color-7b;
+  -fx-font-size: 22px;
+  -fx-text-fill: -fx-color-w
+}
+
+.normal-field-text:focus{
+-fx-border-color: -fx-color-b5;
+-fx-border-radius: 4px;
 }
 
 .img-demo {

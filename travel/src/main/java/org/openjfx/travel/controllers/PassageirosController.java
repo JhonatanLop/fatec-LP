@@ -1,5 +1,6 @@
-package org.travel.controllers;
+package org.openjfx.travel.controllers;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.DatePicker;
@@ -68,4 +69,36 @@ public class PassageirosController {
 
     @FXML
     private Button viagensId;
+
+    // botões
+
+    @FXML
+    void switchToHome(ActionEvent event) {
+
+    }
+
+    @FXML
+    void switchToLocais(ActionEvent event) {
+
+    }
+
+    @FXML
+    void switchToPassageiro(ActionEvent event) {
+
+    }
+
+    @FXML
+    void switchToPassagens(ActionEvent event) {
+
+    }
+
+    @FXML
+    void switchToVeiculos(ActionEvent event) {
+
+    }
+
+    @FXML
+    void switchToViagens(ActionEvent event) {
+
+    }
 }

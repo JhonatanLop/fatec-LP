@@ -12,7 +12,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
 
-<BorderPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="786.0" prefWidth="1430.0" styleClass="background-fx" stylesheets="@../../style/style.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.travel.controllers.PrimaryController">
+<BorderPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="786.0" prefWidth="1430.0" styleClass="background-fx" stylesheets="@../../../style/style.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.openjfx.travel.controllers.PrimaryController">
    <top>
       <HBox alignment="CENTER" BorderPane.alignment="CENTER">
          <children>
@@ -20,7 +20,7 @@
             <Pane maxHeight="-Infinity" prefHeight="7.0" prefWidth="200.0" styleClass="line-header-fx" HBox.hgrow="ALWAYS" />
             <ImageView fitHeight="60.0" fitWidth="75.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../img/airplane%20icon2.png" />
+                  <Image url="@../../../img/airplane%20icon2.png" />
                </image>
                <HBox.margin>
                   <Insets left="5.0" right="5.0" />
@@ -42,7 +42,7 @@
                <children>
                   <ImageView fitHeight="92.0" fitWidth="260.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../../img/logo.png" />
+                        <Image url="@../../../img/logo.png" />
                      </image>
                      <HBox.margin>
                         <Insets bottom="10.0" />
@@ -61,10 +61,10 @@
                      <children>
                         <ImageView fitHeight="36.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../../img/person.png" />
+                              <Image url="@../../../img/person.png" />
                            </image>
                         </ImageView>
-                        <Button fx:id="PassageirosId" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" styleClass="menu-button" text="Passageiros">
+                        <Button fx:id="PassageirosId" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#switchToPassageiros" styleClass="menu-button" text="Passageiros">
                            <opaqueInsets>
                               <Insets />
                            </opaqueInsets>
@@ -78,10 +78,10 @@
                      <children>
                         <ImageView fitHeight="36.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../../img/marcador%20.png" />
+                              <Image url="@../../../img/marcador%20.png" />
                            </image>
                         </ImageView>
-                        <Button fx:id="locaisId" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" styleClass="menu-button" text="Locais">
+                        <Button fx:id="locaisId" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#switckToLocais" styleClass="menu-button" text="Locais">
                            <opaqueInsets>
                               <Insets />
                            </opaqueInsets>
@@ -95,10 +95,10 @@
                      <children>
                         <ImageView fitHeight="36.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../../img/mundo.png" />
+                              <Image url="@../../../img/mundo.png" />
                            </image>
                         </ImageView>
-                        <Button fx:id="viagensId" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" styleClass="menu-button" text="Viagens">
+                        <Button fx:id="viagensId" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#SwitchToViagens" styleClass="menu-button" text="Viagens">
                            <opaqueInsets>
                               <Insets />
                            </opaqueInsets>
@@ -112,10 +112,10 @@
                      <children>
                         <ImageView fitHeight="36.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../../img/veiculos.png" />
+                              <Image url="@../../../img/veiculos.png" />
                            </image>
                         </ImageView>
-                        <Button fx:id="veiculosId" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" styleClass="menu-button" text="Veículos">
+                        <Button fx:id="veiculosId" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#switchToVeiculos" styleClass="menu-button" text="Veículos">
                            <opaqueInsets>
                               <Insets />
                            </opaqueInsets>
@@ -129,10 +129,10 @@
                      <children>
                         <ImageView fitHeight="36.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../../img/passagem.png" />
+                              <Image url="@../../../img/passagem.png" />
                            </image>
                         </ImageView>
-                        <Button fx:id="passagensId" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" styleClass="menu-button" text="Passagens">
+                        <Button fx:id="passagensId" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#switchToPassagens" styleClass="menu-button" text="Passagens">
                            <opaqueInsets>
                               <Insets />
                            </opaqueInsets>
@@ -146,10 +146,10 @@
                      <children>
                         <ImageView fitHeight="36.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../../img/lugar%20.png" />
+                              <Image url="@../../../img/lugar%20.png" />
                            </image>
                         </ImageView>
-                        <Button fx:id="homeid" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" styleClass="menu-button" text="Home">
+                        <Button fx:id="homeid" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#switchToHome" styleClass="menu-button" text="Home">
                            <opaqueInsets>
                               <Insets />
                            </opaqueInsets>
@@ -190,9 +190,9 @@
                            <children>
                               <VBox spacing="15.0">
                                  <children>
-                                    <ImageView fitHeight="352.0" fitWidth="346.0" pickOnBounds="true" preserveRatio="true" styleClass="img-demo">
+                                    <ImageView fitHeight="352.0" fitWidth="346.0" pickOnBounds="true" preserveRatio="true" styleClass="../img-demo">
                                        <image>
-                                          <Image url="@../../img/pic_demo/canoa_demo.jpg" />
+                                          <Image url="@../../../img/pic_demo/canoa_demo.jpg" />
                                        </image>
                                        <VBox.margin>
                                           <Insets />
@@ -200,12 +200,12 @@
                                     </ImageView>
                                     <ImageView fitHeight="518.0" fitWidth="346.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
-                                          <Image url="@../../img/pic_demo/airplane_demo.jpg" />
+                                          <Image url="@../../../img/pic_demo/airplane_demo.jpg" />
                                        </image>
                                     </ImageView>
                                     <ImageView fitHeight="613.0" fitWidth="413.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
-                                          <Image url="@../../img/pic_demo/japan_demo.jpg" />
+                                          <Image url="@../../../img/pic_demo/japan_demo.jpg" />
                                        </image>
                                     </ImageView>
                                  </children>
@@ -220,17 +220,17 @@
                                           <Insets />
                                        </VBox.margin>
                                        <image>
-                                          <Image url="@../../img/pic_demo/cabana_demo.jpg" />
+                                          <Image url="@../../../img/pic_demo/cabana_demo.jpg" />
                                        </image>
                                     </ImageView>
                                     <ImageView fitHeight="365.0" fitWidth="382.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
-                                          <Image url="@../../img/pic_demo/pico_demo.jpg" />
+                                          <Image url="@../../../img/pic_demo/pico_demo.jpg" />
                                        </image>
                                     </ImageView>
                                     <ImageView fitHeight="561.0" fitWidth="365.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
-                                          <Image url="@../../img/pic_demo/grecia_demo.jpg" />
+                                          <Image url="@../../../img/pic_demo/grecia_demo.jpg" />
                                        </image>
                                     </ImageView>
                                  </children>
@@ -242,17 +242,17 @@
                                  <children>
                                     <ImageView fitHeight="515.0" fitWidth="355.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
-                                          <Image url="@../../img/pic_demo/cuba_demo.jpg" />
+                                          <Image url="@../../../img/pic_demo/cuba_demo.jpg" />
                                        </image>
                                     </ImageView>
                                     <ImageView fitHeight="515.0" fitWidth="518.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
-                                          <Image url="@../../img/pic_demo/alpes_demo.jpg" />
+                                          <Image url="@../../../img/pic_demo/alpes_demo.jpg" />
                                        </image>
                                     </ImageView>
                                     <ImageView fitHeight="517.0" fitWidth="355.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
-                                          <Image url="@../../img/pic_demo/egito_demo.jpg" />
+                                          <Image url="@../../../img/pic_demo/egito_demo.jpg" />
                                        </image>
                                     </ImageView>
                                  </children>

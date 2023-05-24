@@ -1,4 +1,4 @@
-package org.travel.utils;
+package org.openjfx.travel.utils;
 import javafx.scene.control.TextField;
 import javafx.scene.control.TextFormatter;
 

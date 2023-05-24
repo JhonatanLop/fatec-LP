@@ -1,4 +1,4 @@
-package org.travel.classes;
+package org.openjfx.travel.classes;
 
 import java.util.Date;
 

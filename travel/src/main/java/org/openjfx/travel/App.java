@@ -1,4 +1,4 @@
-package org.travel;
+package org.openjfx.travel;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -8,9 +8,6 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-/**
- * JavaFX App
- */
 public class App extends Application {
 
     private static Scene scene;

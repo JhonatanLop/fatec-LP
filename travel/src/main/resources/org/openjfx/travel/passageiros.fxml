@@ -12,7 +12,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
 
-<BorderPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="786.0" prefWidth="1430.0" styleClass="background-fx" stylesheets="@../../style/style.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="786.0" prefWidth="1430.0" styleClass="background-fx" stylesheets="@../../../style/style.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.openjfx.travel.controllers.PassageirosController">
    <top>
       <HBox alignment="CENTER" BorderPane.alignment="CENTER">
          <children>
@@ -20,7 +20,7 @@
             <Pane maxHeight="-Infinity" prefHeight="7.0" prefWidth="200.0" styleClass="line-header-fx" HBox.hgrow="ALWAYS" />
             <ImageView fitHeight="60.0" fitWidth="75.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../img/airplane%20icon2.png" />
+                  <Image url="@../../../img/airplane%20icon2.png" />
                </image>
                <HBox.margin>
                   <Insets left="5.0" right="5.0" />
@@ -42,7 +42,7 @@
                <children>
                   <ImageView fitHeight="92.0" fitWidth="260.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../../img/logo.png" />
+                        <Image url="@../../../img/logo.png" />
                      </image>
                      <HBox.margin>
                         <Insets bottom="10.0" />
@@ -61,10 +61,10 @@
                      <children>
                         <ImageView fitHeight="36.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../../img/person.png" />
+                              <Image url="@../../../img/person.png" />
                            </image>
                         </ImageView>
-                        <Button fx:id="PassageirosId" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" styleClass="menu-button" text="Passageiros">
+                        <Button fx:id="PassageirosId" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#switchToPassageiro" styleClass="menu-button" text="Passageiros">
                            <opaqueInsets>
                               <Insets />
                            </opaqueInsets>
@@ -78,10 +78,10 @@
                      <children>
                         <ImageView fitHeight="36.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../../img/marcador%20.png" />
+                              <Image url="@../../../img/marcador%20.png" />
                            </image>
                         </ImageView>
-                        <Button fx:id="locaisId" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" styleClass="menu-button" text="Locais">
+                        <Button fx:id="locaisId" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#switchToLocais" styleClass="menu-button" text="Locais">
                            <opaqueInsets>
                               <Insets />
                            </opaqueInsets>
@@ -95,10 +95,10 @@
                      <children>
                         <ImageView fitHeight="36.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../../img/mundo.png" />
+                              <Image url="@../../../img/mundo.png" />
                            </image>
                         </ImageView>
-                        <Button fx:id="viagensId" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" styleClass="menu-button" text="Viagens">
+                        <Button fx:id="viagensId" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#switchToViagens" styleClass="menu-button" text="Viagens">
                            <opaqueInsets>
                               <Insets />
                            </opaqueInsets>
@@ -112,10 +112,10 @@
                      <children>
                         <ImageView fitHeight="36.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../../img/veiculos.png" />
+                              <Image url="@../../../img/veiculos.png" />
                            </image>
                         </ImageView>
-                        <Button fx:id="veiculosId" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" styleClass="menu-button" text="Veículos">
+                        <Button fx:id="veiculosId" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#switchToVeiculos" styleClass="menu-button" text="Veículos">
                            <opaqueInsets>
                               <Insets />
                            </opaqueInsets>
@@ -129,10 +129,10 @@
                      <children>
                         <ImageView fitHeight="36.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../../img/passagem.png" />
+                              <Image url="@../../../img/passagem.png" />
                            </image>
                         </ImageView>
-                        <Button fx:id="passagensId" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" styleClass="menu-button" text="Passagens">
+                        <Button fx:id="passagensId" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#switchToPassagens" styleClass="menu-button" text="Passagens">
                            <opaqueInsets>
                               <Insets />
                            </opaqueInsets>
@@ -146,10 +146,10 @@
                      <children>
                         <ImageView fitHeight="36.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../../img/lugar%20.png" />
+                              <Image url="@../../../img/lugar%20.png" />
                            </image>
                         </ImageView>
-                        <Button fx:id="homeid" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" styleClass="menu-button" text="Home">
+                        <Button fx:id="homeid" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#switchToHome" styleClass="menu-button" text="Home">
                            <opaqueInsets>
                               <Insets />
                            </opaqueInsets>
@@ -421,7 +421,7 @@
                                     <Label text="Enviar" />
                                     <ImageView fitHeight="41.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
-                                          <Image url="@../../img/airplane%20icon2.png" />
+                                          <Image url="@../../../img/airplane%20icon2.png" />
                                        </image>
                                     </ImageView>
                                  </children>
@@ -436,7 +436,7 @@
                                     <Label text="Cancelar" />
                                     <ImageView fitHeight="36.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
-                                          <Image url="@../../img/lixeira.png" />
+                                          <Image url="@../../../img/lixeira.png" />
                                        </image>
                                     </ImageView>
                                  </children>

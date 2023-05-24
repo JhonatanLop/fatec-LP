@@ -1,8 +1,8 @@
-package org.travel.controllers;
+package org.openjfx.travel.controllers;
 
 import java.io.IOException;
 
-import org.travel.App;
+import org.openjfx.travel.App;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -28,39 +28,33 @@ public class PrimaryController {
     @FXML
     private Button homeid;
 
-    
     @FXML
     void switchToPassageiros(ActionEvent event) throws IOException {
         App.setRoot("passageiros");
     }
     
     @FXML
-    void switchToLocais(ActionEvent event) {
+    void switckToLocais(ActionEvent event) {
 
-    }
-
-    @FXML
-    void switchToViagens(ActionEvent event) {
-        
     }
     
     @FXML
-    void switchToVeiculos(ActionEvent event) {
+    void SwitchToViagens(ActionEvent event) {
         
+    }
+
+    @FXML
+    void switchToVeiculos(ActionEvent event) {
+
     }
     
     @FXML
     void switchToPassagens(ActionEvent event) {
-        
+
     }
-    
+
     @FXML
     void switchToHome(ActionEvent event) {
         
     }
-    
-    //     @FXML
-    //     private void switchToSecondary() throws IOException {
-        //         App.setRoot("secondary");
-//     }
 }

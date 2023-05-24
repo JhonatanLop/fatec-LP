@@ -85,7 +85,7 @@
 
 .menu-button:hover {
   -fx-background-color: -fx-color-15b;
-  -fx-padding: 5px;
+  /* -fx-padding: 5px; */
   -fx-border: none;
   -fx-font-size: 32px;
   -fx-font-family: 'Inter', sans-serif;

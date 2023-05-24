@@ -2,6 +2,7 @@
 
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
@@ -172,7 +173,7 @@
             <Insets bottom="10.0" left="10.0" right="20.0" top="10.0" />
          </BorderPane.margin>
          <children>
-            <VBox prefWidth="100.0" styleClass="left-conteiner-fx">
+            <VBox styleClass="left-conteiner-fx">
                <children>
                   <Label styleClass="title-center-text" text="Bem Vindo!">
                      <padding>
@@ -184,43 +185,268 @@
                   <Insets bottom="10.0" />
                </VBox.margin>
             </VBox>
-            <HBox>
+            <VBox spacing="30.0">
                <children>
-                  <VBox alignment="CENTER">
+                  <HBox spacing="20.0">
                      <children>
-                        <Label alignment="CENTER" contentDisplay="CENTER" styleClass="normal-text" text="Nome: " />
-                     </children>
-                  </VBox>
-                  <TextField fx:id="nameId" prefHeight="50.0" prefWidth="480.0" styleClass="normal-field-text">
-                     <HBox.margin>
-                        <Insets left="10.0" />
-                     </HBox.margin>
-                     <padding>
-                        <Insets left="10.0" right="10.0" />
-                     </padding>
-                  </TextField>
-                  <VBox alignment="CENTER">
-                     <children>
-                        <Label alignment="CENTER" contentDisplay="CENTER" styleClass="normal-text" text="CPF:">
-                           <VBox.margin>
+                        <VBox alignment="CENTER">
+                           <children>
+                              <Label alignment="CENTER" contentDisplay="CENTER" styleClass="normal-text" text="Nome*:" />
+                           </children>
+                        </VBox>
+                        <TextField fx:id="nameId" prefHeight="50.0" prefWidth="480.0" styleClass="normal-field-text">
+                           <HBox.margin>
                               <Insets />
-                           </VBox.margin>
-                        </Label>
+                           </HBox.margin>
+                           <padding>
+                              <Insets left="10.0" right="10.0" />
+                           </padding>
+                        </TextField>
+                        <VBox alignment="CENTER">
+                           <children>
+                              <Label alignment="CENTER" contentDisplay="CENTER" styleClass="normal-text" text="CPF*:">
+                                 <VBox.margin>
+                                    <Insets />
+                                 </VBox.margin>
+                              </Label>
+                           </children>
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </VBox>
+                        <TextField fx:id="documentId" prefHeight="50.0" prefWidth="261.0" styleClass="normal-field-text">
+                           <padding>
+                              <Insets left="10.0" right="10.0" />
+                           </padding>
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </TextField>
                      </children>
-                     <HBox.margin>
-                        <Insets left="30.0" right="20.0" />
-                     </HBox.margin>
-                  </VBox>
-                  <TextField fx:id="documentId" prefHeight="50.0" prefWidth="335.0" styleClass="normal-field-text">
-                     <padding>
-                        <Insets left="10.0" right="10.0" />
-                     </padding>
-                  </TextField>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox spacing="20.0">
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                     <children>
+                        <VBox alignment="CENTER">
+                           <children>
+                              <Label alignment="CENTER" contentDisplay="CENTER" styleClass="normal-text" text="Telefone*:" />
+                           </children>
+                        </VBox>
+                        <TextField fx:id="telId1" prefHeight="50.0" prefWidth="234.0" styleClass="normal-field-text">
+                           <padding>
+                              <Insets left="10.0" right="10.0" />
+                           </padding>
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </TextField>
+                        <VBox alignment="CENTER">
+                           <children>
+                              <Label alignment="CENTER" contentDisplay="CENTER" styleClass="normal-text" text="Data de Nascimento*:" />
+                           </children>
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </VBox>
+                        <DatePicker fx:id="nascimentoId" prefHeight="46.0" prefWidth="210.0" styleClass="normal-field-text" />
+                     </children>
+                  </HBox>
+                  <HBox spacing="15.0">
+                     <children>
+                        <VBox alignment="CENTER">
+                           <children>
+                              <Label alignment="CENTER" contentDisplay="CENTER" styleClass="normal-text" text="Email*:" />
+                           </children>
+                        </VBox>
+                        <TextField fx:id="emailId" prefHeight="50.0" prefWidth="390.0" styleClass="normal-field-text">
+                           <padding>
+                              <Insets left="10.0" right="10.0" />
+                           </padding>
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </TextField>
+                        <VBox alignment="CENTER">
+                           <children>
+                              <Label alignment="CENTER" contentDisplay="CENTER" styleClass="normal-text" text="Confirmar Email*:" />
+                           </children>
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </VBox>
+                        <TextField fx:id="confirmEmailId" prefHeight="50.0" prefWidth="390.0" styleClass="normal-field-text">
+                           <padding>
+                              <Insets left="10.0" right="10.0" />
+                           </padding>
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </TextField>
+                     </children>
+                  </HBox>
+                  <HBox spacing="20.0">
+                     <children>
+                        <VBox alignment="CENTER">
+                           <children>
+                              <Label alignment="CENTER" contentDisplay="CENTER" styleClass="normal-text" text="Senha*:" />
+                           </children>
+                        </VBox>
+                        <TextField fx:id="senhaId" prefHeight="50.0" prefWidth="260.0" styleClass="normal-field-text">
+                           <padding>
+                              <Insets left="10.0" right="10.0" />
+                           </padding>
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </TextField>
+                        <VBox alignment="CENTER">
+                           <children>
+                              <Label alignment="CENTER" contentDisplay="CENTER" styleClass="normal-text" text="Confirmar Senha*:" />
+                           </children>
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </VBox>
+                        <TextField fx:id="confirmSenhaid" prefHeight="50.0" prefWidth="260.0" styleClass="normal-field-text">
+                           <padding>
+                              <Insets left="10.0" right="10.0" />
+                           </padding>
+                        </TextField>
+                     </children>
+                  </HBox>
+                  <HBox spacing="15.0">
+                     <children>
+                        <VBox alignment="CENTER">
+                           <children>
+                              <Label alignment="CENTER" contentDisplay="CENTER" styleClass="normal-text" text="CEP*:" />
+                           </children>
+                        </VBox>
+                        <TextField fx:id="cepId" prefHeight="50.0" prefWidth="150.0" styleClass="normal-field-text">
+                           <padding>
+                              <Insets left="10.0" right="10.0" />
+                           </padding>
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </TextField>
+                        <VBox alignment="CENTER">
+                           <children>
+                              <Label alignment="CENTER" contentDisplay="CENTER" styleClass="normal-text" text="Logradouro*:" />
+                           </children>
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </VBox>
+                        <TextField fx:id="logradId" prefHeight="50.0" prefWidth="340.0" styleClass="normal-field-text">
+                           <padding>
+                              <Insets left="10.0" right="10.0" />
+                           </padding>
+                        </TextField>
+                        <VBox alignment="CENTER">
+                           <children>
+                              <Label alignment="CENTER" contentDisplay="CENTER" styleClass="normal-text" text="Número*:" />
+                           </children>
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </VBox>
+                        <TextField fx:id="numeroId" prefHeight="50.0" prefWidth="170.0" styleClass="normal-field-text">
+                           <padding>
+                              <Insets left="10.0" right="10.0" />
+                           </padding>
+                        </TextField>
+                     </children>
+                  </HBox>
+                  <HBox spacing="15.0">
+                     <children>
+                        <VBox alignment="CENTER">
+                           <children>
+                              <Label alignment="CENTER" contentDisplay="CENTER" styleClass="normal-text" text="Bairro*:" />
+                           </children>
+                        </VBox>
+                        <TextField fx:id="bairroId" prefHeight="50.0" prefWidth="275.0" styleClass="normal-field-text">
+                           <padding>
+                              <Insets left="10.0" right="10.0" />
+                           </padding>
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </TextField>
+                        <VBox alignment="CENTER">
+                           <children>
+                              <Label alignment="CENTER" contentDisplay="CENTER" styleClass="normal-text" text="Município*:" />
+                           </children>
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </VBox>
+                        <TextField fx:id="municipioId" prefHeight="50.0" prefWidth="291.0" styleClass="normal-field-text">
+                           <padding>
+                              <Insets left="10.0" right="10.0" />
+                           </padding>
+                        </TextField>
+                        <VBox alignment="CENTER">
+                           <children>
+                              <Label alignment="CENTER" contentDisplay="CENTER" styleClass="normal-text" text="Estado*:" />
+                           </children>
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </VBox>
+                        <TextField fx:id="estadoId" prefHeight="50.0" prefWidth="102.0" styleClass="normal-field-text">
+                           <padding>
+                              <Insets left="10.0" right="10.0" />
+                           </padding>
+                        </TextField>
+                     </children>
+                  </HBox>
                </children>
                <VBox.margin>
                   <Insets top="10.0" />
                </VBox.margin>
-            </HBox>
+            </VBox>
+            <VBox alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <HBox alignment="CENTER_LEFT">
+                     <children>
+                        <Button mnemonicParsing="false" prefHeight="66.0" prefWidth="185.0" styleClass="form-button">
+                           <graphic>
+                              <HBox alignment="CENTER" spacing="10.0">
+                                 <children>
+                                    <Label text="Enviar" />
+                                    <ImageView fitHeight="41.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../img/airplane%20icon2.png" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                              </HBox>
+                           </graphic>
+                        </Button>
+                        <Pane maxHeight="-Infinity" prefHeight="0.0" prefWidth="200.0" HBox.hgrow="ALWAYS" />
+                        <Button fx:id="canceId" mnemonicParsing="false" prefHeight="66.0" prefWidth="220.0" styleClass="form-button">
+                           <graphic>
+                              <HBox alignment="CENTER" spacing="10.0">
+                                 <children>
+                                    <Label text="Cancelar" />
+                                    <ImageView fitHeight="36.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../img/lixeira.png" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                              </HBox>
+                           </graphic>
+                        </Button>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
          </children>
       </VBox>
    </center>

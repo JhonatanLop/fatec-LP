@@ -2,6 +2,7 @@ package org.travel.controllers;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.control.DatePicker;
 import javafx.scene.control.TextField;
 
 public class PassageirosController {
@@ -9,7 +10,28 @@ public class PassageirosController {
     private Button PassageirosId;
 
     @FXML
+    private TextField bairroId;
+
+    @FXML
+    private Button canceId;
+
+    @FXML
+    private TextField cepId;
+
+    @FXML
+    private TextField confirmEmailId;
+
+    @FXML
+    private TextField confirmSenhaid;
+
+    @FXML
     private TextField documentId;
+
+    @FXML
+    private TextField emailId;
+
+    @FXML
+    private TextField estadoId;
 
     @FXML
     private Button homeid;
@@ -18,10 +40,28 @@ public class PassageirosController {
     private Button locaisId;
 
     @FXML
+    private TextField logradId;
+
+    @FXML
+    private TextField municipioId;
+
+    @FXML
     private TextField nameId;
 
     @FXML
+    private DatePicker nascimentoId;
+
+    @FXML
+    private TextField numeroId;
+
+    @FXML
     private Button passagensId;
+
+    @FXML
+    private TextField senhaId;
+
+    @FXML
+    private TextField telId1;
 
     @FXML
     private Button veiculosId;

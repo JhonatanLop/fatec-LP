@@ -2,6 +2,8 @@ package org.travel.controllers;
 
 import java.io.IOException;
 
+import org.travel.App;
+
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -28,13 +30,13 @@ public class PrimaryController {
 
     
     @FXML
-    void switchToLocais(ActionEvent event) {
-
+    void switchToPassageiros(ActionEvent event) throws IOException {
+        App.setRoot("passageiros");
     }
     
     @FXML
-    void switchToPassageiros(ActionEvent event) {
-        
+    void switchToLocais(ActionEvent event) {
+
     }
 
     @FXML

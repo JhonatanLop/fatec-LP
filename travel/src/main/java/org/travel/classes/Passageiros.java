@@ -1,9 +1,12 @@
 package org.travel.classes;
 
+import java.util.Date;
+
 public class Passageiros {
     private String nome;
     private int CPF;
     private int telefone;
+    private Date nascimento;
     private String email;
     private String password;
     private int cep;
@@ -18,6 +21,7 @@ public class Passageiros {
         String nome,
         int CPF,
         int telefone,
+        Date nascimento,
         String email,
         String password,
         int cep,
@@ -31,6 +35,7 @@ public class Passageiros {
         this.nome = nome;
         this.CPF = CPF;
         this.telefone = telefone;
+        this.nascimento = nascimento;
         this.email = email;
         this.password = password;
         this.cep = cep;
@@ -45,6 +50,7 @@ public class Passageiros {
     public String getNome() { return nome; }
     public int getCPF() { return CPF; }
     public int getTelefone() { return telefone; }
+    public Date getNascimento() { return nascimento; }
     public String getEmail() { return email; }
     public String getPassword() { return password; }
     public int getCep() { return cep; }
@@ -58,6 +64,7 @@ public class Passageiros {
     public void setNome(String nome) { this.nome = nome; }
     public void setCPF(int CPF) { this.CPF = CPF; }
     public void setTelefone(int telefone) { this.telefone = telefone; }
+    public void setNascimento(Date nascimento) { this.nascimento = nascimento; }
     public void setEmail(String email) { this.email = email; }
     public void setPassword(String password) { this.password = password; }
     public void setCep(int cep) { this.cep = cep; }

@@ -236,7 +236,7 @@
                               <Insets left="10.0" />
                            </HBox.margin>
                         </VBox>
-                        <DatePicker fx:id="nascimentoId" prefHeight="46.0" prefWidth="210.0" styleClass="normal-field-text" />
+                        <DatePicker fx:id="nascimentoId" prefHeight="50.0" prefWidth="210.0" styleClass="normal-field-text" />
                      </children>
                   </HBox>
                   <HBox spacing="15.0">

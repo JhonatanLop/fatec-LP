@@ -61,23 +61,6 @@
                      <children>
                         <ImageView fitHeight="36.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../../../img/person.png" />
-                           </image>
-                        </ImageView>
-                        <Button fx:id="PassageirosId" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#switchToPassageiro" styleClass="menu-button" text="Passageiros">
-                           <opaqueInsets>
-                              <Insets />
-                           </opaqueInsets>
-                           <HBox.margin>
-                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-                           </HBox.margin>
-                        </Button>
-                     </children>
-                  </HBox>
-                  <HBox alignment="CENTER" prefHeight="60.0" spacing="10.0">
-                     <children>
-                        <ImageView fitHeight="36.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
                               <Image url="@../../../img/marcador%20.png" />
                            </image>
                         </ImageView>

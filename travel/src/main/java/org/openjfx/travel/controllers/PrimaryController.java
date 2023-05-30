@@ -29,13 +29,23 @@ public class PrimaryController {
     private Button homeid;
 
     @FXML
-    void switchToPassageiros(ActionEvent event) throws IOException {
-        App.setRoot("passageiros");
+    void switchToPassageiros(ActionEvent event) {
+        try {
+            App.setRoot("passageiros");
+        } catch (IOException e) {
+            System.out.println("Erro! - Falha ao mudar para tela - passageiros.fxml");
+            e.printStackTrace();
+        }
     }
     
     @FXML
     void switckToLocais(ActionEvent event) {
-
+        try {
+            App.setRoot("locais");
+        } catch (IOException e) {
+            System.out.println("Erro! - Falha ao mudar para tela - locais.fxml");
+            e.printStackTrace();
+        }
     }
     
     @FXML

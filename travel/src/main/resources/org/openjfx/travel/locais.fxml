@@ -77,23 +77,6 @@
                      <children>
                         <ImageView fitHeight="36.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../../../img/marcador%20.png" />
-                           </image>
-                        </ImageView>
-                        <Button fx:id="locaisId" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#switckToLocais" styleClass="menu-button" text="Locais">
-                           <opaqueInsets>
-                              <Insets />
-                           </opaqueInsets>
-                           <HBox.margin>
-                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-                           </HBox.margin>
-                        </Button>
-                     </children>
-                  </HBox>
-                  <HBox alignment="CENTER" prefHeight="60.0" spacing="10.0">
-                     <children>
-                        <ImageView fitHeight="36.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
                               <Image url="@../../../img/mundo.png" />
                            </image>
                         </ImageView>
@@ -365,7 +348,20 @@
                               <Insets left="10.0" right="10.0" />
                            </padding>
                         </TextField>
-                        <VBox alignment="CENTER" />
+                        <VBox alignment="CENTER">
+                           <children>
+                              <Label alignment="CENTER" contentDisplay="CENTER" styleClass="normal-text" text="Wify:*">
+                                 <VBox.margin>
+                                    <Insets />
+                                 </VBox.margin>
+                              </Label>
+                           </children>
+                        </VBox>
+                        <TextField fx:id="wifiId" prefHeight="50.0" prefWidth="110.0" styleClass="normal-field-text">
+                           <padding>
+                              <Insets left="10.0" right="10.0" />
+                           </padding>
+                        </TextField>
                      </children>
                   </HBox>
                </children>

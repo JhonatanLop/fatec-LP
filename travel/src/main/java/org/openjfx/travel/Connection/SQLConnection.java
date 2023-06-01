@@ -1,6 +1,5 @@
 package org.openjfx.travel.Connection;
 
-import java.io.IOException;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
@@ -12,7 +11,7 @@ public class SQLConnection {
     private String port = "5432"; // porta de conexão do servidor
     private String userName = "postgres"; // nome do usuário para acesso ao banco
     private String password = "Postgres!1@2#3"; // senha do usuário para acesso ao banco
-    private String database = "Khali"; // nome do banco de dados a ser utilizado
+    private String database = "LP1"; // nome do banco de dados a ser utilizado
     // driver de conexão
     private String driver = "jdbc:postgresql://" + host + ":" + port + "/" + database;
     static Connection conexao;
@@ -33,16 +32,5 @@ public class SQLConnection {
             System.out.println("Erro ao conectar com o banco de dados: " + ex.getMessage());
         } 
         return conexao;
-    }
-
-    public static void main(String[] args) throws SQLException, IOException {
-        SQLConnection sqlConnection = new SQLConnection();
-        Connection conexao = sqlConnection.connect();
-        
-        String arquivoSql = "./SQL/Tabelas.sql";
-        QueryLibs.executeSqlFile(conexao, arquivoSql);
-
-        // QueryLibs.insertTable(conexao);
-        conexao.close();
     }
 }

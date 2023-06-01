@@ -10,7 +10,16 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class QueryLibs {
-    public static void simpleSelect(Connection conexao) throws SQLException {
+
+    private static Connection initilalizConnection() {
+        SQLConnection sqlConnection = new SQLConnection();
+        Connection conexao = sqlConnection.connect();
+        return conexao;
+    }
+
+
+    public static void simpleSelect() throws SQLException {
+        Connection conexao = initilalizConnection();
         // método que executa um select simples
         // recebe como parâmetro uma conexão com o banco de dados
         // e pode lançar uma exceção SQLException
@@ -36,9 +45,12 @@ public class QueryLibs {
                 System.out.println(coluna1 + " - " + coluna2 + " - " + coluna3);
             }
         }
+
+        conexao.close();
     }
 
-    public static void insertTable(Connection conexao) throws SQLException {
+    public static void insertTable() throws SQLException {
+        Connection conexao = initilalizConnection();
         // código sql a ser executado, passando "?" como parâmetro de valors
         String sql = "INSERT INTO tabela_teste (nome, nome2) values (?, ?)";
         try (PreparedStatement statement = conexao.prepareStatement(sql)) {
@@ -51,14 +63,12 @@ public class QueryLibs {
         } catch (Exception ex) {
             System.out.println("Erro ao executar a query: " + ex.getMessage());
         }
+        conexao.close();
     }
 
-    public static void executeSqlFile(Connection conexao, String arquivoSql) throws SQLException, IOException {
-        // Verifica se a conexão não é nula
-        if (conexao == null) {
-            System.out.println("Conexão é nula");
-            return; // Encerra o método se a conexão for nula
-        }
+    public static void executeSqlFile(String arquivoSql) throws SQLException, IOException {
+        Connection conexao = initilalizConnection();
+
         try (BufferedReader br = new BufferedReader(new FileReader(arquivoSql))) {
             String linha;
             StringBuilder sb = new StringBuilder();
@@ -72,6 +82,10 @@ public class QueryLibs {
                 // executa as instruções SQL contidas no arquivo
                 statement.execute(sql);
             }
+            conexao.commit();
+        } catch (Exception ex) {
+            System.out.println("Erro ao executar a query: " + ex.getMessage());
         }
+        conexao.close();
     }
 }

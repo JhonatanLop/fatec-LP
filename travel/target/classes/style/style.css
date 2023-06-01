@@ -78,9 +78,8 @@
   -fx-font-size: 32px;
   -fx-font-family: 'Inter', sans-serif;
   -fx-text-fill: linear-gradient(to bottom,
-      -fx-color-10b,
-      -fx-color-14b);
-  ;
+    -fx-color-10b,
+    -fx-color-14b);
 }
 
 .menu-button:hover {
@@ -111,6 +110,10 @@
 .normal-field-text:focus{
 -fx-border-color: -fx-color-b5;
 -fx-border-radius: 4px;
+}
+
+.estilo_teste{
+  -fx-background-color: #00141e;
 }
 
 .img-demo {
@@ -274,4 +277,18 @@
 .division-form{
   -fx-background-color: #00a6ff;
   -fx-background-radius: 4px;
+}
+
+.plus-button{
+  -fx-background-color: -fx-color-9b;
+  -fx-border-radius: 4px;
+  -fx-background-radius: 4px;
+}
+
+.plus-button:hover{
+  -fx-background-color: -fx-color-3b;
+}
+
+.img-button:hover{
+  -fx-background-color: -fx-color-8b;
 }

@@ -107,5 +107,4 @@ public class ViagensController {
     void switckToLocais(ActionEvent event) {
 
     }
-
 }

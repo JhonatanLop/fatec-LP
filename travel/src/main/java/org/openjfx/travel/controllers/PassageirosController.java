@@ -98,7 +98,12 @@ public class PassageirosController {
 
     @FXML
     void switchToPassageiro(ActionEvent event) {
-
+        try {
+            App.setRoot("passageiros");
+        } catch (IOException e) {
+            System.out.println("Erro! - Falha ao mudar para tela - locais.fxml");
+            e.printStackTrace();
+        }
     }
 
     @FXML
@@ -108,7 +113,12 @@ public class PassageirosController {
 
     @FXML
     void switchToVeiculos(ActionEvent event) {
-
+        try {
+            App.setRoot("veiculos");
+        } catch (IOException e) {
+            System.out.println("Erro! - Falha ao mudar para tela - locais.fxml");
+            e.printStackTrace();
+        }
     }
 
     @FXML

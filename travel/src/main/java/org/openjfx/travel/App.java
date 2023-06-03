@@ -8,8 +8,6 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-import org.openjfx.travel.Connection.SQLConnection;
-
 public class App extends Application {
 
     private static Scene scene;
@@ -34,5 +32,4 @@ public class App extends Application {
         launch();
         // SQLConnection.connect();
     }
-
 }

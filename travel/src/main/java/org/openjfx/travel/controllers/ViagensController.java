@@ -8,17 +8,18 @@ import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
 
 public class ViagensController {
+    
     @FXML
     private Button PassageirosId;
-
-    @FXML
-    private Button buttonLugar;
 
     @FXML
     private DatePicker dataPartida;
 
     @FXML
     private DatePicker dataVolta;
+
+    @FXML
+    private TextField destinoViagem;
 
     @FXML
     private Button homeid;
@@ -30,7 +31,7 @@ public class ViagensController {
     private Button locaisId;
 
     @FXML
-    private TextField lugar;
+    private TextField origemViagem;
 
     @FXML
     private TextField passageiros;
@@ -39,7 +40,10 @@ public class ViagensController {
     private Button passagensId;
 
     @FXML
-    private TextField tfTransporte;
+    private TextField transpIda;
+
+    @FXML
+    private TextField transpVolta;
 
     @FXML
     private Button veiculosId;
@@ -55,7 +59,12 @@ public class ViagensController {
     }
 
     @FXML
-    void selectLugar(ActionEvent event) {
+    void selectDestino(ActionEvent event) {
+
+    }
+
+    @FXML
+    void selectOrigem(ActionEvent event) {
 
     }
 
@@ -65,7 +74,12 @@ public class ViagensController {
     }
 
     @FXML
-    void selectTransporte(ActionEvent event) {
+    void selectTranspIda(ActionEvent event) {
+
+    }
+
+    @FXML
+    void selectTranspVolta(ActionEvent event) {
 
     }
 
@@ -93,6 +107,4 @@ public class ViagensController {
     void switckToLocais(ActionEvent event) {
 
     }
-
 }
-

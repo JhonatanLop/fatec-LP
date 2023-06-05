@@ -13,7 +13,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
 
-<BorderPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="786.0" prefWidth="1430.0" styleClass="background-fx" stylesheets="@../../../style/style.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="786.0" prefWidth="1430.0" styleClass="background-fx" stylesheets="@../../../style/style.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.openjfx.travel.controllers.ViagensController">
    <top>
       <HBox alignment="CENTER" BorderPane.alignment="CENTER">
          <children>
@@ -199,13 +199,13 @@
                      <children>
                         <HBox alignment="CENTER_LEFT">
                            <children>
-                              <Label styleClass="normal-text" text="Seleção de Lugar:*" />
-                              <TextField fx:id="lugar" prefHeight="50.0" prefWidth="316.0" styleClass="normal-field-text" HBox.hgrow="ALWAYS">
+                              <Label styleClass="normal-text" text="Origem da Viagens:*" />
+                              <TextField fx:id="origemViagem" prefHeight="50.0" prefWidth="316.0" styleClass="normal-field-text" HBox.hgrow="ALWAYS">
                                  <HBox.margin>
                                     <Insets left="10.0" />
                                  </HBox.margin>
                               </TextField>
-                              <Button fx:id="buttonLugar" mnemonicParsing="false" onAction="#selectLugar" prefHeight="50.0" prefWidth="50.0" styleClass="plus-button">
+                              <Button mnemonicParsing="false" onAction="#selectOrigem" prefHeight="50.0" prefWidth="50.0" styleClass="plus-button">
                                  <HBox.margin>
                                     <Insets left="2.0" />
                                  </HBox.margin>
@@ -221,13 +221,57 @@
                         </HBox>
                         <HBox alignment="CENTER_LEFT">
                            <children>
-                              <Label styleClass="normal-text" text="Seleção de Transporte:*" />
-                              <TextField fx:id="tfTransporte" prefHeight="50.0" prefWidth="291.0" styleClass="normal-field-text" HBox.hgrow="ALWAYS">
+                              <Label styleClass="normal-text" text="Destino da Viagem:*" />
+                              <TextField fx:id="destinoViagem" prefHeight="50.0" prefWidth="316.0" styleClass="normal-field-text" HBox.hgrow="ALWAYS">
                                  <HBox.margin>
                                     <Insets left="10.0" />
                                  </HBox.margin>
                               </TextField>
-                              <Button mnemonicParsing="false" onAction="#selectTransporte" prefHeight="50.0" prefWidth="50.0" styleClass="plus-button">
+                              <Button mnemonicParsing="false" onAction="#selectDestino" prefHeight="50.0" prefWidth="50.0" styleClass="plus-button">
+                                 <HBox.margin>
+                                    <Insets left="2.0" />
+                                 </HBox.margin>
+                                 <graphic>
+                                    <ImageView fitHeight="38.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true" styleClass="img-button">
+                                       <image>
+                                          <Image url="@../../../img/v.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT">
+                           <children>
+                              <Label styleClass="normal-text" text="Transporte de Ida:*" />
+                              <TextField fx:id="transpIda" prefHeight="50.0" prefWidth="291.0" styleClass="normal-field-text" HBox.hgrow="ALWAYS">
+                                 <HBox.margin>
+                                    <Insets left="10.0" />
+                                 </HBox.margin>
+                              </TextField>
+                              <Button mnemonicParsing="false" onAction="#selectTranspIda" prefHeight="50.0" prefWidth="50.0" styleClass="plus-button">
+                                 <graphic>
+                                    <ImageView fitHeight="38.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true" styleClass="img-button">
+                                       <image>
+                                          <Image url="@../../../img/v.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <HBox.margin>
+                                    <Insets left="2.0" />
+                                 </HBox.margin>
+                              </Button>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT">
+                           <children>
+                              <Label styleClass="normal-text" text="Transporte de Volta:*" />
+                              <TextField fx:id="transpVolta" prefHeight="50.0" prefWidth="291.0" styleClass="normal-field-text" HBox.hgrow="ALWAYS">
+                                 <HBox.margin>
+                                    <Insets left="10.0" />
+                                 </HBox.margin>
+                              </TextField>
+                              <Button mnemonicParsing="false" onAction="#selectTranspVolta" prefHeight="50.0" prefWidth="50.0" styleClass="plus-button">
                                  <graphic>
                                     <ImageView fitHeight="38.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true" styleClass="img-button">
                                        <image>

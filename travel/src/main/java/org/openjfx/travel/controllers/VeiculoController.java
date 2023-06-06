@@ -74,7 +74,7 @@ public class VeiculoController {
         try {
             App.setRoot("viagens");
         } catch (IOException e) {
-            System.out.println("Erro! - Falha ao mudar para tela - locais.fxml");
+            System.out.println("Erro! - Falha ao mudar para tela - viagens.fxml");
             e.printStackTrace();
         }
     }
@@ -84,7 +84,7 @@ public class VeiculoController {
         try {
             App.setRoot("primary");
         } catch (IOException e) {
-            System.out.println("Erro! - Falha ao mudar para tela - locais.fxml");
+            System.out.println("Erro! - Falha ao mudar para tela - primary.fxml");
             e.printStackTrace();
         }
     }
@@ -94,7 +94,7 @@ public class VeiculoController {
         try {
             App.setRoot("passageiros");
         } catch (IOException e) {
-            System.out.println("Erro! - Falha ao mudar para tela - locais.fxml");
+            System.out.println("Erro! - Falha ao mudar para tela - passageiros.fxml");
             e.printStackTrace();
         }
     }

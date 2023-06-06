@@ -1,5 +1,9 @@
 package org.openjfx.travel.controllers;
 
+import java.io.IOException;
+
+import org.openjfx.travel.App;
+
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.DatePicker;
@@ -32,7 +36,56 @@ public class PassagemController {
     @FXML
     private TextField viagemId;
 
+    @FXML
+    void SwitchToViagens(ActionEvent event) {
+        try {
+            App.setRoot("viagens");
+        } catch (IOException e) {
+            System.out.println("Erro! - Falha ao mudar para tela - viagens.fxml");
+            e.printStackTrace();
+        }
+    }
     
+    @FXML
+    void switchToHome(ActionEvent event) {
+        try {
+            App.setRoot("primary");
+        } catch (IOException e) {
+            System.out.println("Erro! - Falha ao mudar para tela - primary.fxml");
+            e.printStackTrace();
+        }
+    }
+
+    @FXML
+    void switchToLocais(ActionEvent event) {
+        try {
+            App.setRoot("locais");
+        } catch (IOException e) {
+            System.out.println("Erro! - Falha ao mudar para tela - locais.fxml");
+            e.printStackTrace();
+        }
+    }
+    
+    @FXML
+    void switchToPassageiros(ActionEvent event) {
+        try {
+            App.setRoot("passageiros");
+        } catch (IOException e) {
+            System.out.println("Erro! - Falha ao mudar para tela - passageiros.fxml");
+            e.printStackTrace();
+        }
+    }
+
+    @FXML
+    void switchToVeiculos(ActionEvent event) {
+        try {
+            App.setRoot("veiculos");
+        } catch (IOException e) {
+            System.out.println("Erro! - Falha ao mudar para tela - veiculos.fxml");
+            e.printStackTrace();
+        }
+    }
+
     @FXML
     void ButtonCancelar(ActionEvent event) {
 
@@ -44,32 +97,8 @@ public class PassagemController {
     }
 
     @FXML
-    void SwitchToViagens(ActionEvent event) {
-        
-    }
-    
-    @FXML
     void selectViagem(ActionEvent event) {
-
-    }
-    
-    @FXML
-    void switchToHome(ActionEvent event) {
-
-    }
-
-    @FXML
-    void switchToLocais(ActionEvent event) {
         
     }
     
-    @FXML
-    void switchToPassageiros(ActionEvent event) {
-        
-    }
-
-    @FXML
-    void switchToVeiculos(ActionEvent event) {
-
-    }
 }

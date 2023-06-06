@@ -71,17 +71,12 @@ public class VeiculoController {
 
     @FXML
     void SwitchToViagens(ActionEvent event) {
-
-    }
-
-    @FXML
-    void cancel(ActionEvent event) {
-
-    }
-
-    @FXML
-    void enviar(ActionEvent event) {
-
+        try {
+            App.setRoot("viagens");
+        } catch (IOException e) {
+            System.out.println("Erro! - Falha ao mudar para tela - locais.fxml");
+            e.printStackTrace();
+        }
     }
 
     @FXML
@@ -117,5 +112,15 @@ public class VeiculoController {
             System.out.println("Erro! - Falha ao mudar para tela - locais.fxml");
             e.printStackTrace();
         }
+    }
+    
+    @FXML
+    void cancel(ActionEvent event) {
+    
+    }
+    
+    @FXML
+    void enviar(ActionEvent event) {
+    
     }
 }

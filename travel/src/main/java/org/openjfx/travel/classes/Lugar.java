@@ -11,8 +11,8 @@ public class Lugar {
     int nBanheiro;
     int nHospedes;
     int nQuartos;
-    boolean wifi;
-    boolean pet;
+    boolean wifiFree;
+    boolean petPermission;
 
     public Lugar(
         String nome,
@@ -25,8 +25,8 @@ public class Lugar {
         int nBanheiro,
         int nHospedes,
         int nQuartos,
-        boolean wifi,
-        boolean pet
+        boolean wifiFree,
+        boolean petPermission
     ) {
         this.nome = nome;
         this.pais = pais;
@@ -38,8 +38,8 @@ public class Lugar {
         this.nBanheiro = nBanheiro;
         this.nHospedes = nHospedes;
         this.nQuartos = nQuartos;
-        this.wifi = wifi;
-        this.pet = pet;
+        this.wifiFree = wifiFree;
+        this.petPermission = petPermission;
     }
 
     public void setNome(String nome) { this.nome = nome; }
@@ -52,8 +52,8 @@ public class Lugar {
     public void setnBanheiro(int nBanheiro) { this.nBanheiro = nBanheiro; }
     public void setnHospedes(int nHospedes) { this.nHospedes = nHospedes; }
     public void setnQuartos(int nQuartos) { this.nQuartos = nQuartos; }
-    public void setWifi(boolean wifi) { this.wifi = wifi; }
-    public void setPet(boolean pet) { this.pet = pet; } 
+    public void setWifiFree(boolean wifiFree) { this.wifiFree = wifiFree; }
+    public void setPetPermission(boolean petPermission) { this.petPermission = petPermission; } 
 
     public String getNome() { return nome; }
     public String getPais() { return pais; }
@@ -65,6 +65,6 @@ public class Lugar {
     public int getnBanheiro() { return nBanheiro; }
     public int getnHospedes() { return nHospedes; }
     public int getnQuartos() { return nQuartos; }
-    public boolean isWifi() { return wifi; }
-    public boolean isPet() { return pet; }
+    public boolean isWifiFree() { return wifiFree; }
+    public boolean isPetPermission() { return petPermission; }
 }

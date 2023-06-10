@@ -105,7 +105,12 @@ public class LugarController {
 
     @FXML
     void switchToVeiculos(ActionEvent event) {
-
+        try {
+            App.setRoot("veiculos");
+        } catch (IOException e) {
+            System.out.println("Erro! - Falha ao mudar para tela - passageiros.fxml");
+            e.printStackTrace();
+        }
     }
 
     @FXML

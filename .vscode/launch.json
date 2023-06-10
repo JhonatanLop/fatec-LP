@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "App",
+            "request": "launch",
+            "mainClass": "org.travel/org.openjfx.travel.App",
+            "projectName": "travel"
+        },
+        {
+            "type": "java",
             "name": "Aviao",
             "request": "launch",
             "mainClass": "Aviao"

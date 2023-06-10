@@ -158,7 +158,7 @@
          <children>
             <VBox styleClass="left-conteiner-fx">
                <children>
-                  <Label styleClass="title-center-text" text="Bem Vindo!">
+                  <Label styleClass="title-center-text" text="Passageiro!">
                      <padding>
                         <Insets left="10.0" />
                      </padding>

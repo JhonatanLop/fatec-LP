@@ -15,16 +15,16 @@ public class PrimaryController {
 
     @FXML
     private Button locaisId;
-    
+
     @FXML
     private Button viagensId;
-    
+
     @FXML
     private Button veiculosId;
-    
+
     @FXML
     private Button passagensId;
-    
+
     @FXML
     private Button homeid;
 
@@ -37,7 +37,7 @@ public class PrimaryController {
             e.printStackTrace();
         }
     }
-    
+
     @FXML
     void switckToLocais(ActionEvent event) {
         try {
@@ -47,24 +47,33 @@ public class PrimaryController {
             e.printStackTrace();
         }
     }
-    
+
     @FXML
     void SwitchToViagens(ActionEvent event) {
-        
+        try {
+            App.setRoot("viagens");
+        } catch (IOException e) {
+            System.out.println("Erro! - Falha ao mudar para tela - viagens.fxml");
+            e.printStackTrace();
+        }
     }
 
     @FXML
     void switchToVeiculos(ActionEvent event) {
-
+        try {
+            App.setRoot("veiculos");
+        } catch (IOException e) {
+            System.out.println("Erro! - Falha ao mudar para tela - veiculos.fxml");
+            e.printStackTrace();
+        }
     }
-    
+
     @FXML
     void switchToPassagens(ActionEvent event) {
-
     }
 
     @FXML
     void switchToHome(ActionEvent event) {
-        
+
     }
 }

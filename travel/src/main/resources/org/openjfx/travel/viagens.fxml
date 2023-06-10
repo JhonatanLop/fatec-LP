@@ -166,10 +166,26 @@
                   </Label>
                </children>
             </VBox>
-            <HBox alignment="TOP_RIGHT" prefHeight="100.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+            <HBox alignment="TOP_RIGHT" prefHeight="100.0" prefWidth="200.0" spacing="20.0" VBox.vgrow="ALWAYS">
                <children>
                   <VBox alignment="TOP_CENTER" prefHeight="562.0" prefWidth="499.0" spacing="30.0">
                      <children>
+                        <VBox spacing="8.0">
+                           <children>
+                              <HBox alignment="CENTER_LEFT" spacing="4.0">
+                                 <children>
+                                    <Label styleClass="normal-text" text="Dê um nome à Viagem:" />
+                                    <Pane maxHeight="-Infinity" prefHeight="1.0" prefWidth="200.0" styleClass="line-menu-bar-fx" HBox.hgrow="ALWAYS" />
+                                    <ImageView fitHeight="38.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../../img/ticket%20to%20travel.png" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                              </HBox>
+                              <TextField fx:id="viagemName" prefHeight="50.0" prefWidth="272.0" styleClass="normal-field-text" />
+                           </children>
+                        </VBox>
                         <HBox alignment="CENTER">
                            <children>
                               <Label styleClass="normal-text" text="Passageiro(s):*" />
@@ -200,7 +216,7 @@
                         <HBox alignment="CENTER_LEFT">
                            <children>
                               <Label styleClass="normal-text" text="Origem da Viagens:*" />
-                              <TextField fx:id="origemViagem" prefHeight="50.0" prefWidth="316.0" styleClass="normal-field-text" HBox.hgrow="ALWAYS">
+                              <TextField fx:id="origemViagem" prefHeight="50.0" prefWidth="296.0" styleClass="normal-field-text" HBox.hgrow="ALWAYS">
                                  <HBox.margin>
                                     <Insets left="10.0" />
                                  </HBox.margin>
@@ -222,7 +238,7 @@
                         <HBox alignment="CENTER_LEFT">
                            <children>
                               <Label styleClass="normal-text" text="Destino da Viagem:*" />
-                              <TextField fx:id="destinoViagem" prefHeight="50.0" prefWidth="316.0" styleClass="normal-field-text" HBox.hgrow="ALWAYS">
+                              <TextField fx:id="destinoViagem" prefHeight="50.0" prefWidth="299.0" styleClass="normal-field-text" HBox.hgrow="ALWAYS">
                                  <HBox.margin>
                                     <Insets left="10.0" />
                                  </HBox.margin>

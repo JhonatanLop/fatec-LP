@@ -11,15 +11,14 @@ import java.sql.SQLException;
 
 public class QueryLibs {
 
-    private static Connection initilalizConnection() {
+    private static Connection initConnection() {
         SQLConnection sqlConnection = new SQLConnection();
         Connection conexao = sqlConnection.connect();
         return conexao;
     }
 
-
     public static void simpleSelect() throws SQLException {
-        Connection conexao = initilalizConnection();
+        Connection conexao = initConnection();
         // método que executa um select simples
         // recebe como parâmetro uma conexão com o banco de dados
         // e pode lançar uma exceção SQLException
@@ -50,7 +49,7 @@ public class QueryLibs {
     }
 
     public static void insertTable() throws SQLException {
-        Connection conexao = initilalizConnection();
+        Connection conexao = initConnection();
         // código sql a ser executado, passando "?" como parâmetro de valors
         String sql = "INSERT INTO tabela_teste (nome, nome2) values (?, ?)";
         try (PreparedStatement statement = conexao.prepareStatement(sql)) {
@@ -67,7 +66,7 @@ public class QueryLibs {
     }
 
     public static void executeSqlFile(String arquivoSql) throws SQLException, IOException {
-        Connection conexao = initilalizConnection();
+        Connection conexao = initConnection();
 
         try (BufferedReader br = new BufferedReader(new FileReader(arquivoSql))) {
             String linha;
@@ -85,6 +84,42 @@ public class QueryLibs {
             conexao.commit();
         } catch (Exception ex) {
             System.out.println("Erro ao executar a query: " + ex.getMessage());
+        }
+        conexao.close();
+    }
+
+    // Query's para insert de dados
+    public static void insertLugar(String nome,
+            String pais,
+            String estado,
+            String cidade,
+            String planejamentoT,
+            int cep,
+            String cafe,
+            int nBanheiro,
+            int nHospedes,
+            int nQuartos,
+            boolean wifi,
+            boolean pet) throws SQLException {
+        
+        // inicializa conexão com o banco de dados
+        Connection conexao = initConnection();
+        // cédigo sql a ser executado, passando "?" como parâmetro de valors
+        String sql = "INSERT INTO lugar (nome, pais, estado, cidade, planejamentoT, cep, cafe, nBanheiro, nHospedes, nQuartos, wifi, pet) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+        try (PreparedStatement statement = conexao.prepareStatement(sql)) {
+            // substituindo os parâmetros "?" para valores desejados
+            statement.setString(1, nome);
+            statement.setString(2, pais);
+            statement.setString(3, estado);
+            statement.setString(4, cidade);
+            statement.setString(5, planejamentoT);
+            statement.setInt(6, cep);
+            statement.setString(7, cafe);
+            statement.setInt(8, nBanheiro);
+            statement.setInt(9, nHospedes);
+            // exibe erros ao executar a query
+        } catch (Exception ex) {
+            System.out.println("initializeErro ao executar a query: " + ex.getMessage());
         }
         conexao.close();
     }

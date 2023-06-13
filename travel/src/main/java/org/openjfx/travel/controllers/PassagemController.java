@@ -6,68 +6,35 @@ import org.openjfx.travel.App;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
 import javafx.scene.control.DatePicker;
+import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
 
-public class VeiculoController {
-   
-    @FXML
-    private Button PassageirosId;
+public class PassagemController {
 
     @FXML
-    private DatePicker anoFabId;
+    private DatePicker dataPartida;
 
     @FXML
-    private Button canceId;
+    private DatePicker dataVolta;
 
     @FXML
-    private TextField carroceriaId;
+    private TextField destinoViagem;
 
     @FXML
-    private TextField chassiId;
+    private ListView<?> listPassageiros;
 
     @FXML
-    private TextField consumoMedId;
+    private TextField origemViagem;
 
     @FXML
-    private Button enviarId;
+    private TextField transpIda;
 
     @FXML
-    private TextField espCargId;
+    private TextField transpVolta;
 
     @FXML
-    private Button homeid;
-
-    @FXML
-    private Button locaisId;
-
-    @FXML
-    private TextField marcaId;
-
-    @FXML
-    private TextField modeloId;
-
-    @FXML
-    private TextField motorId;
-
-    @FXML
-    private Button passagensId;
-
-    @FXML
-    private TextField qtdPassagId;
-
-    @FXML
-    private TextField tipoId;
-
-    @FXML
-    private TextField transmId;
-
-    @FXML
-    private TextField veicId;
-
-    @FXML
-    private Button viagensId;
+    private TextField viagemId;
 
     @FXML
     void SwitchToViagens(ActionEvent event) {
@@ -78,7 +45,7 @@ public class VeiculoController {
             e.printStackTrace();
         }
     }
-
+    
     @FXML
     void switchToHome(ActionEvent event) {
         try {
@@ -90,6 +57,16 @@ public class VeiculoController {
     }
 
     @FXML
+    void switchToLocais(ActionEvent event) {
+        try {
+            App.setRoot("locais");
+        } catch (IOException e) {
+            System.out.println("Erro! - Falha ao mudar para tela - locais.fxml");
+            e.printStackTrace();
+        }
+    }
+    
+    @FXML
     void switchToPassageiros(ActionEvent event) {
         try {
             App.setRoot("passageiros");
@@ -100,27 +77,28 @@ public class VeiculoController {
     }
 
     @FXML
-    void switchToPassagens(ActionEvent event) {
-
-    }
-
-    @FXML
-    void switckToLocais(ActionEvent event) {
+    void switchToVeiculos(ActionEvent event) {
         try {
-            App.setRoot("locais");
+            App.setRoot("veiculos");
         } catch (IOException e) {
-            System.out.println("Erro! - Falha ao mudar para tela - locais.fxml");
+            System.out.println("Erro! - Falha ao mudar para tela - veiculos.fxml");
             e.printStackTrace();
         }
     }
-    
+
     @FXML
-    void cancel(ActionEvent event) {
-    
+    void ButtonCancelar(ActionEvent event) {
+
     }
     
     @FXML
-    void enviar(ActionEvent event) {
-    
+    void buttonImprimir(ActionEvent event) {
+        
     }
+
+    @FXML
+    void selectViagem(ActionEvent event) {
+        
+    }
+    
 }

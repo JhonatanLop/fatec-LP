@@ -1,6 +1,9 @@
 package org.openjfx.travel.Connection;
 
 import java.sql.Statement;
+
+import org.openjfx.travel.classes.Lugar;
+
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
@@ -89,34 +92,25 @@ public class QueryLibs {
     }
 
     // Query's para insert de dados
-    public static void insertLugar(String nome,
-            String pais,
-            String estado,
-            String cidade,
-            String planejamentoT,
-            int cep,
-            String cafe,
-            int nBanheiro,
-            int nHospedes,
-            int nQuartos,
-            boolean wifi,
-            boolean pet) throws SQLException {
+    public static void insertLugar(Lugar lugar) throws SQLException {
         
         // inicializa conexão com o banco de dados
         Connection conexao = initConnection();
         // cédigo sql a ser executado, passando "?" como parâmetro de valors
-        String sql = "INSERT INTO lugar (nome, pais, estado, cidade, planejamentoT, cep, cafe, nBanheiro, nHospedes, nQuartos, wifi, pet) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+        String sql = "INSERT INTO lugar (nome, latitude, longitude, planejamentoT, cep, cafe, nBanheiro, nHospedes, nQuartos, wifi, pet) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
         try (PreparedStatement statement = conexao.prepareStatement(sql)) {
             // substituindo os parâmetros "?" para valores desejados
-            statement.setString(1, nome);
-            statement.setString(2, pais);
-            statement.setString(3, estado);
-            statement.setString(4, cidade);
-            statement.setString(5, planejamentoT);
-            statement.setInt(6, cep);
-            statement.setString(7, cafe);
-            statement.setInt(8, nBanheiro);
-            statement.setInt(9, nHospedes);
+            statement.setString(1, lugar.getNome());
+            statement.setDouble(2, lugar.getLatitude());
+            statement.setDouble(3, lugar.getLongitude());
+            statement.setString(4, lugar.getPlanejamentoT());
+            statement.setInt(5, lugar.getCep());
+            statement.setBoolean(6, lugar.getCafe());
+            statement.setInt(7, lugar.getnBanheiro());
+            statement.setInt(8, lugar.getnHospedes());
+            statement.setInt(9, lugar.getnQuartos());
+            statement.setBoolean(10, lugar.isWifiFree());
+            statement.setBoolean(11, lugar.isPetPermission());
             // exibe erros ao executar a query
         } catch (Exception ex) {
             System.out.println("initializeErro ao executar a query: " + ex.getMessage());

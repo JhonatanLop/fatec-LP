@@ -15,7 +15,7 @@ public class Passageiros {
     private String complemento;
     private String bairro;
     private String municipio;
-    private String estado;
+    private String uf;
 
     public Passageiros(
         String nome,
@@ -30,7 +30,7 @@ public class Passageiros {
         String complemento,
         String bairro,
         String municipio,
-        String estado
+        String uf
     ) {
         this.nome = nome;
         this.CPF = CPF;
@@ -44,7 +44,7 @@ public class Passageiros {
         this.complemento = complemento;
         this.bairro = bairro;
         this.municipio = municipio;
-        this.estado = estado;
+        this.uf = uf;
     }
 
     public String getNome() { return nome; }
@@ -59,7 +59,7 @@ public class Passageiros {
     public String getComplemento() { return complemento; }
     public String getBairro() { return bairro; }
     public String getMunicipio() { return municipio; }
-    public String getEstado() { return estado; }
+    public String getUf() { return uf; }
 
     public void setNome(String nome) { this.nome = nome; }
     public void setCPF(int CPF) { this.CPF = CPF; }
@@ -73,6 +73,6 @@ public class Passageiros {
     public void setComplemento(String complemento) { this.complemento = complemento; }
     public void setBairro(String bairro) { this.bairro = bairro; }
     public void setMunicipio(String municipio) { this.municipio = municipio; }
-    public void setEstado(String estado) { this.estado = estado; }
+    public void setUf(String uf) { this.uf = uf; }
 
 }

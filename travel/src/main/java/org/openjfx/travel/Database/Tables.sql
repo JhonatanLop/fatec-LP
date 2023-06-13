@@ -57,3 +57,4 @@ create table if not exists public.viagem(
     data_ida date not null,
     data_volta date
 );
+

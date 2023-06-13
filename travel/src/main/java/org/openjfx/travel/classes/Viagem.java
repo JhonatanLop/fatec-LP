@@ -1,7 +1,6 @@
 package org.openjfx.travel.classes;
 
 import java.util.Date;
-import java.util.List;
 
 public class Viagem {
     Passageiros passageiros;
@@ -45,5 +44,4 @@ public class Viagem {
     public void setTranpVolta(Veiculo tranpVolta) { this.tranpVolta = tranpVolta; }
     public void setDataIda(Date dataIda) { this.dataIda = dataIda; }
     public void setDataVolta(Date dataVolta) { this.dataVolta = dataVolta; }
-
 }

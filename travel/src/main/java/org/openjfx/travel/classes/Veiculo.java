@@ -1,6 +1,5 @@
 package org.openjfx.travel.classes;
 
-import java.util.Date;
 public class Veiculo {
     String nome;
     String marca;

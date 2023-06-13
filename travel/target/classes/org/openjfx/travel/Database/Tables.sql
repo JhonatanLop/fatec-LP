@@ -46,3 +46,14 @@ create table if not exists public.veiculo(
     transmissao varchar null,
     consumo numeric null
 );
+
+create table if not exists public.viagem(
+    vg_id SERIAL PRIMARY KEY,
+    psg_rl_id int not null,
+    lugar_ida int not null,
+    lugar_volta int not null,
+    veiculo_ida int not null,
+    veiculo_volta int not null,
+    data_ida date not null,
+    data_volta date
+);

@@ -91,6 +91,7 @@ public class QueryLibs {
         conexao.close();
     }
 
+
     // Query's para insert de dados
     public static void insertLugar(Lugar lugar) throws SQLException {
         
@@ -112,6 +113,10 @@ public class QueryLibs {
             statement.setBoolean(10, lugar.isWifiFree());
             statement.setBoolean(11, lugar.isPetPermission());
             // exibe erros ao executar a query
+            statement.executeUpdate();
+            conexao.commit();
+        
+            System.out.println("Insert executado com sucesso!");
         } catch (Exception ex) {
             System.out.println("initializeErro ao executar a query: " + ex.getMessage());
         }

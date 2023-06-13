@@ -1,9 +1,8 @@
 create table if not exists public.lugar(
     lg_id SERIAL PRIMARY KEY,
     nome varchar not null,
-    pais varchar null,
-    estado varchar null,
-    cidade varchar null,
+    latitude numeric not null,
+    longitude numeric not null,
     planejamentoT boolean,
     cep int null,
     cafe boolean,
@@ -15,27 +14,28 @@ create table if not exists public.lugar(
 );
 
 create table if not exists public.passageiro(
-    psg_id SERIAL PRIMARY KEY,
+    ps_id SERIAL PRIMARY KEY,
     nome varchar not null,
     cpf int null,
     telefone int null,
-    nascimento date null,
     email varchar unique,
     senha varchar not null,
+    nascimento date null,
     cep int null,
     logradouto varchar null,
     numero varchar null,
     complemento varchar null,
     bairro varchar null,
     municipio varchar null,
-    estado varchar null
+    uf varchar null
 );
 
 create table if not exists public.veiculo(
-    vc_id SERIAL PRIMARY KEY,
+    ve_id SERIAL PRIMARY KEY,
+    nome varchar null,
     marca varchar null,
     modelo varchar null,
-    ano_fab date null,
+    ano date null,
     identificacao varchar null,
     num_chassi int not null unique,
     tipo varchar null,
@@ -49,7 +49,6 @@ create table if not exists public.veiculo(
 
 create table if not exists public.viagem(
     vg_id SERIAL PRIMARY KEY,
-    psg_rl_id int not null,
     lugar_ida int not null,
     lugar_volta int not null,
     veiculo_ida int not null,
@@ -57,3 +56,9 @@ create table if not exists public.viagem(
     data_ida date not null,
     data_volta date
 );
+
+create table if not exists public.passageiro_x_viagem(
+    ps_vg int not null,
+    ps_id int not null,
+    vg_id int not null,
+)

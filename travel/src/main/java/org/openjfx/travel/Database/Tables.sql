@@ -49,6 +49,7 @@ create table if not exists public.veiculo(
 
 create table if not exists public.viagem(
     vg_id SERIAL PRIMARY KEY,
+    ps_id int not null,
     lugar_ida int not null,
     lugar_volta int not null,
     veiculo_ida int not null,
@@ -56,9 +57,3 @@ create table if not exists public.viagem(
     data_ida date not null,
     data_volta date
 );
-
-create table if not exists public.passageiro_x_viagem(
-    ps_vg int not null,
-    ps_id int not null,
-    vg_id int not null,
-)

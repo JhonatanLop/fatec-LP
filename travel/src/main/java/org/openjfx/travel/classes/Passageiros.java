@@ -3,6 +3,7 @@ package org.openjfx.travel.classes;
 import java.util.Date;
 
 public class Passageiros {
+    private int ps_id;
     private String nome;
     private int CPF;
     private int telefone;
@@ -17,6 +18,7 @@ public class Passageiros {
     private String municipio;
     private String uf;
 
+    // construtor sem id
     public Passageiros(
         String nome,
         int CPF,
@@ -47,6 +49,40 @@ public class Passageiros {
         this.uf = uf;
     }
 
+    // construtor com id
+    public Passageiros(
+        int ps_id,
+        String nome,
+        int CPF,
+        int telefone,
+        Date nascimento,
+        String email,
+        String password,
+        int cep,
+        String logradouro,
+        int numero,
+        String complemento,
+        String bairro,
+        String municipio,
+        String uf
+    ) {
+        this.ps_id = ps_id;
+        this.nome = nome;
+        this.CPF = CPF;
+        this.telefone = telefone;
+        this.nascimento = nascimento;
+        this.email = email;
+        this.password = password;
+        this.cep = cep;
+        this.logradouro = logradouro;
+        this.numero = numero;
+        this.complemento = complemento;
+        this.bairro = bairro;
+        this.municipio = municipio;
+        this.uf = uf;
+    }
+
+    public int getId() { return ps_id; }
     public String getNome() { return nome; }
     public int getCPF() { return CPF; }
     public int getTelefone() { return telefone; }
@@ -61,6 +97,7 @@ public class Passageiros {
     public String getMunicipio() { return municipio; }
     public String getUf() { return uf; }
 
+    public void setId(int ps_id) { this.ps_id = ps_id; }
     public void setNome(String nome) { this.nome = nome; }
     public void setCPF(int CPF) { this.CPF = CPF; }
     public void setTelefone(int telefone) { this.telefone = telefone; }

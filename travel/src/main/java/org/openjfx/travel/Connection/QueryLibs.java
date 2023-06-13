@@ -6,6 +6,7 @@ import org.openjfx.travel.classes.Lugar;
 import org.openjfx.travel.classes.Passageiros;
 import org.openjfx.travel.classes.Passagem;
 import org.openjfx.travel.classes.Veiculo;
+import org.openjfx.travel.classes.Viagem;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
@@ -181,10 +182,37 @@ public class QueryLibs {
             statement.setString(12, veiculo.getTransmissao());
             statement.setDouble(13, veiculo.getConsumo());
             // exibe erros ao executar a query
+            statement.executeUpdate();
             conexao.commit();
 
             System.out.println("Insert executado com sucesso!");
         } catch (Exception ex) {
+            System.out.println("initializeErro ao executar a query: " + ex.getMessage());
+        } finally {
+            conexao.close();
+        }
+    }
+
+    public static void insertViagem(Viagem viagem) throws SQLException { 
+        
+        // inicializa conexão com o banco de dados
+        Connection conexao = initConnection();
+
+        String sql = "INSERT INTO viagem (ps_id, lugar_ida, lugar_volta, veiculo_ida, veiculo_volta, data_ida, data_volta) values (?, ?, ?, ?, ?, ?, ?)";
+        try (PreparedStatement statement = conexao.prepareStatement(sql)) {
+            statement.setInt(1, viagem.getPassageiros().getId());
+            statement.setString(2, viagem.getLugarIda().getNome());
+            statement.setString(3, viagem.getLugarVolta().getNome());
+            statement.setString(4, viagem.getTranspIda().getNome());
+            statement.setString(5, viagem.getTranpVolta().getNome());
+            statement.setDate(6, (Date) viagem.getDataIda());
+            statement.setDate(7, (Date) viagem.getDataVolta());
+            // exibe erros ao executar a query
+            statement.executeUpdate();
+            conexao.commit();
+
+            System.out.println("Insert executado com sucesso!");
+        }  catch (Exception ex) {
             System.out.println("initializeErro ao executar a query: " + ex.getMessage());
         } finally {
             conexao.close();

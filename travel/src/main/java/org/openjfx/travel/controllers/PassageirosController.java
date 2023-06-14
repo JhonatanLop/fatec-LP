@@ -1,8 +1,14 @@
 package org.openjfx.travel.controllers;
 
 import java.io.IOException;
+import java.sql.SQLException;
+import java.time.LocalDate;
+import java.util.Date;
 
 import org.openjfx.travel.App;
+import org.openjfx.travel.Connection.QueryLibs;
+import org.openjfx.travel.classes.Passageiros;
+import org.openjfx.travel.utils.Convert;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -11,14 +17,12 @@ import javafx.scene.control.DatePicker;
 import javafx.scene.control.TextField;
 
 public class PassageirosController {
-    @FXML
-    private Button PassageirosId;
 
     @FXML
     private TextField bairroId;
 
     @FXML
-    private Button canceId;
+    private Button cancelId;
 
     @FXML
     private TextField cepId;
@@ -34,6 +38,9 @@ public class PassageirosController {
 
     @FXML
     private TextField emailId;
+
+    @FXML
+    private Button enviarId;
 
     @FXML
     private TextField estadoId;
@@ -66,7 +73,7 @@ public class PassageirosController {
     private TextField senhaId;
 
     @FXML
-    private TextField telId1;
+    private TextField tellId;
 
     @FXML
     private Button veiculosId;
@@ -75,6 +82,25 @@ public class PassageirosController {
     private Button viagensId;
 
     // botões
+
+    @FXML
+    void saveData(ActionEvent event) throws SQLException {
+        Passageiros passageiro = new Passageiros(
+            nameId.getText(),
+            Convert.convertToInt(documentId),
+            Convert.convertToInt(tellId),
+            Convert.convertToDate(nascimentoId.getValue()),
+            emailId.getText(),
+            senhaId.getText(),
+            Convert.convertToInt(cepId),
+            logradId.getText(),
+            numeroId.getText(),
+            bairroId.getText(),
+            municipioId.getText(),
+            estadoId.getText());
+
+        QueryLibs.insertPassageiros(passageiro);
+    }
 
     @FXML
     void switchToHome(ActionEvent event) {
@@ -101,14 +127,19 @@ public class PassageirosController {
         try {
             App.setRoot("passageiros");
         } catch (IOException e) {
-            System.out.println("Erro! - Falha ao mudar para tela - locais.fxml");
+            System.out.println("Erro! - Falha ao mudar para tela - passageiros.fxml");
             e.printStackTrace();
         }
     }
 
     @FXML
     void switchToPassagens(ActionEvent event) {
-
+        try {
+            App.setRoot("passagens");
+        } catch (IOException e) {
+            System.out.println("Erro! - Falha ao mudar para tela - passagens.fxml");
+            e.printStackTrace();
+        }
     }
 
     @FXML
@@ -116,13 +147,18 @@ public class PassageirosController {
         try {
             App.setRoot("veiculos");
         } catch (IOException e) {
-            System.out.println("Erro! - Falha ao mudar para tela - locais.fxml");
+            System.out.println("Erro! - Falha ao mudar para tela - veiculos.fxml");
             e.printStackTrace();
         }
     }
 
     @FXML
     void switchToViagens(ActionEvent event) {
-
+        try {
+            App.setRoot("viagens");
+        } catch (IOException e) {
+            System.out.println("Erro! - Falha ao mudar para tela - viagens.fxml");
+            e.printStackTrace();
+        }
     }
 }

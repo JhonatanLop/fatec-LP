@@ -55,6 +55,7 @@ public class SQLConnection {
 
             // objeto "conexao" para execução de comandos SQL
             conexao = DriverManager.getConnection(driver, userName, password);
+            conexao.setAutoCommit(false);
             System.out.println("Banco conectado com sucesso!");
         // tratamento de erros
         } catch (ClassNotFoundException ex) {

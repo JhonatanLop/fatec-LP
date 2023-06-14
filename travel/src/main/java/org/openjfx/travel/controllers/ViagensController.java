@@ -1,15 +1,21 @@
 package org.openjfx.travel.controllers;
 
 import java.io.IOException;
+import java.sql.SQLException;
 
 import org.openjfx.travel.App;
+import org.openjfx.travel.Connection.QueryLibs;
+import org.openjfx.travel.classes.Passageiros;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
+import java.util.ArrayList;
+import java.util.List;
 
 public class ViagensController {
     
@@ -53,6 +59,9 @@ public class ViagensController {
     private Button veiculosId;
 
     @FXML
+    private ChoiceBox<Passageiros> selectPassageiro;
+
+    @FXML
     void ButtonCancelar(ActionEvent event) {
 
     }
@@ -85,6 +94,13 @@ public class ViagensController {
     @FXML
     void selectTranspVolta(ActionEvent event) {
 
+    }
+
+    @FXML
+    public void initialize() throws SQLException{
+        List<Passageiros> listPassageiros = QueryLibs.selectAllPassageiros();
+        ChoiceBox<Passageiros> selectPassageiro = new ChoiceBox<>();
+        selectPassageiro.getItems().addAll(listPassageiros);
     }
 
     @FXML

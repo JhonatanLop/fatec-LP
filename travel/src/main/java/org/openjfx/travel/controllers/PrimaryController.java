@@ -70,6 +70,12 @@ public class PrimaryController {
 
     @FXML
     void switchToPassagens(ActionEvent event) {
+        try {
+            App.setRoot("passagens");
+        } catch (IOException e) {
+            System.out.println("Erro! - Falha ao mudar para tela - passagens.fxml");
+            e.printStackTrace();
+        }
     }
 
     @FXML

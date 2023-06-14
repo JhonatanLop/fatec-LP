@@ -98,9 +98,9 @@ public class ViagensController {
 
     @FXML
     public void initialize() throws SQLException{
-        List<Passageiros> listPassageiros = QueryLibs.selectAllPassageiros();
-        ChoiceBox<Passageiros> selectPassageiro = new ChoiceBox<>();
-        selectPassageiro.getItems().addAll(listPassageiros);
+        // List<Passageiros> listPassageiros = QueryLibs.selectAllPassageiros();
+        // ChoiceBox<Passageiros> selectPassageiro = new ChoiceBox<>();
+        // selectPassageiro.getItems().addAll(listPassageiros);
     }
 
     @FXML
@@ -125,12 +125,12 @@ public class ViagensController {
 
     @FXML
     void switchToPassagens(ActionEvent event) {
-        // try {
-        //     App.setRoot("passagens");
-        // } catch (IOException e) {
-        //     System.out.println("Erro! - Falha ao mudar para tela - locais.fxml");
-        //     e.printStackTrace();
-        // }
+        try {
+            App.setRoot("passagens");
+        } catch (IOException e) {
+            System.out.println("Erro! - Falha ao mudar para tela - passagens.fxml");
+            e.printStackTrace();
+        }
     }
 
     @FXML

@@ -2,9 +2,9 @@
 
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.ChoiceBox?>
 <?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -65,7 +65,7 @@
                               <Image url="@../../../img/person.png" />
                            </image>
                         </ImageView>
-                        <Button fx:id="PassageirosId" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#switchToPassageiros" styleClass="menu-button" text="Passageiros">
+                        <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#switchToPassageiros" styleClass="menu-button" text="Passageiros">
                            <opaqueInsets>
                               <Insets />
                            </opaqueInsets>
@@ -82,7 +82,7 @@
                               <Image url="@../../../img/marcador%20.png" />
                            </image>
                         </ImageView>
-                        <Button fx:id="locaisId" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#switckToLocais" styleClass="menu-button" text="Locais">
+                        <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#switchToLocais" styleClass="menu-button" text="Locais">
                            <opaqueInsets>
                               <Insets />
                            </opaqueInsets>
@@ -99,7 +99,7 @@
                               <Image url="@../../../img/veiculos.png" />
                            </image>
                         </ImageView>
-                        <Button fx:id="veiculosId" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#switchToVeiculos" styleClass="menu-button" text="Veículos">
+                        <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#switchToVeiculos" styleClass="menu-button" text="Veículos">
                            <opaqueInsets>
                               <Insets />
                            </opaqueInsets>
@@ -113,10 +113,10 @@
                      <children>
                         <ImageView fitHeight="36.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../../../img/passagem.png" />
+                              <Image url="@../../../img/mundo.png" />
                            </image>
                         </ImageView>
-                        <Button fx:id="passagensId" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#switchToPassagens" styleClass="menu-button" text="Passagens">
+                        <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#SwitchToViagens" styleClass="menu-button" text="Viagens">
                            <opaqueInsets>
                               <Insets />
                            </opaqueInsets>
@@ -133,7 +133,7 @@
                               <Image url="@../../../img/lugar%20.png" />
                            </image>
                         </ImageView>
-                        <Button fx:id="homeid" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#switchToHome" styleClass="menu-button" text="Home">
+                        <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#switchToHome" styleClass="menu-button" text="Home">
                            <opaqueInsets>
                               <Insets />
                            </opaqueInsets>
@@ -159,129 +159,87 @@
          <children>
             <VBox prefWidth="100.0" styleClass="left-conteiner-fx">
                <children>
-                  <Label styleClass="title-center-text" text="Viagens">
+                  <Label styleClass="title-center-text" text="Passagem">
                      <padding>
                         <Insets left="10.0" />
                      </padding>
                   </Label>
                </children>
             </VBox>
-            <HBox alignment="TOP_RIGHT" prefHeight="100.0" prefWidth="200.0" spacing="20.0" VBox.vgrow="ALWAYS">
+            <HBox alignment="TOP_RIGHT" prefHeight="100.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
                <children>
                   <VBox alignment="TOP_CENTER" prefHeight="562.0" prefWidth="499.0" spacing="30.0">
                      <children>
-                        <VBox spacing="8.0">
+                        <HBox alignment="CENTER_LEFT">
                            <children>
-                              <HBox alignment="CENTER_LEFT" spacing="4.0">
-                                 <children>
-                                    <Label styleClass="normal-text" text="Dê um nome à Viagem:" />
-                                    <Pane maxHeight="-Infinity" prefHeight="1.0" prefWidth="200.0" styleClass="line-menu-bar-fx" HBox.hgrow="ALWAYS" />
-                                    <ImageView fitHeight="38.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
+                              <Label styleClass="normal-text" text="Viagem:*" />
+                              <TextField fx:id="viagemId" prefHeight="50.0" prefWidth="272.0" styleClass="normal-field-text" HBox.hgrow="ALWAYS">
+                                 <HBox.margin>
+                                    <Insets left="10.0" />
+                                 </HBox.margin>
+                              </TextField>
+                              <Button mnemonicParsing="false" onAction="#selectViagem" prefHeight="50.0" prefWidth="50.0" styleClass="plus-button">
+                                 <HBox.margin>
+                                    <Insets left="2.0" />
+                                 </HBox.margin>
+                                 <graphic>
+                                    <ImageView fitHeight="38.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
-                                          <Image url="@../../../img/ticket%20to%20travel.png" />
+                                          <Image url="@../../../img/v.png" />
                                        </image>
                                     </ImageView>
-                                 </children>
-                              </HBox>
-                              <TextField fx:id="viagemName" prefHeight="50.0" prefWidth="272.0" styleClass="normal-field-text" />
-                           </children>
-                        </VBox>
-                        <HBox alignment="CENTER">
-                           <children>
-                              <Label styleClass="normal-text" text="Passageiro:*" />
-                              <ChoiceBox fx:id="selectPassageiro" prefHeight="46.0" prefWidth="360.0" styleClass="normal-field-text" />
+                                 </graphic>
+                              </Button>
                            </children>
                         </HBox>
+                        <VBox spacing="10.0" VBox.vgrow="ALWAYS">
+                           <children>
+                              <Label styleClass="normal-text" text="Passageiros:" />
+                              <ListView fx:id="listPassageiros" style="-fx-background-radius: 10;" styleClass="normal-field-text" />
+                           </children>
+                        </VBox>
                      </children>
                   </VBox>
                   <VBox prefHeight="200.0" prefWidth="100.0" spacing="30.0" HBox.hgrow="ALWAYS">
                      <children>
                         <HBox alignment="CENTER_LEFT">
                            <children>
-                              <Label styleClass="normal-text" text="Origem da Viagens:*" />
-                              <TextField fx:id="origemViagem" prefHeight="50.0" prefWidth="296.0" styleClass="normal-field-text" HBox.hgrow="ALWAYS">
+                              <Label styleClass="normal-text" text="Origem da Viagens:" />
+                              <TextField fx:id="origemViagem" prefHeight="50.0" prefWidth="316.0" styleClass="normal-field-text" HBox.hgrow="ALWAYS">
                                  <HBox.margin>
                                     <Insets left="10.0" />
                                  </HBox.margin>
                               </TextField>
-                              <Button mnemonicParsing="false" onAction="#selectOrigem" prefHeight="50.0" prefWidth="50.0" styleClass="plus-button">
-                                 <HBox.margin>
-                                    <Insets left="2.0" />
-                                 </HBox.margin>
-                                 <graphic>
-                                    <ImageView fitHeight="38.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true" styleClass="img-button">
-                                       <image>
-                                          <Image url="@../../../img/v.png" />
-                                       </image>
-                                    </ImageView>
-                                 </graphic>
-                              </Button>
                            </children>
                         </HBox>
                         <HBox alignment="CENTER_LEFT">
                            <children>
-                              <Label styleClass="normal-text" text="Destino da Viagem:*" />
-                              <TextField fx:id="destinoViagem" prefHeight="50.0" prefWidth="299.0" styleClass="normal-field-text" HBox.hgrow="ALWAYS">
+                              <Label styleClass="normal-text" text="Destino da Viagem:" />
+                              <TextField fx:id="destinoViagem" prefHeight="50.0" prefWidth="316.0" styleClass="normal-field-text" HBox.hgrow="ALWAYS">
                                  <HBox.margin>
                                     <Insets left="10.0" />
                                  </HBox.margin>
                               </TextField>
-                              <Button mnemonicParsing="false" onAction="#selectDestino" prefHeight="50.0" prefWidth="50.0" styleClass="plus-button">
-                                 <HBox.margin>
-                                    <Insets left="2.0" />
-                                 </HBox.margin>
-                                 <graphic>
-                                    <ImageView fitHeight="38.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true" styleClass="img-button">
-                                       <image>
-                                          <Image url="@../../../img/v.png" />
-                                       </image>
-                                    </ImageView>
-                                 </graphic>
-                              </Button>
                            </children>
                         </HBox>
                         <HBox alignment="CENTER_LEFT">
                            <children>
                               <Label styleClass="normal-text" text="Transporte de Ida:*" />
-                              <TextField fx:id="transpIda" prefHeight="50.0" prefWidth="291.0" styleClass="normal-field-text" HBox.hgrow="ALWAYS">
+                              <TextField fx:id="transpIda" prefHeight="50.0" prefWidth="373.0" styleClass="normal-field-text" HBox.hgrow="ALWAYS">
                                  <HBox.margin>
                                     <Insets left="10.0" />
                                  </HBox.margin>
                               </TextField>
-                              <Button mnemonicParsing="false" onAction="#selectTranspIda" prefHeight="50.0" prefWidth="50.0" styleClass="plus-button">
-                                 <graphic>
-                                    <ImageView fitHeight="38.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true" styleClass="img-button">
-                                       <image>
-                                          <Image url="@../../../img/v.png" />
-                                       </image>
-                                    </ImageView>
-                                 </graphic>
-                                 <HBox.margin>
-                                    <Insets left="2.0" />
-                                 </HBox.margin>
-                              </Button>
                            </children>
                         </HBox>
                         <HBox alignment="CENTER_LEFT">
                            <children>
-                              <Label styleClass="normal-text" text="Transporte de Volta:*" />
+                              <Label styleClass="normal-text" text="Transporte de Volta:" />
                               <TextField fx:id="transpVolta" prefHeight="50.0" prefWidth="291.0" styleClass="normal-field-text" HBox.hgrow="ALWAYS">
                                  <HBox.margin>
                                     <Insets left="10.0" />
                                  </HBox.margin>
                               </TextField>
-                              <Button mnemonicParsing="false" onAction="#selectTranspVolta" prefHeight="50.0" prefWidth="50.0" styleClass="plus-button">
-                                 <graphic>
-                                    <ImageView fitHeight="38.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true" styleClass="img-button">
-                                       <image>
-                                          <Image url="@../../../img/v.png" />
-                                       </image>
-                                    </ImageView>
-                                 </graphic>
-                                 <HBox.margin>
-                                    <Insets left="2.0" />
-                                 </HBox.margin>
-                              </Button>
                            </children>
                         </HBox>
                         <HBox alignment="CENTER_LEFT">
@@ -318,7 +276,7 @@
                <children>
                   <HBox alignment="CENTER_LEFT">
                      <children>
-                        <Button mnemonicParsing="false" onAction="#dropTravel" prefHeight="66.0" prefWidth="220.0" styleClass="form-button">
+                        <Button mnemonicParsing="false" onAction="#ButtonCancelar" prefHeight="66.0" prefWidth="220.0" styleClass="form-button">
                            <graphic>
                               <HBox alignment="CENTER" spacing="10.0">
                                  <children>
@@ -333,11 +291,11 @@
                            </graphic>
                         </Button>
                         <Pane maxHeight="-Infinity" prefHeight="0.0" prefWidth="200.0" HBox.hgrow="ALWAYS" />
-                        <Button mnemonicParsing="false" onAction="#saveTravel" prefHeight="66.0" prefWidth="185.0" styleClass="form-button">
+                        <Button mnemonicParsing="false" onAction="#buttonImprimir" prefHeight="66.0" prefWidth="230.0" styleClass="form-button">
                            <graphic>
                               <HBox alignment="CENTER" spacing="10.0">
                                  <children>
-                                    <Label text="Enviar" />
+                                    <Label text="Imprimir" />
                                     <ImageView fitHeight="41.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
                                           <Image url="@../../../img/airplane%20icon2.png" />

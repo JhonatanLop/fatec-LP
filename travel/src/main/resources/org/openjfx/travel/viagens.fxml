@@ -318,7 +318,7 @@
                <children>
                   <HBox alignment="CENTER_LEFT">
                      <children>
-                        <Button mnemonicParsing="false" onAction="#ButtonCancelar" prefHeight="66.0" prefWidth="220.0" styleClass="form-button">
+                        <Button mnemonicParsing="false" onAction="#dropTravel" prefHeight="66.0" prefWidth="220.0" styleClass="form-button">
                            <graphic>
                               <HBox alignment="CENTER" spacing="10.0">
                                  <children>
@@ -333,7 +333,7 @@
                            </graphic>
                         </Button>
                         <Pane maxHeight="-Infinity" prefHeight="0.0" prefWidth="200.0" HBox.hgrow="ALWAYS" />
-                        <Button mnemonicParsing="false" onAction="#buttonEnviar" prefHeight="66.0" prefWidth="185.0" styleClass="form-button">
+                        <Button mnemonicParsing="false" onAction="#saveTravel" prefHeight="66.0" prefWidth="185.0" styleClass="form-button">
                            <graphic>
                               <HBox alignment="CENTER" spacing="10.0">
                                  <children>

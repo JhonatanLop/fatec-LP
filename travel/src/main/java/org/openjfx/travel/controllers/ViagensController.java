@@ -6,6 +6,8 @@ import java.sql.SQLException;
 import org.openjfx.travel.App;
 import org.openjfx.travel.Connection.QueryLibs;
 import org.openjfx.travel.classes.Passageiros;
+import org.openjfx.travel.classes.Viagem;
+import org.openjfx.travel.utils.Convert;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -18,9 +20,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ViagensController {
-    
-    @FXML
-    private Button PassageirosId;
 
     @FXML
     private DatePicker dataPartida;
@@ -29,37 +28,19 @@ public class ViagensController {
     private DatePicker dataVolta;
 
     @FXML
-    private TextField destinoViagem;
+    private ChoiceBox<String> selectDestino;
 
     @FXML
-    private Button homeid;
+    private ChoiceBox<String> selectOrigem;
 
     @FXML
-    private ListView<?> listPassageiros;
+    private ChoiceBox<String> selectPassageiros;
 
     @FXML
-    private Button locaisId;
+    private ChoiceBox<String> selectTranspIda;
 
     @FXML
-    private TextField origemViagem;
-
-    @FXML
-    private TextField passageiros;
-
-    @FXML
-    private Button passagensId;
-
-    @FXML
-    private TextField transpIda;
-
-    @FXML
-    private TextField transpVolta;
-
-    @FXML
-    private Button veiculosId;
-
-    @FXML
-    private ChoiceBox<Passageiros> selectPassageiro;
+    private ChoiceBox<String> selectTranspVolta;
 
     @FXML
     void ButtonCancelar(ActionEvent event) {
@@ -67,40 +48,45 @@ public class ViagensController {
     }
 
     @FXML
-    void buttonEnviar(ActionEvent event) {
+    void buttonEnviar(ActionEvent event) throws SQLException, ClassNotFoundException {
+        Viagem viagem = new Viagem(
+            selectPassageiros.toString(),
+            selectOrigem.toString(),
+            selectDestino.toString(),
+            selectTranspIda.toString(),
+            selectTranspVolta.toString(),
+            Convert.convertToDate(dataPartida.getValue()),
+            Convert.convertToDate(dataVolta.getValue()));
 
+            
+        QueryLibs.insertViagem(viagem);
+        // App.showPopup("model.savePopUp");
     }
 
     @FXML
     void selectDestino(ActionEvent event) {
-
     }
 
-    @FXML
-    void selectOrigem(ActionEvent event) {
-
-    }
 
     @FXML
-    void selectPassageiro(ActionEvent event) {
+    public void initialize() throws SQLException, ClassNotFoundException {
+        // carrega todos os dados
 
-    }
+        // Passageiros
+        // salva resultado da consulta em uma lista
+        List<String> listPassageiros = QueryLibs.selectNameAllPassageiros();
+        // adiciona os itens da lista na comboBox
+        selectPassageiros.getItems().addAll(listPassageiros);
 
-    @FXML
-    void selectTranspIda(ActionEvent event) {
+        // Locais
+        List<String> listLocais = QueryLibs.selectNameAllLocais();
+        selectOrigem.getItems().addAll(listLocais);
+        selectDestino.getItems().addAll(listLocais);
 
-    }
-
-    @FXML
-    void selectTranspVolta(ActionEvent event) {
-
-    }
-
-    @FXML
-    public void initialize() throws SQLException{
-        List<Passageiros> listPassageiros = QueryLibs.selectAllPassageiros();
-        ChoiceBox<Passageiros> selectPassageiro = new ChoiceBox<>();
-        selectPassageiro.getItems().addAll(listPassageiros);
+        // Transporte
+        List<String> listTransp = QueryLibs.selectNameAllTransporte();
+        selectTranspIda.getItems().addAll(listTransp);
+        selectTranspVolta.getItems().addAll(listTransp);
     }
 
     @FXML
@@ -125,12 +111,12 @@ public class ViagensController {
 
     @FXML
     void switchToPassagens(ActionEvent event) {
-        // try {
-        //     App.setRoot("passagens");
-        // } catch (IOException e) {
-        //     System.out.println("Erro! - Falha ao mudar para tela - locais.fxml");
-        //     e.printStackTrace();
-        // }
+        try {
+            App.setRoot("passagens");
+        } catch (IOException e) {
+            System.out.println("Erro! - Falha ao mudar para tela - locais.fxml");
+            e.printStackTrace();
+        }
     }
 
     @FXML

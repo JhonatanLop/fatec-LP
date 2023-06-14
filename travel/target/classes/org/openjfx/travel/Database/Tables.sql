@@ -22,9 +22,8 @@ create table if not exists public.passageiro(
     senha varchar not null,
     nascimento date null,
     cep int null,
-    logradouto varchar null,
+    logradouro varchar null,
     numero varchar null,
-    complemento varchar null,
     bairro varchar null,
     municipio varchar null,
     uf varchar null

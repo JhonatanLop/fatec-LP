@@ -13,6 +13,7 @@ public class Convert {
     // }
 
     public static java.sql.Date convertToDate(LocalDate localDate) {
+        System.out.println(java.sql.Date.valueOf(localDate));
         return java.sql.Date.valueOf(localDate);
     }
 

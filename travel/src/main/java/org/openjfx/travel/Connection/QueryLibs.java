@@ -6,7 +6,6 @@ import java.util.List;
 
 import org.openjfx.travel.classes.Lugar;
 import org.openjfx.travel.classes.Passageiros;
-import org.openjfx.travel.classes.Passagem;
 import org.openjfx.travel.classes.Veiculo;
 import org.openjfx.travel.classes.Viagem;
 
@@ -21,13 +20,13 @@ import java.sql.SQLException;
 
 public class QueryLibs {
 
-    private static Connection initConnection() {
+    private static Connection initConnection(){
         SQLConnection sqlConnection = new SQLConnection();
         Connection conexao = sqlConnection.connect();
         return conexao;
     }
 
-    public static void simpleSelect() throws SQLException {
+    public static void simpleSelect() throws SQLException{
         Connection conexao = initConnection();
         // método que executa um select simples
         // recebe como parâmetro uma conexão com o banco de dados
@@ -58,7 +57,7 @@ public class QueryLibs {
         conexao.close();
     }
 
-    public static void insertTable() throws SQLException {
+    public static void insertTable() throws SQLException{
         Connection conexao = initConnection();
         // código sql a ser executado, passando "?" como parâmetro de valors
         String sql = "INSERT INTO tabela_teste (nome, nome2) values (?, ?)";
@@ -75,7 +74,7 @@ public class QueryLibs {
         conexao.close();
     }
 
-    public static void executeSqlFile(String arquivoSql) throws SQLException, IOException {
+    public static void executeSqlFile(String arquivoSql) throws SQLException, IOException{
         Connection conexao = initConnection();
 
         try (BufferedReader br = new BufferedReader(new FileReader(arquivoSql))) {
@@ -99,7 +98,7 @@ public class QueryLibs {
     }
 
     // Query's para insert de dados
-    public static void insertLugar(Lugar lugar) throws SQLException {
+    public static void insertLugar(Lugar lugar) throws SQLException{
 
         // inicializa conexão com o banco de dados
         Connection conexao = initConnection();
@@ -130,7 +129,7 @@ public class QueryLibs {
         }
     }
 
-    public static void insertPassageiros(Passageiros passageiro) throws SQLException {
+    public static void insertPassageiros(Passageiros passageiro) throws SQLException{
         // Inicializa conexão com o banco de dados
         Connection conexao = initConnection();
 
@@ -167,7 +166,7 @@ public class QueryLibs {
         }
     }
 
-    public static void insertVeiculo(Veiculo veiculo) throws SQLException {
+    public static void insertVeiculo(Veiculo veiculo) throws SQLException{
 
         // inicializa conexão com o banco de dados
         Connection conexao = initConnection();
@@ -199,18 +198,18 @@ public class QueryLibs {
         }
     }
 
-    public static void insertViagem(Viagem viagem) throws SQLException {
+    public static void insertViagem(Viagem viagem) throws SQLException{
 
         // inicializa conexão com o banco de dados
         Connection conexao = initConnection();
 
         String sql = "INSERT INTO viagem (ps_id, lugar_ida, lugar_volta, veiculo_ida, veiculo_volta, data_ida, data_volta) values (?, ?, ?, ?, ?, ?, ?)";
         try (PreparedStatement statement = conexao.prepareStatement(sql)) {
-            statement.setInt(1, viagem.getPassageiros().getId());
-            statement.setString(2, viagem.getLugarIda().getNome());
-            statement.setString(3, viagem.getLugarVolta().getNome());
-            statement.setString(4, viagem.getTranspIda().getNome());
-            statement.setString(5, viagem.getTranpVolta().getNome());
+            statement.setString(1, viagem.getPassageiros());
+            statement.setString(2, viagem.getLugarIda());
+            statement.setString(3, viagem.getLugarVolta());
+            statement.setString(4, viagem.getTranspIda());
+            statement.setString(5, viagem.getTranpVolta());
             statement.setDate(6, (Date) viagem.getDataIda());
             statement.setDate(7, (Date) viagem.getDataVolta());
             // exibe erros ao executar a query
@@ -226,36 +225,66 @@ public class QueryLibs {
     }
 
     // retorna lista com todos os passageiros
-    public static List<Passageiros> selectAllPassageiros() throws SQLException {
+    public static List<String> selectNameAllPassageiros(){
 
+        // inicia conexão e lista
         Connection conexao = initConnection();
-        List<Passageiros> passageiros = new ArrayList<>();
+        List<String> passageiros = new ArrayList<>();
 
+        // string sql com a query
         String sql = "select * from passageiro";
         try (PreparedStatement statement = conexao.prepareStatement(sql)) {
-            ResultSet result = statement.executeQuery(sql);
+            ResultSet result = statement.executeQuery();
 
             while (result.next()) {
-                int psId = result.getInt("ps_id");
                 String nome = result.getString("nome");
-                int cpf = result.getInt("cpf");
-                int telefone = result.getInt("telefone");
-                String email = result.getString("email");
-                String senha = result.getString("senha");
-                Date nascimento = result.getDate("nascimento");
-                int cep = result.getInt("cep");
-                String logradouro = result.getString("logradouto");
-                String numero = result.getString("numero");
-                String bairro = result.getString("bairro");
-                String municipio = result.getString("municipio");
-                String uf = result.getString("uf");
-
-                Passageiros passageiro = new Passageiros(psId, nome, cpf, telefone, nascimento, email, senha, cep,
-                        logradouro, numero, bairro, municipio, uf);
-
-                passageiros.add(passageiro);
+                // adiciona nome na lista
+                passageiros.add(nome);
             }
+        // em caso de falha
+        } catch (Exception e) {
+            System.out.println("Falha ao executar a query");
         }
         return passageiros;
+    }
+
+    // retorna lista com nome de todos os lugares cadastrados
+    public static List<String> selectNameAllLocais() throws SQLException{
+
+        Connection conexao = initConnection();
+        List<String> lugares = new ArrayList<>();
+
+        String sql = "select * from lugar";
+        try (PreparedStatement statement = conexao.prepareStatement(sql)) {
+            ResultSet result = statement.executeQuery();
+
+            while (result.next()) {
+                String nome = result.getString("nome");
+                lugares.add(nome);
+            }
+        } catch (Exception e) {
+            System.out.println("Falha ao executar a query");
+        }
+        return lugares;
+    }
+
+    // retorna lista com nome de todos os meios de transporte cadastrados
+    public static List<String> selectNameAllTransporte(){
+
+        Connection conexao = initConnection();
+        List<String> listVeiculos = new ArrayList<>();
+
+        String sql = "select * from veiculo";
+        try (PreparedStatement statement = conexao.prepareStatement(sql)) {
+            ResultSet result = statement.executeQuery();
+
+            while (result.next()) {
+                String nome = result.getString("nome");
+                listVeiculos.add(nome);
+            }
+        } catch (Exception e) {
+            System.out.println("Falha ao executar a query");
+        }
+        return listVeiculos;
     }
 }

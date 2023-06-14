@@ -3,20 +3,20 @@ package org.openjfx.travel.classes;
 import java.util.Date;
 
 public class Viagem {
-    Passageiros passageiros;
-    Lugar lugarIda;
-    Lugar lugarVolta;
-    Veiculo transpIda;
-    Veiculo tranpVolta;
+    String passageiros;
+    String lugarIda;
+    String lugarVolta;
+    String transpIda;
+    String tranpVolta;
     Date dataIda;
     Date dataVolta;
 
     public Viagem(
-        Passageiros passageiros,
-        Lugar lugarIda,
-        Lugar lugarVolta,
-        Veiculo transpIda,
-        Veiculo tranpVolta,
+        String passageiros,
+        String lugarIda,
+        String lugarVolta,
+        String transpIda,
+        String tranpVolta,
         Date dataIda,
         Date dataVolta
     ){ 
@@ -29,19 +29,23 @@ public class Viagem {
         this.dataVolta = dataVolta;
     }
 
-    public Passageiros getPassageiros() { return passageiros; }
-    public Lugar getLugarIda() { return lugarIda; }
-    public Lugar getLugarVolta() { return lugarVolta; }
-    public Veiculo getTranspIda() { return transpIda; }
-    public Veiculo getTranpVolta() { return tranpVolta; }
+    public Viagem(String string, String string2, String string3, String string4, String string5,
+            java.sql.Date convertToDate, java.sql.Date convertToDate2) {
+    }
+
+    public String getPassageiros() { return passageiros; }
+    public String getLugarIda() { return lugarIda; }
+    public String getLugarVolta() { return lugarVolta; }
+    public String getTranspIda() { return transpIda; }
+    public String getTranpVolta() { return tranpVolta; }
     public Date getDataIda() { return dataIda; }
     public Date getDataVolta() { return dataVolta; }
     
-    public void setPassageiros(Passageiros passageiros) { this.passageiros = passageiros; }
-    public void setLugarIda(Lugar lugarIda) { this.lugarIda = lugarIda; }
-    public void setLugarVolta(Lugar lugarVolta) { this.lugarVolta = lugarVolta; }
-    public void setTranspIda(Veiculo transpIda) { this.transpIda = transpIda; }
-    public void setTranpVolta(Veiculo tranpVolta) { this.tranpVolta = tranpVolta; }
+    public void setPassageiros(String passageiros) { this.passageiros = passageiros; }
+    public void setLugarIda(String lugarIda) { this.lugarIda = lugarIda; }
+    public void setLugarVolta(String lugarVolta) { this.lugarVolta = lugarVolta; }
+    public void setTranspIda(String transpIda) { this.transpIda = transpIda; }
+    public void setTranpVolta(String tranpVolta) { this.tranpVolta = tranpVolta; }
     public void setDataIda(Date dataIda) { this.dataIda = dataIda; }
     public void setDataVolta(Date dataVolta) { this.dataVolta = dataVolta; }
 }

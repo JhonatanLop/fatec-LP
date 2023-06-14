@@ -84,7 +84,7 @@ public class PassageirosController {
     // botões
 
     @FXML
-    void saveData(ActionEvent event) throws SQLException {
+    void saveData(ActionEvent event) throws SQLException, ClassNotFoundException {
         Passageiros passageiro = new Passageiros(
             nameId.getText(),
             Convert.convertToInt(documentId),

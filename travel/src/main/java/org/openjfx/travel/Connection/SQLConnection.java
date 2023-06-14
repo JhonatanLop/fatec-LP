@@ -12,7 +12,6 @@ import java.util.Map;
 public class SQLConnection {
     static Connection conexao;
 
-
     private static Map<String, String> readEnvFile() {
         Map<String, String> envCode = new HashMap<>();
 
@@ -32,7 +31,6 @@ public class SQLConnection {
 
         return envCode;
     }
-
 
     // método de conexão com banco
     public static Connection connect(){
@@ -57,7 +55,7 @@ public class SQLConnection {
             conexao = DriverManager.getConnection(driver, userName, password);
             conexao.setAutoCommit(false);
             System.out.println("Banco conectado com sucesso!");
-        // tratamento de erros
+            // tratamento de erros
         } catch (ClassNotFoundException ex) {
             System.out.println("Driver do banco de dados não localizado!");
         } catch (SQLException ex) {

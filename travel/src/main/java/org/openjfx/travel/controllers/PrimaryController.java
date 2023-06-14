@@ -70,10 +70,11 @@ public class PrimaryController {
 
     @FXML
     void switchToPassagens(ActionEvent event) {
-    }
-
-    @FXML
-    void switchToHome(ActionEvent event) {
-
+        try {
+            App.setRoot("passagens");
+        } catch (IOException e) {
+            System.out.println("Erro! - Falha ao mudar para tela - veiculos.fxml");
+            e.printStackTrace();
+        }
     }
 }

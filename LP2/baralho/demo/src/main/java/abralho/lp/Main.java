@@ -20,13 +20,15 @@ public class Main {
             baralho.incluirCarta(i,nCarta);
         }
         while (loop != "não"){
-            System.out.println("qual metodo desja usar?\n1- distribuir cartas\n2- embaralhar");
+            System.out.println("qual metodo desja usar?\n1- distribuir cartas\n2- embaralhar\n3- Verificar se há cartas");
             resp = leia.nextInt();
             if (resp == 1) {
                 Carta carta = Baralho.distribuirCarta(baralho);
                 System.out.println("A carte é:"+carta.getNaipe()+carta.getNome());
             } else if(resp == 2) {
-                Baralho.embaralhar(baralho);
+                baralho = Baralho.embaralharBaralho(baralho);
+            } else if(resp == 3) {
+                Baralho.hasCarta(baralho);
             }
         }
     }

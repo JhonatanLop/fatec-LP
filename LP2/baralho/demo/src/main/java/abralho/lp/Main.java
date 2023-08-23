@@ -8,27 +8,19 @@ public class Main {
     
     
     public static void main(String[] args) {
-        String loop = "";
         int resp;
-        for (int i = 0; i < 56; i++) {
-            System.out.println("Digite o naipe:");
-            String naipe = leia.next();
-            System.out.println("Digite o Nome da carta:");
-            String nome = leia.next();
-
-            Carta nCarta = new Carta(nome,naipe);
-            baralho.incluirCarta(i,nCarta);
-        }
-        while (loop != "não"){
-            System.out.println("qual metodo desja usar?\n1- distribuir cartas\n2- embaralhar\n3- Verificar se há cartas");
+        while (true){
+            System.out.println("qual metodo desja usar?\n1- distribuir cartas\n2- embaralhar\n3- Verificar se há cartas\n4- Imprimir baralho");
             resp = leia.nextInt();
             if (resp == 1) {
                 Carta carta = Baralho.distribuirCarta(baralho);
                 System.out.println("A carte é:"+carta.getNaipe()+carta.getNome());
             } else if(resp == 2) {
-                baralho = Baralho.embaralharBaralho(baralho);
+                baralho = Baralho.embaralhar(baralho);
             } else if(resp == 3) {
-                Baralho.hasCarta(baralho);
+                System.out.println(Baralho.hasCarta(baralho));
+            } else if(resp == 4) {
+                Baralho.ImprimirBaralho(baralho);
             }
         }
     }

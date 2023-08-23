@@ -7,72 +7,8 @@ public class Baralho {
     private Carta[] cartas = new Carta[57];
     private int indice = 56;
 
-    // public Baralho() {
-    // Carta[] cartas = new Carta[56];
-    //     // nipe paus
-    //     for(int i = 0; i < 14; i++){
-    //         if(i == 0){
-    //             Carta card = new Carta("A","paus");
-    //             cartas[i] = card;
-    //         }
-    //         else if (i != 0){
-    //             String nome = Integer.toString(i + 1);
-    //             Carta card = new Carta(nome,"paus");
-    //             cartas[i] = card;
-    //         }
-    //     }
-
-    //     // nipe ouro
-    //     for(int i = 0; i < 15; i++){
-    //         if(i == 0){
-    //             Carta card = new Carta("A","paus");
-    //             cartas[i] = card;
-    //         }
-    //         else if (i != 0){
-    //             String nome = Integer.toString(i + 1);
-    //             Carta card = new Carta(nome,"ouro");
-    //             cartas[i+13] = card;
-    //         }
-    //     }
-
-    //     // nipe espadas
-    //     for(int i = 0; i < 15; i++){
-    //         String nome = Integer.toString(i + 1);
-    //         Carta card = new Carta(nome,"espadas");
-    //         cartas[i+26] = card;
-    //     }
-
-    //     // nipe copas
-    //     for(int i = 0; i < 15; i++){
-    //         String nome = Integer.toString(i + 1);
-    //         Carta card = new Carta(nome,"copas");
-    //         cartas[i+39] = card;
-    //     }
-
-    //     for(int i = 0; i < 4; i ++){
-    //         Carta card = new Carta("coringa","coringa");
-    //         cartas[i+52] = card;
-    //     }
-    // }
-
     public Baralho(){
         cartas = new Carta[56];
-        // cartas[0] = new Carta("A","Espadas");
-        // cartas[1] = new Carta("A","Paus");
-        // cartas[2] = new Carta("A","Ouros");
-        // cartas[3] = new Carta("A","Copas");
-        // cartas[4] = new Carta("K","Espadas");
-        // cartas[5] = new Carta("K","Paus");
-        // cartas[6] = new Carta("K","Ouros");
-        // cartas[7] = new Carta("K","Copas");
-        // cartas[8] = new Carta("Q","Espadas");
-        // cartas[9] = new Carta("Q","Paus");
-        // cartas[10] = new Carta("Q","Ouros");
-        // cartas[11] = new Carta("Q","Copas");
-        // cartas[12] = new Carta("J","Espadas");
-        // cartas[13] = new Carta("J","Paus");
-        // cartas[14] = new Carta("J","Ouros");
-        // cartas[15] = new Carta("J","Copas");
         cartas[0] = new Carta("Joker","Joker");
         cartas[1] = new Carta("Joker","Joker");
         cartas[2] = new Carta("Joker","Joker");

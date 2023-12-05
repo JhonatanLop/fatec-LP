@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox prefHeight="491.0" prefWidth="813.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.openjfx.atividade.ViagemController">
+   <children>
+      <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="494.0" prefWidth="814.0" style="-fx-background-color: #1C1C1C; -fx-border-radius: 50;">
+         <children>
+            <ImageView fitHeight="491.0" fitWidth="875.0" opacity="0.41">
+               <image>
+                  <Image url="@images/viagensgirlanime.jpg" />
+               </image>
+            </ImageView>
+            <Label layoutX="28.0" layoutY="14.0" style="-fx-font-size: 24;" text="Planejamento de Viagens" textFill="#05c6bc">
+               <font>
+                  <Font size="27.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="217.0" fitWidth="217.0" layoutX="652.0" layoutY="2.0" opacity="0.15">
+               <image>
+                  <Image url="@images/avião.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="cadViagem" alignment="CENTER" layoutX="671.0" layoutY="412.0" mnemonicParsing="false" onAction="#cadViagem" prefHeight="38.0" prefWidth="157.0" style="-fx-background-color: #2E2E2E; -fx-border-color: #088a85; -fx-border-radius: 4; -fx-text-alignment: center;" text="Enviar Cadastro" textAlignment="CENTER" textFill="#05c6bc">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+            <Label layoutX="257.0" layoutY="450.0" prefHeight="30.0" prefWidth="239.0" style="-fx-font-size: 11;" text="Jhonatan Oliveria Lopes ⓒ Copyright Inc. 2023" textFill="#05c6bc">
+               <font>
+                  <Font size="9.0" />
+               </font>
+            </Label>
+            <Label layoutX="33.0" layoutY="63.0" prefHeight="30.0" prefWidth="127.0" style="-fx-font-size: 16;" text="Local de Partida:" textFill="#05c6bc">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="32.0" layoutY="134.0" prefHeight="30.0" prefWidth="138.0" style="-fx-font-size: 16;" text="Local de Chegada:" textFill="#05c6bc">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="471.0" layoutY="63.0" prefHeight="30.0" prefWidth="138.0" style="-fx-font-size: 16;" text="Data partida:" textFill="#05c6bc">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="471.0" layoutY="134.0" prefHeight="30.0" prefWidth="138.0" style="-fx-font-size: 16;" text="Data chegada:" textFill="#05c6bc">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <TextField fx:id="localPartida" layoutX="33.0" layoutY="93.0" prefHeight="35.0" prefWidth="306.0" style="-fx-background-color: #2E2E2E; -fx-border-color: #088a85; -fx-border-radius: 4; -fx-text-fill: #088a85;" />
+            <TextField fx:id="localChegada" layoutX="33.0" layoutY="164.0" prefHeight="38.0" prefWidth="306.0" style="-fx-background-color: #2E2E2E; -fx-border-color: #088a85; -fx-border-radius: 4; -fx-text-fill: #088a85;" />
+            <DatePicker fx:id="dataPartida" layoutX="473.0" layoutY="93.0" prefHeight="35.0" prefWidth="197.0" style="-fx-background-color: #BDBDBD; -fx-background: none; -fx-border-color: #088a85; -fx-border-radius: 4; -fx-text-fill: #088a85;" />
+            <DatePicker fx:id="dataChegada" layoutX="473.0" layoutY="164.0" prefHeight="35.0" prefWidth="198.0" style="-fx-background-color: #BDBDBD; -fx-background: none; -fx-border-color: #088a85; -fx-border-radius: 4; -fx-text-fill: #088a85;" />
+            <Label layoutX="32.0" layoutY="204.0" prefHeight="30.0" prefWidth="138.0" style="-fx-font-size: 16;" text="Nome:" textFill="#05c6bc">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <TextField fx:id="nomeViajante" layoutX="33.0" layoutY="234.0" prefHeight="38.0" prefWidth="306.0" style="-fx-background-color: #2E2E2E; -fx-border-color: #088a85; -fx-border-radius: 4; -fx-text-fill: #088a85;" />
+            <Label layoutX="473.0" layoutY="200.0" prefHeight="30.0" prefWidth="138.0" style="-fx-font-size: 16;" text="Documento:" textFill="#05c6bc">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <TextField fx:id="documentoViajante" layoutX="474.0" layoutY="230.0" prefHeight="38.0" prefWidth="306.0" style="-fx-background-color: #2E2E2E; -fx-border-color: #088a85; -fx-border-radius: 4; -fx-text-fill: #088a85;" />
+            <Label layoutX="32.0" layoutY="277.0" prefHeight="30.0" prefWidth="138.0" style="-fx-font-size: 16;" text="Transporte:" textFill="#05c6bc">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <TextField fx:id="transporte" layoutX="33.0" layoutY="307.0" prefHeight="38.0" prefWidth="306.0" style="-fx-background-color: #2E2E2E; -fx-border-color: #088a85; -fx-border-radius: 4; -fx-text-fill: #088a85;" />
+            <Button fx:id="voltar" alignment="CENTER" layoutX="44.0" layoutY="412.0" mnemonicParsing="false" onAction="#goBack" prefHeight="38.0" prefWidth="127.0" style="-fx-background-color: #2E2E2E; -fx-border-color: #088a85; -fx-border-radius: 4; -fx-text-alignment: center;" text="Voltar" textAlignment="CENTER" textFill="#05c6bc">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+            <Button fx:id="limpar" alignment="CENTER" layoutX="512.0" layoutY="412.0" mnemonicParsing="false" onAction="#cleanFields" prefHeight="38.0" prefWidth="127.0" style="-fx-background-color: #2E2E2E; -fx-border-color: #088a85; -fx-border-radius: 4; -fx-text-alignment: center;" text="Limpar" textAlignment="CENTER" textFill="#05c6bc">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+   </children>
+</VBox>

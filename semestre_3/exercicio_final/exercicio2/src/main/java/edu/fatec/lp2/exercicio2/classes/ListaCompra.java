@@ -23,6 +23,15 @@ public class ListaCompra implements Calculavel{
         this.itensCompra = new ArrayList<ItemCompra>();
     }
 
+    public int countItens() {
+        int sum = 0;
+        // verifica quantidades de produtos disponíveis
+        for (ItemCompra item : this.itensCompra) {
+            sum += item.getQuantidade();
+        }
+        return sum;
+    }
+
     public void incluir(ItemCompra item) {
         if (this.itensCompra.size() >= qtdeMax) {
             System.out.println("Lista cheia");

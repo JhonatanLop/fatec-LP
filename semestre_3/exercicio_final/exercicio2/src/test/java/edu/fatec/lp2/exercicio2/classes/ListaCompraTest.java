@@ -26,7 +26,7 @@ public class ListaCompraTest {
         listaCompra.incluir(item2);
 
         int expectedCount = 5;
-        int actualCount = listaCompra.countItens();
+        int actualCount = listaCompra.countProducts();
 
         Assertions.assertEquals(expectedCount, actualCount);
     }
@@ -68,13 +68,13 @@ public class ListaCompraTest {
     @Test
     public void testCalcularPreco() {
         Supermercado familia = new Supermercado("Super mercado família");
-        ItemCompra item1 = new ItemCompra(1, new Produto("geladinho 1", "1", "é gelado", 10.0, 0.25, familia), 50.0);
+        ItemCompra item1 = new ItemCompra(2, new Produto("geladinho 1", "1", "é gelado", 10.0, 0.25, familia), 50.0);
         ItemCompra item2 = new ItemCompra(1, new Produto("salgado 2", "5.0", "é salgado", 4.0, 0.0, familia), 0.0);
 
         listaCompra.incluir(item1);
         listaCompra.incluir(item2);
 
-        double expectedPreco = 9.0;
+        double expectedPreco = 14.0;
         double actualPreco = listaCompra.calcularPreco();
 
         Assertions.assertEquals(expectedPreco, actualPreco);

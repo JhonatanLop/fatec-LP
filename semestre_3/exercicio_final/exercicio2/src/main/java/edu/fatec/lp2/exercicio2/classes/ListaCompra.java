@@ -33,6 +33,10 @@ public class ListaCompra implements Calculavel{
     }
 
     public void incluir(ItemCompra item) {
+        if (item.getDesconto() > item.getProduto().getDescontoMaximo()) {
+            System.out.println("Desconto maior que o permitido");
+            return;
+        }
         if (this.itensCompra.size() >= qtdeMax) {
             System.out.println("Lista cheia");
         } else {
@@ -54,7 +58,7 @@ public class ListaCompra implements Calculavel{
     public double calcularPreco() {
         double precoTotal = 0.0;
         for (ItemCompra item : this.itensCompra) {
-            precoTotal += item.calcularPreco();
+            precoTotal += item.getProduto().getPreco() + (item.getProduto().getPreco() * item.getDesconto());
         }
         return precoTotal;
     }

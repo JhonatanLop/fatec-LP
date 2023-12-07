@@ -40,6 +40,11 @@ public class ListaCompra implements Calculavel{
         }
     }
 
+    // insire o máximo de intens possíveis
+    public void addLimite(Produto produto) {
+        itensCompra.add(new ItemCompra(produto, qtdeMax - countItens()));
+    }
+
     public double calcularPreco() {
         double precoTotal = 0.0;
         for (ItemCompra item : this.itensCompra) {

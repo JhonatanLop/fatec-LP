@@ -23,7 +23,7 @@ public class ListaCompra implements Calculavel{
         this.itensCompra = new ArrayList<ItemCompra>();
     }
 
-    public int countItens() {
+    public int countProducts() {
         int sum = 0;
         // verifica quantidades de produtos disponíveis
         for (ItemCompra item : this.itensCompra) {
@@ -42,7 +42,13 @@ public class ListaCompra implements Calculavel{
 
     // insire o máximo de intens possíveis
     public void addLimite(Produto produto) {
-        itensCompra.add(new ItemCompra(produto, qtdeMax - countItens()));
+        int currentCount = countProducts();
+        int quantidadeToAdd = qtdeMax - currentCount;
+    
+        if (quantidadeToAdd > 0) {
+            ItemCompra newItem = new ItemCompra(quantidadeToAdd,produto, quantidadeToAdd);
+            itensCompra.add(newItem);
+        }
     }
 
     public double calcularPreco() {

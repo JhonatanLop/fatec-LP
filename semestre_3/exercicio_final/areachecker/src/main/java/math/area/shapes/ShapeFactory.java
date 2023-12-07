@@ -21,7 +21,7 @@ public class ShapeFactory {
             case CIRCLE:
                 return new Circle(values[0]);
             case TRIANGLE:
-                return new Triangle(values);
+                return new Triangle(values[0], values[1]);
             case PARALLELOGRAM:
                 return new Parallelogram(values[0], values[1]);
             case TRAPEZE:

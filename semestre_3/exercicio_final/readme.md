@@ -86,5 +86,6 @@ Dadas as necessidades do Seu Astolfo e assumindo-se que todas as classes possuem
     1. ```cd exercicio2``` - para entrar nessa atividade
     1. ```mvn clean install``` - para instalar as dependências
     2. ```mvn exec:java``` - para executar o projeto
+    3. ```mvn test``` - para executar a rotina de testes
 
 ![](./areachecker/assets/picture1.png)
